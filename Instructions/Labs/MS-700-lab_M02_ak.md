@@ -82,7 +82,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 You have now successfully activated guest access and disallow guests to delete their sent messages for Teams in your tenant.
 
 #### Task 3 - Add a guest to a team
-In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_United States** you created from Lab 1. 
+In this task, you will add a guest user by inviting the guest to the team **Afterwork** you created from Lab 1. 
 
 You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
@@ -90,9 +90,9 @@ You will change the default settings for inviting/creating guest users and then 
 
 1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
 
-2. Add the guest to **Group_Afterwork_United States** team.
+2. Add the guest to **Afterwork** team.
 	
-	1. Select **Teams** > Select **...** next to the **Group_Afterwork_United States** team.
+	1. Select **Teams** > Select **...** next to the **Afterwork** team.
 
 	2. Select **Add member** and enter your outlook account. 
 
@@ -106,11 +106,11 @@ You will change the default settings for inviting/creating guest users and then 
 	
 	3. Select **Accept** and sign in to Teams web client with your outlook account. 
 
-	4. From the Teams client, select **Teams**, you will see the team **Group_Afterwork_United States**.
+	4. From the Teams client, select **Teams**, you will see the team **Afterwork**.
 
 4. Test the guest access
 
-	1. Under the team **Group_Afterwork_United States**, select **General** channel, and send the message: **Hello!**.
+	1. Under the team **Afterwork**, select **General** channel, and send the message: **Hello!**.
 
 	2. Select **...** of the message you just posted. Notice there's no **Delete** option. 
 
@@ -146,9 +146,9 @@ As a part of your system administrator role, you need to review access to resour
 
 	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select on the name of the report - **Review guest access across Microsoft 365 groups**.
 
-	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_United States** under group name.
+	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Afterwork** under group name.
 
-	4. On the **Group_Afterwork_United States | Overview** page, you can see there's one users show under **Not reviewed** category. 
+	4. On the **Afterwork | Overview** page, you can see there's one users show under **Not reviewed** category. 
 
 4. Review the access review and approve the guest user. 
 

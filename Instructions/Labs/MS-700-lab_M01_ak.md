@@ -210,7 +210,7 @@ You have finished the first exercise, and you can continue with the next one.
 
 ### **Exercise 2: Explore Teams management tools**
 
-In this exercise, you will explore Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
+In this exercise, you will explore Teams admin center required to manage teams, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center.
 
 To perform these tasks, you will use Joni Sherman’s account (JoniS@_&lt;YourTenant&gt;_.onmicrosoft.com).
 
@@ -285,7 +285,7 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
 
 The new Microsoft 365 Group with the name "IT-Department" was successfully created. Close the browser window and continue to the next task.
 
-#### **Task 2 - Create a new team by using the desktop client**
+#### **Task 2 - Create a 3 new teams by using the desktop client**
 
 To test the self-service capabilities of Teams, in this task, **Alex Wilber** will sign in to the Teams Desktop client, create a new team with the name **Teams Rollout** and add all members participating in the Teams evaluation project.
 
@@ -315,7 +315,39 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 8. Select **Close**.
 
-You have successfully created a new team from the Teams desktop client, added the project team members, and you have made Joni Sherman a team owner. 
+9. Repeat the above steps and create one more group as details mentioned below
 
+10. Enter **Afterwork** for the **Team name**.
+
+    Below the entered name, you can see the configured prefix and suffix for new teams.
+
+11. Select **Create** to create the new team.
+
+12. Add **Lynne Robbins** to the team member.
+
+13. Review the name of the newly created team.
+
+You have successfully created two new teams from the Teams desktop client, added the project team members, and you have made Joni Sherman a team owner. 
+
+
+#### **Task 3 - Create a new team by using the web client**
+
+In this task, **Lynne Robbins** will continue testing the self-service capabilities of Teams by using the Teams web client to create another team with the name **Sales**. She will also add **Alex Wilber** as a member.
+
+1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+
+2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+
+3. Select **Use the Web app instead** if prompted to download Teams Desktop app. At the 'Stay signed in to all your apps' window, select **No, sign in to this app only**. 
+
+4. Select **Join or create a team** from the lower left corner. 
+
+5. Select **Create team** >**From scratch** > **Private**. Enter the team name **Sales** and select **Create**.
+
+6. On the **Add members to Sales** window, enter the following names and select **Add** > **Close**.
+
+    * Alex Wilber
+
+The newly created team is displayed in the list of your teams. You have successfully created a new team with the Teams web client.
 
 END OF LAB
