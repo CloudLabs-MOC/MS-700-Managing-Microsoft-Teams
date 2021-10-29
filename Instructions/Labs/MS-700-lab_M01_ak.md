@@ -261,13 +261,13 @@ You will create a new Microsoft 365 Group named "IT-Department," and then add th
         - Select **Add(1)**, and then select **Next**.
 
     * Members: 
-	- select **+ Add Members**
+	    - select **+ Add Members**
         - Patti Fernandez
         - Allan Deyoung
         - MOD Administrator
 	
-	>   Note : 
-	Please note that odl_userXXXXX@<YourTenant>.onmicrosoft.com is your administrator user and you should use odl_userXXXXX@<YourTenant>.onmicrosoft.com in place of MOD           Administrator (admin@<YourTenant>.onmicrosoft.com) throughout this lab
+	    >   Note : 
+	    Please note that odl_userXXXXX@<YourTenant>.onmicrosoft.com is your administrator user and you should use odl_userXXXXX@<YourTenant>.onmicrosoft.com in place of MOD Administrator (admin@<YourTenant>.onmicrosoft.com) throughout this lab
 	
         - Select **Add(3)**, and then select **Next**.
         
