@@ -1,10 +1,3 @@
----
-lab:
-    title: 'Lab 02: Configure security and compliance for Microsoft Teams'
-    type: 'Answer Key'
-    module: 'Module 2: Implement security and compliance for Microsoft Teams'
----
-
 # **Lab 02: Configure security and compliance for Microsoft Teams**
 
 # **Student lab answer key**

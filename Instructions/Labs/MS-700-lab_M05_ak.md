@@ -1,10 +1,3 @@
----
-lab:
-    title: 'Lab 05: Manage Teams meetings experiences'
-    type: 'Answer Key'
-    module: 'Module 5: Manage meetings and virtual events in Microsoft Teams'
----
-
 # **Lab 05: - Manage Teams meetings experiences**
 
 # **Student lab answer key**
@@ -72,6 +65,21 @@ In this task you need to sign in to the second client and create a meeting with 
 5. In the meeting window, select … for **More actions**.
 
 6. Notice that you can't select **Start recording**.
+
+
+#### Task 3 – Creating a org-wide team
+
+In this task, you will create a **IT Support** org-wide team 
+
+1. Create the **IT Support** org-wide team.
+
+	1. Connect to the **Client 1 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **ODL Administrator**. 
+
+	2. Select **Join or create a team** from the lower left corner. 
+
+	3. Select **Create team** >**From scratch** > **Org-wide**. 
+	
+	4. Enter the team name **IT Support** and select **Create**.
  
 
 #### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings

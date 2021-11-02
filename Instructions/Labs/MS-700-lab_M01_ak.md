@@ -1,10 +1,3 @@
----
-lab:
-    title: 'Lab 01: Manage Microsoft Teams'
-    type: 'Answer Key'
-    module: 'Module 1: Get started with managing Microsoft Teams '
----
-
 # **Lab 01: Manage Microsoft Teams**
 
 ## **Microsoft 365 user interface**

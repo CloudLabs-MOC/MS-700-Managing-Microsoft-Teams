@@ -1,10 +1,3 @@
----
-lab:
-    title: 'Lab 04: Manage teams and collaboration settings for Teams'
-    type: 'Answer Key'
-    module: 'Module 4: Manage chat, teams, channels, and apps in Microsoft Teams'
----
-
 # **Lab 04: Manage teams and collaboration settings for Teams**
 
 # **Student lab answer key**
@@ -22,8 +15,6 @@ After you complete this lab, you will be able to:
 - Create a Team from a Microsoft 365 Group
 
 - Create a Team by using PowerShell
-
-- Create a Team by using Microsoft Graph API
 
 - Create a Team with dynamic membership
 
@@ -80,6 +71,75 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 10. Leave the Teams desktop client open and continue to the next task.
 
 You have successfully created a new team with the Teams desktop client, by using an existing Microsoft 365 group. Leave the Teams client open and continue with the next task.
+
+
+#### Task 2 - Create a team by using PowerShell
+
+In this task, you will create via the Teams PowerShell a new team **"CA-Office"**. You will create the public channels **"Support"** and **"Recruiting"**. Additionally, you will create the private channel **"Administration"** via Teams PowerShell.
+
+1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+
+2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell**.
+
+3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
+
+    ```powershell
+    Connect-MicrosoftTeams
+    ```
+
+4. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** credential provided to you (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and then select **Next**.
+
+5. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** credential provided to you and then select **Sign in**.
+
+6. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
+
+    ```powershell
+    New-Team -Displayname "CA-Office" -MailNickName "CA-Office" -Visibility Public
+    ```
+
+7. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
+
+    ```powershell
+    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
+    ```
+
+8. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing **&lt;YourTenant&gt;** with the name of the Microsoft 365 Tenant provided to you.):
+
+    ```powershell
+    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
+    ```
+
+9. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+
+    ```powershell
+    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Support"
+    ```
+
+10. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+
+    ```powershell
+    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Recruiting"
+    ```
+
+11. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+
+    ```powershell
+    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
+    ```
+
+12. Disconnect from the Microsoft Teams environment.  
+
+    ```powershell
+    Disconnect-MicrosoftTeams
+    ```
+
+13. Close the PowerShell window.
+
+14. Open the Teams desktop client from the taskbar. On the left side pane with all teams Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+
+15. Close all browser windows and the Teams desktop client.
+
+You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
 
 #### Task 2 – Archive and unarchive a team

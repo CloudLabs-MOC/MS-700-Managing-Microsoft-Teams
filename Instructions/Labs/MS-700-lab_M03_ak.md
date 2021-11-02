@@ -1,10 +1,3 @@
----
-lab:
-    title: 'Lab 03: Plan and configure network settings for Microsoft Teams '
-    type: 'Answer Key'
-    module: 'Module 3: Prepare the environment for a Microsoft Teams deployment'
----
-
 # **Lab 03: Plan and configure network settings for Microsoft Teams**
 
 # **Student lab answer key**
@@ -52,7 +45,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.microsoft.com**](https://admin.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. In the **Teams admin center,** on the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
 
@@ -114,7 +107,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	- In the **Network settings** section, in the **Subnet** box type **192.168.20.0**, and in the **Network range** box type **24**.
 
-	- In the **Network settings** section, ensure ExpressRoute button is **Off**.
+	- In the **Network settings** section, ensure **ExpressRoute** button is **Off**.
 
 	- In the **Network settings** section, turn **On** the **Connected to WAN** button, then in **WAN link capacity** box type **400**, in the **WAN audio queue size** box type **50**, and in **Video queue size** box type **100**.
 
@@ -138,7 +131,7 @@ In this lab, you have used Network Planner to estimate the Microsoft Teams impac
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 network connectivity test tool** ([**https://connectivity.office.com/**](https://connectivity.office.com?azure-portal=true)) as **MOD Administrator**. 
 
 2. Select **Sign in** at top-right corner.
 
