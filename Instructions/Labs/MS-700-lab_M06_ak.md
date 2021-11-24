@@ -1,10 +1,3 @@
----
-lab:
-    title: 'Lab 06: Manage calling in Microsoft Teams'
-    type: 'Answer Key'
-    module: 'Module 6: Manage calling in Microsoft Teams'
----
-
 # **Lab 06: - Manage calling in Microsoft Teams**
 
 # **Student lab answer key**
