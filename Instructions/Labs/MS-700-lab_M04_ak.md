@@ -201,7 +201,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 4. Restore group
 
-	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
+	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as MOD Administrator. 
 
 	2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
 
