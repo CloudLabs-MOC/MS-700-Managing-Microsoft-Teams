@@ -227,7 +227,7 @@ You have successfully deleted a team via the Teams web client and restored it wi
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
+1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as MOD Administrator. 
 
 2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
 
