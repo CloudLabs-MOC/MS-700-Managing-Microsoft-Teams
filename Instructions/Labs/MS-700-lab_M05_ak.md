@@ -66,22 +66,6 @@ In this task you need to sign in to the second client and create a meeting with 
 
 6. Notice that you can't select **Start recording**.
 
-
-#### Task 3 – Creating a org-wide team
-
-In this task, you will create a **IT Support** org-wide team 
-
-1. Create the **IT Support** org-wide team.
-
-	1. Connect to the **Client 1 VM** and browse the **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **ODL Administrator**. 
-
-	2. Select **Join or create a team** from the lower left corner. 
-
-	3. Select **Create team** >**From scratch** > **Org-wide**. 
-	
-	4. Enter the team name **IT Support** and select **Create**.
- 
-
 #### Task 3 - Configure meeting settings and restrict anonymous users from joining meetings
 
 Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
@@ -160,8 +144,8 @@ The IT department wants to host a company-wide meeting to answer employees' ques
 		
 7. Test the meeting registration. 
 
-	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
-
+	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+	
 	2. Go to the **General** channel of the **IT Support** team and select the registration link that you posted.
 
 	3. Fill out the registration form and select **Register now**.
