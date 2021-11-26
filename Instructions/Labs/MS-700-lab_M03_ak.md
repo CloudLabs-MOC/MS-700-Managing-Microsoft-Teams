@@ -131,7 +131,7 @@ In this lab, you have used Network Planner to estimate the Microsoft Teams impac
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 network connectivity test tool** ([**https://connectivity.office.com/**](https://connectivity.office.com?azure-portal=true)) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 network connectivity test tool** ([**https://connectivity.office.com/**](https://connectivity.office.com?azure-portal=true)) as MOD Administrator. 
 
 2. Select **Sign in** at top-right corner.
 
