@@ -36,7 +36,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 #### Task 1 - Review guest access settings (optional)
 
-1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
+1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as MOD Administrator. 
 
 2. In left navigation of the Azure AD admin center, select **Users**> **User settings** > **Manage external collaboration settings**. Review the following settings for external users at the Azure AD level:
 
@@ -46,7 +46,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 	* **Collaboration restrictions**: Allow invitations to be sent to any domain (most inclusive)
 
-3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as MOD Administrator.
 
 4. In left navigation of the Microsoft 365 admin center, select **Settings** > **Org settings**.
 
@@ -113,7 +113,7 @@ You have successfully invited a guest to a team and validate the guest access se
 
 As a part of your system administrator role, you need to review access to resources in your tenant on a regular basis. You can do that by creating an access reviews.
 
-1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
+1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as MOD Administrator 
 
 2. Create an access review to monitor guest users.
 
@@ -168,7 +168,7 @@ In this exercise, you will increase the security level in your organization by c
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that blocks documents that contain malware.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as MOD Administrator
 
 2. In left navigation of the Microsoft 365 Defender portal, select **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section.
 
