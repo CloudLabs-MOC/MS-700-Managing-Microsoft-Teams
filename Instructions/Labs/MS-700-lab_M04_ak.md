@@ -79,11 +79,12 @@ In this task, you will create via the Teams PowerShell a new team **"CA-Office"*
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell**.
+2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell** in Administator mode.
 
 3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
 
     ```powershell
+    Install-Module -Name MicrosoftTeams
     Connect-MicrosoftTeams
     ```
 
@@ -200,7 +201,7 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 4. Restore group
 
-	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
+	1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
 
 	2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
 
@@ -226,7 +227,7 @@ You have successfully deleted a team via the Teams web client and restored it wi
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **MOD Administrator**. 
+1. Connect to the **Client 1 VM** and browse to Azure AD admin center (https://aad.portal.azure.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com). 
 
 2. On the left navigation pane, select **Azure Active Directory** > **Groups**.
 
