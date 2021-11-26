@@ -46,7 +46,7 @@ In this exercise you will set up one of your users with a Calling Plan Trial. Yo
 
 In this task you will add a new emergency address "One Microsoft Way, Redmond, WA 98052, USA" for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
-1. Connect to the **Client 1 VM** and browse to the **Teams admin center** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **https://admin.teams.microsoft.com/** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 2. On the left navigation pane select **Locations** and below select **Emergency addresses**.
 
@@ -62,7 +62,7 @@ In this task you will add a new emergency address "One Microsoft Way, Redmond, W
 
       (You can enable **Edit the address manually**, and enter the address manually)
 
-5. Acknowledge the emergency calling disclaimer.
+5. select the checkbox of Acknowledge the emergency calling disclaimer.
 
 6. Select **Save**.
 
@@ -80,7 +80,7 @@ In this task you will activate the Calling Plan Add-on Trial for your tenant so 
 
 4. Open the Navigation Menu in the upper left corner and select  **Billing &gt; purchase services**.
 
-5. Select **Add-ons**.
+5. Select **View Products**.
 
 6. Scroll down until you see **Microsoft 365 Domestic Calling Plan for US and Canada Trial** (you may have to select **See more add-ons products**) and select **Details**.
 
@@ -170,7 +170,7 @@ In this Task you will assign an existing phone number to a user.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **https://admin.teams.microsoft.com/** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
 
@@ -199,7 +199,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **https://admin.teams.microsoft.com/** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. On the left navigation pane, select **Voice**, and then **Calling policies** below.
 
@@ -221,7 +221,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Manage users** from the top pane.
 
-10. In the right-side pane, type into the search field **Megan, Alex, Joni, Lynne** and select **Add** right from their names.
+10. In the right-side pane, type into the search field **Alex, Joni, Lynne** and select **Add** right from their names.
 
 11. Select **Apply** to assign the policy to the selected users.
 
@@ -241,7 +241,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **https://admin.teams.microsoft.com/** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
 
@@ -307,7 +307,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **https://admin.teams.microsoft.com/** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
 
