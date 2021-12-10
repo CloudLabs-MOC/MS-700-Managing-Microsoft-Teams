@@ -5,6 +5,6 @@
 
 1. Refer the **Environment Details** tab for any other lab credentials/details.
 
-1. For accessing client2 Go to **Environment Details** tab, under resources click on launch button as shown below:
+1. For accessing client2 Go to **Resources** tab, under resources click on launch button as shown below:
 
    <img src="media/client2.png"/><br/>
