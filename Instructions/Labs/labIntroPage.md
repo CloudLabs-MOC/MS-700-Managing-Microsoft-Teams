@@ -7,4 +7,4 @@
 
 1. For accessing client2 Go to **Environment Details** tab, under resources click on launch button as shown below:
 
-   <img src="images/client2.png"/><br/>
+   <img src="media/client2.png"/><br/>
