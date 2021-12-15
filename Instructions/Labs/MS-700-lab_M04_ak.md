@@ -26,14 +26,6 @@ After you complete this lab, you will be able to:
 
 - Manage private channels
 
-- Disable third-party storage providers
-
-- Manage Policy packages
-
-- Edit and test default org-wide app policy
-
-- Edit and test default app permission policy
-
 
 ## **Lab Setup**
 
