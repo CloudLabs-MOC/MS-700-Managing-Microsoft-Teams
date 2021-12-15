@@ -18,10 +18,6 @@ After you complete this lab, you will be able to:
 
 - Activating Safe Attachments for SharePoint, OneDrive and Teams
 
-- Create, configure and test retention policies
-
-- Create and test a DLP policy to protect GDPR content
-
 ## **Lab Setup**
 
 - **Estimated Time:** 90 minutes.
