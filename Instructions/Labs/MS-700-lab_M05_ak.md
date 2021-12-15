@@ -20,9 +20,6 @@ After you complete this lab, you will be able to:
 
 - Create a webinar
 
-- Create configuration profiles for devices
-
-- Configure a new Microsoft Teams Room
 
 ## **Lab Setup**
 
