@@ -60,39 +60,69 @@ After you complete this lab, you will be able to:
 
 ### **Before you start**
 
-The labs in this course have been prepared for a Microsoft Teams deployment at Contoso Ltd. Corporation. Contoso is running a Microsoft 365 cloud-only deployment. The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
+The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
 
 #### **1. Sign in to the lab virtual machines**
 
 The labs in this course will use two virtual machines:
 
-- Client 1 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client 1 VM: a stand-alone Windows 11 client virtual machine with Microsoft Teams pre-installed.
 
-- Client 2 VM: a stand-alone Windows 10 client virtual machine with Microsoft Teams pre-installed.
+- Client 2 VM: a stand-alone Windows 11 client virtual machine with Microsoft Teams pre-installed.
 
-**Note:** Lab virtual machine sign-in instructions will be provided to you by your instructor.
+**Note:** Once you get connected to the Lab environment, The VM on the left side of the Lab interface will launch the Windows 11 Welcome experience, Follow the below steps to skip through the welcome wizard.
 
-**Important:** The exercises in the MS-700 labs are cloud-only deployments. A local administrator account has been created on the client VMs. You will log into the VMs as a local administrator instead of a domain account. Following your login, the desktop will indicate that you are logged in as either **CLIENT1 or CLIENT2**, depending on which machine you are on.
+- Select **NO** and Click **ACCEPT**.
+
+![alt text](media/image-2.png)
+
+- Select **NO** and Click **ACCEPT**.
+
+![alt text](media/image-3.png)
+
+- Select **Required only** and Click **ACCEPT**.
+
+![alt text](media/image-4.png)
+
+- Select **NO** and Click **ACCEPT**.
+
+![alt text](media/image-5.png)
+
+- Select **NO** and Click **ACCEPT**.
+  
+![alt text](media/image-6.png)
+
+- Select **NO** and Click **ACCEPT**.
+
+![alt text](media/image-7.png)
+
+**Note:** You can connect to either of the Virtual Machines by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
+
+![alt text](media/image-1.png)
+
+**Note:** **Perform the same steps as above to skip through the welcome wizard on Client2**
 
 #### **2. Review installed applications**
 
-Once you signed in to the VM, observe the start menu, and verify following applications have been installed:
+Once you sign in to the VM, Just search for *TEAMS* from the search bar available on the taskbar, and verify following applications have been installed:
 
 - Microsoft Teams
+
+![alt text](media/image.png)
 
 #### **3. Review Microsoft 365 tenant**
 
 Besides two VMs, you will also be provided with a Microsoft 365 tenant with the following highlights:
 
-- Office 365 E5 with Enterprise Mobility + Security E5.
+- Office 365 E5 with Teams Enterprise Licenses.
 
-- 15 licenses in total with 5 available of 15(10 used).
+- One Global Administrator (ODL User) and few standard users have been pre-created.
 
-- One Global Administrator (MOD Administrator) and 9 standard users have been pre-created.
+**Note:** Microsoft 365 login credentials are available on the **Environment** tab of the Lab Interface.
 
-- **Note:** Microsoft 365 sign-in instructions will be provided to you by your instructor.
+![alt text](media/image-8.png)
 
-- The username of the Global Administrator (MOD Administrator) is **admin@&lt;YourTenant&gt;.onmicrosoft.com**.
+- The username of the Global Administrator is **admin@&lt;YourTenant&gt;.onmicrosoft.com**.
 
 - **&lt;YourTenant&gt;.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (&lt;YourTenant&gt;) is the unique tenant ID provided by the lab hosting provider. The &lt;YourTenant&gt; portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
 
