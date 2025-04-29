@@ -14,17 +14,17 @@ In the labs, of this course, you will assume the role of Joni Sherman, a Teams A
 
 You have just started the pilot project, and you’ve already got two virtual machines with preinstalled Teams Desktop clients and a tenant with different users:
 
-- Joni Sherman (**<inject key="JoniSherman" enableCopy="true" style="color:blue" />**) **Teams administrator**
+- Joni Sherman **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** **Teams administrator**
 
-- Patti Fernandez (PattiF@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams device administrator**
+- Patti Fernandez **<inject key="PattiFernandez" enableCopy="true" style="color:blue" />** **Teams device administrator**
 
-- Allan Deyoung (AllanD@&lt;YourTenant&gt;.OnMicrosoft.com) **Teams communication support engineer**
+- Allan Deyoung **<inject key="AllanDeyoung" enableCopy="true" style="color:blue" />** **Teams communication support engineer**
 
-- Alex Wilber (AlexW@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user from Canada**
+- Alex Wilber **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** **Regular pilot user from Canada**
 
-- Lynne Robbins (LynneR@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user**
+- Lynne Robbins **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** **Regular pilot user**
 
-- Diego Siciliani (DiegoS@&lt;YourTenant&gt;.OnMicrosoft.com) **Regular pilot user**
+- Diego Siciliani **<inject key="DiegoSiciliani" enableCopy="true" style="color:blue" />** **Regular pilot user**
 
 ## **Objectives**
 
