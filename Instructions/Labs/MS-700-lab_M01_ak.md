@@ -135,10 +135,8 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 1. Browse to Microsoft 365 admin center (https://admin.microsoft.com/).
 
 	- Ensure that you are connected to the **Client1** VM.
-
-
-	💡
-	**Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
+	
+	💡**Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
 
 	![alt text](media/image-1.png)
 
@@ -147,9 +145,7 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 	- Enter the Global Admin User Name:
 		**<inject key="AzureAdUserEmail"></inject>** `← 📋 Copy`
 	- Enter the Global Admin Password:
-		**<inject key="AzureAdUserPassword"></inject>** `← 📋 Copy`	
-
-
+		**<inject key="AzureAdUserPassword"></inject>** `← 📋 Copy`
 
 2. To assign **Teams admin** role to **Joni Sherman**
 
