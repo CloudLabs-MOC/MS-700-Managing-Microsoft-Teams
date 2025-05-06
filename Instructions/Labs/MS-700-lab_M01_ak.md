@@ -142,8 +142,10 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Open **Microsoft Edge** on **Client1** VM.
 	- Browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
-	- Enter the Global Admin User Name: **<inject key="AzureAdUserEmail"></inject>**.
-	- Enter the Global Admin Password: **<inject key="AzureAdUserPassword"></inject>**.
+	- Enter the Global Admin User Name:
+	**<inject key="AzureAdUserEmail"></inject>**.
+	- Enter the Global Admin Password:
+	**<inject key="AzureAdUserPassword"></inject>**.
 
 
 
