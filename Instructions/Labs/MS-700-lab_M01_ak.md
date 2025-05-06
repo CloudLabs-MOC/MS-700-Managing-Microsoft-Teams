@@ -136,16 +136,18 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Ensure that you are connected to the **Client1** VM.
 
-	💡 **Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
+
+	💡
+	**Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
 
 	![alt text](media/image-1.png)
 
 	- Open **Microsoft Edge** on **Client1** VM.
 	- Browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
 	- Enter the Global Admin User Name:
-	**<inject key="AzureAdUserEmail"></inject>** `← 📋 Copy`
+		**<inject key="AzureAdUserEmail"></inject>** `← 📋 Copy`
 	- Enter the Global Admin Password:
-	**<inject key="AzureAdUserPassword"></inject>** `← 📋 Copy`	
+		**<inject key="AzureAdUserPassword"></inject>** `← 📋 Copy`	
 
 
 
