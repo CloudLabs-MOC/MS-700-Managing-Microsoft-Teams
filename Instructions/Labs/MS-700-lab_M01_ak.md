@@ -116,28 +116,13 @@ Besides two VMs, you will also be provided with a Microsoft 365 tenant with the 
 
 - One Global Administrator (ODL User) and few standard users have been pre-created.
 
-**Note:** Microsoft 365 login credentials are available on the **Environment** tab of the Lab Interface.
+- The username of the Global Administrator is **<inject key="AzureAdUserEmail"></inject>**
+
+- **<inject key="TenantDomainName"></inject>** - This is the domain associated with the Microsoft 365 tenant that was provided by CloudLabs.
+
+**Note:** All the information related to the Lab Environment is available on the **Environment** tab of the Lab Interface.
 
 ![alt text](media/image-8.png)
-
-- The username of the Global Administrator is **<inject key="AzureAdUserEmail"></inject>**.
-
-- **<inject key="TenantDomainName"></inject>** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (&lt;YourTenant&gt;) is the unique tenant ID provided by the lab hosting provider. The &lt;YourTenant&gt; portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
-
-- **IMPORTANT:** This is critical because, throughout this lab, you will be asked to enter the **&lt;YourTenant&gt;.onmicrosoft.com** domain name when signing into apps with a given username (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com). When doing so, you must enter the unique tenant suffix ID that is assigned to your tenant ID in place of the **&lt;YourTenant&gt;**.
-
-- For example, if your Tenant Email is **admin@contosolab.onmicrosoft.com**, the unique tenant suffix ID (&lt;YourTenant&gt;) is **contosolab**. When signing in as Joni when entering this domain, you would replace &lt;YourTenant&gt; with contosolab (for example, JoniS@contosolab.onmicrosoft.com).
-
-- **RECOMMENDATION:** You should write down your unique tenant suffix, mentioned as &lt;YourTenant&gt; in this lab and provided by your training provider. After a while, you will have this name or number memorized as you move through the labs in this course.
-
-- **WWL Tenants - Terms of Use**
-
-    If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training. 
-
-    Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension. 
-
-    Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time. 
-
 
 ### **Exercise 1: Prepare Teams admin roles and licenses**
 
@@ -147,11 +132,20 @@ In the first exercise, you will assign required administrative roles to users an
 
 In this task, you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in the context of Joni Sherman’s account.
 
-1. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Browse to Microsoft 365 admin center (https://admin.microsoft.com/).
 
-	- Connect to the **Client 1 VM** with the credentials that have been provided to you.
+	- Ensure that you are connected to the **Client1** VM.
 
-	- Open **Microsoft Edge** and browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/) with the Global admin credential ( **MOD Administrator** : admin@&lt;YourTenant&gt;.onmicrosoft.com).
+	**Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
+
+	![alt text](media/image-1.png)
+
+	- Open **Microsoft Edge** on **Client1** VM.
+	- Browse to the **Microsoft 365 admin center** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
+	- Enter the Global Admin User Name: **<inject key="AzureAdUserEmail"></inject>**
+	- Enter the Global Admin Password: **<inject key="AzureAdUserPassword"></inject>**
+
+
 
 2. To assign **Teams admin** role to **Joni Sherman**
 
