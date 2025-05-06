@@ -1,5 +1,3 @@
-
-
 # **Lab 01: Manage Microsoft Teams**
 
 ## **Microsoft 365 user interface**
@@ -122,7 +120,7 @@ Besides two VMs, you will also be provided with a Microsoft 365 tenant with the 
 
 ![alt text](media/image-8.png)
 
-- The username of the Global Administrator is **admin@&lt;YourTenant&gt;.onmicrosoft.com**.
+- The username of the Global Administrator is **<inject key="azureUserName" enableCopy="true" style="color:blue" />**.
 
 - **&lt;YourTenant&gt;.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (&lt;YourTenant&gt;) is the unique tenant ID provided by the lab hosting provider. The &lt;YourTenant&gt; portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
 
