@@ -102,7 +102,7 @@ The labs in this course will use two virtual machines:
 
 #### **2. Review installed applications**
 
-Once you sign in to the VM, Just search for *TEAMS* from the search bar available on the taskbar, and verify following applications have been installed:
+Once you sign in to the VM, Just search for **TEAMS** from the search bar available on the taskbar, and verify following applications have been installed:
 
 - Microsoft Teams
 
@@ -120,7 +120,7 @@ Besides two VMs, you will also be provided with a Microsoft 365 tenant with the 
 
 ![alt text](media/image-8.png)
 
-- The username of the Global Administrator is **<inject key="azureUserName" enableCopy="true" style="color:blue" />**.
+- The username of the Global Administrator is **<inject key="AzureAdUserEmail"></inject>**.
 
 - **&lt;YourTenant&gt;.onmicrosoft.com** - This is the domain associated with the Microsoft 365 tenant that was provided by the lab hosting provider. The first part of this domain name (&lt;YourTenant&gt;) is the unique tenant ID provided by the lab hosting provider. The &lt;YourTenant&gt; portion of the tenant ID, which is the tenant suffix ID, will be unique for each student.
 
