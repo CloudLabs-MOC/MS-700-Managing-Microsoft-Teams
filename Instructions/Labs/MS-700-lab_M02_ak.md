@@ -44,23 +44,31 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 #### Task 1 - Review guest access settings (optional)
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**.
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
 
-2. In left navigation of the Azure AD admin center, select **Identity** > **Users**> **User settings** > **Manage external collaboration settings** under the External users. Review and ensure the following settings for external users at the Azure AD level:
+2. In left navigation of the Azure AD admin center, select **Entra ID (1)** > **Users (2)**> **User settings (3)** > **Manage external collaboration settings (4)** under the External users. Review and ensure the following settings for external users at the Azure AD level:
 
-	- **Guest user access**: Guest users have limited access to properties and memberships of directory objects.
+	- **Guest user access (1)**: Guest users have limited access to properties and memberships of directory objects.
 
-	- **Guest invite settings**: Anyone in the organization can invite guest users including guests and non-admins (most inclusive).
+	- **Guest invite settings (2)**: Anyone in the organization can invite guest users including guests and non-admins (most inclusive).
 
-	- **Collaboration restrictions**: Allow invitations to be sent to any domain (most inclusive)
+	- **Collaboration restrictions (3)**: Allow invitations to be sent to any domain (most inclusive)
 
-3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+		![alt text](media/31.png)
 
-4. In the left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings** > **Org settings**.
+		![alt text](media/32.png)
 
-	- Under the **Services** tab, select **Microsoft 365 Groups**. Make sure the checkbox is selected for **Let group owners add people outside your organization to Microsoft 365 Groups as guests**. Close the **Microsoft 365 Groups** page by selecting **X** button.
+3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User**.
+
+4. In the left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings (1)** > **Org settings (2)**.
+
+	- Under the **Services (3)** tab, select **Microsoft 365 Groups (4)**. Make sure the checkbox is selected for **Let group owners add people outside your organization to Microsoft 365 Groups as guests (5)**. Close the **Microsoft 365 Groups** page by selecting **X (6)** button.
+
+		![alt text](media/33.png)	
 
 	- Under the **Security &amp; privacy** tab, select **Sharing**. Make sure the checkbox is selected for **Let users add new guests to the organization**.
+
+		![alt text](media/34.png)
 
 You have now reviewed guest access settings across different admin centers. You are ready to invite the guest for collaboration.
 
@@ -68,15 +76,19 @@ You have now reviewed guest access settings across different admin centers. You 
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left navigation of the Teams admin center, select **Users** > **Guest access**.
 
 3. On the **Guest access** page, check if **Guest Access** is enabled. If not, select **On**.
 
+	![alt text](media/35.png)
+
 4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
 5. Scroll down and select **Save**.
+
+	![alt text](media/36.png)
 
 You have now successfully activated guest access and disallowed guests to delete their sent messages for Teams in your tenant.
 
@@ -88,7 +100,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 **Note**: You will need an Outlook.com account for this exercise. If you don’t have an outlook account, you can create a new account from [**https://outlook.com**](https://outlook.com/).
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com)
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />**
 
 2. Add the guest to **Group_Afterwork_** team.
 
@@ -98,9 +110,13 @@ You will change the default settings for inviting/creating guest users and then 
 
 	- You will see a message **add &lt;Your outlook account&gt; as a guest**. Select the message and select **Add**.
 
+		![alt text](media/37.png)
+
 3. Accept the guest invite
 
 	- Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
+
+		![alt text](media/38.png)
 
 	- Select **Open Microsoft Teams** from the email. You will be redirected to the sign-in page with a permission consent request.
 
@@ -112,6 +128,8 @@ You will change the default settings for inviting/creating guest users and then 
 
 	- Under the team **Group_Afterwork_United States**, select **General** channel, select **Start a post** and send the message: **Hello!**.
 
+		![alt text](media/39.png)
+
 	- Select **…** of the message you just posted. Notice there’s no **Delete** option.
 
 You have successfully invited a guest to a team and validated the guest access setting from the previous task.
@@ -120,11 +138,13 @@ You have successfully invited a guest to a team and validated the guest access s
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **MOD Administrator**. 
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**. 
 
 2. Create an access review to monitor guest users.
 
-	In left navigation of the Entra admin center, select **Identity** and select **Identity Governance** > and select **Access Reviews** and select **+ New access review**. Follow the wizard with the following information:
+	In left navigation of the Entra admin center,  type and select **Identity Governance** > and select **Access Reviews** and select **+ New access** review. Follow the wizard with the following information:
+
+	![alt text](media/40.png)
 
 	1. On the **Review type** tab:
 	
