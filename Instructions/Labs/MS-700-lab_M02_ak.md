@@ -10,26 +10,17 @@ In the labs of this course, you will assume the role of the Global Administrator
 
 After you complete the planning process, you will protect Teams from threats, and configure Teams to meet your organization’s compliance requirements.
 
- 
-
 ## **Objectives**
 
 After you complete this lab, you will be able to:
 
 - Configure guest access in Azure and Teams
-
 - Review Access to a resource
-
 - Activate, create and assign sensitivity lables
-
 - Activating Safe Attachments for SharePoint, OneDrive, and Teams
-
 - Create, configure and test retention policies
-
 - Create and test a DLP policy to protect GDPR content
-
 - Calculate the network bandwidth capacity for a Teams deployment
-
 - Work with the Microsoft 365 network connectivity test tool on a client
 
 ## **Lab Setup**
@@ -42,7 +33,7 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will test the guest access features in Microsoft 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
 
-#### Task 1 - Review guest access settings (optional)
+### Task 1 - Review guest access settings (optional)
 
 1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
 
@@ -72,7 +63,7 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 You have now reviewed guest access settings across different admin centers. You are ready to invite the guest for collaboration.
 
-#### Task 2 - Configure guest access in Teams
+### Task 2 - Configure guest access in Teams
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
@@ -92,7 +83,7 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 You have now successfully activated guest access and disallowed guests to delete their sent messages for Teams in your tenant.
 
-#### Task 3 - Add a guest to a team
+### Task 3 - Add a guest to a team
 
 In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_** you created from Lab 1.
 
@@ -105,9 +96,7 @@ You will change the default settings for inviting/creating guest users and then 
 2. Add the guest to **Group_Afterwork_** team.
 
 	- Select **Teams** > Select **…** next to the **Group_Afterwork_** team.
-
 	- Select **Add member** and enter your outlook account.
-
 	- You will see a message **add &lt;Your outlook account&gt; as a guest**. Select the message and select **Add**.
 
 		![alt text](media/37.png)
@@ -119,9 +108,7 @@ You will change the default settings for inviting/creating guest users and then 
 		![alt text](media/38.png)
 
 	- Select **Open Microsoft Teams** from the email. You will be redirected to the sign-in page with a permission consent request.
-
 	- Select **Accept** and sign in to Teams web client with your outlook account.
-
 	- From the Teams client, select **Teams**, you will see the team **Group_Afterwork_**.
 
 4. Test the guest access
@@ -130,11 +117,11 @@ You will change the default settings for inviting/creating guest users and then 
 
 		![alt text](media/39.png)
 
-	- Select **…** of the message you just posted. Notice there’s no **Delete** option.
+	- Select **"…"** of the message you just posted. Notice there’s no **Delete** option.
 
 You have successfully invited a guest to a team and validated the guest access setting from the previous task.
 
-#### Task 4 - Create access reviews
+### Task 4 - Create access reviews
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
@@ -172,13 +159,13 @@ As a part of your system administrator role, you need to review access to resour
 
 4. Review the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** (AlexW@&lt;YourTenant&gt;.onmicrosoft.com). You can open an InPrivate window.
+	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber**. You can open an InPrivate window.
 
 	2. Check the email with the subject **Action required: Review group access**.
 
 	3. Select **Start review >** in the content of the email. 
 
-	4. From the **My Access** (Https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+	4. From the **My Access** (https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
 
 	5. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
 	
@@ -186,11 +173,11 @@ As a part of your system administrator role, you need to review access to resour
 
 You have successfully created an access review and approved a guest user in your tenant.
 
-### **Exercise 2: Implement security for Microsoft Teams**
+## **Exercise 2: Implement security for Microsoft Teams**
 
 In this exercise, you will increase the security level in your organization by configuring Safe Attachments to ensure that no malicious content is sent through documents shared in Teams by blocking attachments that contain malware.
 
-#### Task 1 - Configure Safe Attachments for Microsoft Teams
+### Task 1 - Configure Safe Attachments for Microsoft Teams
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that block documents that contain malware.
 
@@ -210,11 +197,11 @@ Users in your organization are using Microsoft Teams for communication and colla
 
 In this task, you have activated Safe Attachments scanning for SharePoint, OneDrive, and Microsoft Teams that block documents that contain malware.
 
-### **Exercise 3: Implement compliance for Microsoft Teams**
+## **Exercise 3: Implement compliance for Microsoft Teams**
 
 Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Team’s compliance features to meet the organization’s requirements.
 
-#### Task 1 – Activate sensitivity lables for Teams
+### Task 1 – Activate sensitivity lables for Teams
 
 You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Azure AD, for being able to assign labels to teams.
 
@@ -271,7 +258,7 @@ Connect-AzureAD
 
 You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
-#### Task 2 - Configure sensitivity labels for Teams
+### Task 2 - Configure sensitivity labels for Teams
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
@@ -394,10 +381,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 	Select **Information Protection** on the left hand side navigation panel then select the **labels** button then select **+ Create a label**, follow the wizard with the following information and select **Next** after each step: 
 	
 	a. In the **label details** section, under the **Provide basic details for this label** page, enter the following information:
-		- **Name**: Internal
-		- **Display name**: Internal
-		- **Description for users**: Internal information with sharing protection
-		- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+
+	-	**Name**: Internal
+	- 	**Display name**: Internal
+	-	**Description for users**: Internal information with sharing protection
+	-	**Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
 
 	b. In the **Scope** section, under the **Define the scope for this label** page, leave the marked checkboxes as is and Click on **Next**
 
@@ -456,10 +444,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 	Select the **Information protection** button on the left hand side navigation panel then select the **Lables** button then select the  **Confidential** label and select the **...** button then select **Edit label** button, follow the wizard with the following information and select **Next** after each step: 
 	
 	a. In the **Name & description** section, enter the following information:
-		- **Name**: Leave unchanged
-		- **Display name**: Confidential
-		- **Description for users**: Leave unchanged
-		- **Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
+
+	-	**Name**: Leave unchanged
+	-	**Display name**: Confidential
+	-	**Description for users**: Leave unchanged
+	-	**Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
 	b. In the **Scope** section, under the **Define the scope for thislabel** page select **File &amp; other data assets** and **Groups &amp; Sites (1)** and click on **Next (2)** 
 
@@ -493,18 +482,17 @@ After activating sensitivity labels for groups, you will now create three sensit
 	**Privacy and external user access** and 
 	**External sharing and Conditional Access** 
 
-
 	h. In the **Privacy & external user access** section, under the **Define privacy and external user access settings** page, select **Private**. 
 
 	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
-	- Select **Control external sharing from labeled SharePoint sites (1)** and select **Only people in your organization (2)**.
-	- Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites (3)** and select **Block access (4)**
-	- Click on **Next (5)**
+
+	-	Select **Control external sharing from labeled SharePoint sites (1)** and select **Only people in your organization (2)**.
+	-	Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites (3)** and select **Block access (4)**
+	-	Click on **Next (5)**
 
 		![alt text](media/65.png)
 
 	j. Click **Create label** > **Done**.
-
 
 21. Publish sensitivity labels, after performing each step select **Next** (if required).
 
@@ -516,7 +504,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	d. In the **Sensitivity labels to publish** window, check all labels (2) and select **Add (3)** and click on **Next (4)**
 
-		![alt text](media/66.png)
+	![alt text](media/66.png)
 
  	e. In the **Assign admin units** page, leave as is.
 
@@ -540,7 +528,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing teams.
 
-#### Task 3 - Assign sensitivity labels to teams
+### Task 3 - Assign sensitivity labels to teams
 
 Once the sensitivity labels are created and published, users can now assign them to teams. Furthermore, users can modify assigned labels if needed. In this task, you will assign the **Internal** label to the **Teams Rollout** team.
 
@@ -568,7 +556,7 @@ Once the sensitivity labels are created and published, users can now assign them
 
 You have successfully applied a sensitivity label to an existing team. The configured settings of the Internal label are now applied to the Teams Rollout team. Continue with the next task.
 
-#### Task 4 – Test external access with sensitivity labels (optional)
+### Task 4 – Test external access with sensitivity labels (optional)
 
 In this task, you will try to add a guest user to an internal team.
 
@@ -586,7 +574,7 @@ In this task, you will try to add a guest user to an internal team.
 
 You have successfully tested the sensitivity labels setting to prevent guest access to a protected team and you can confirm, the labels are working as predicted.
 
-#### Task 5 - Create a new retention policy to retain content
+### Task 5 - Create a new retention policy to retain content
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
@@ -641,7 +629,7 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 In this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages and chat of the **Sales** Team for **7 years after the last modification**.
 
-#### Task 6 - Create a new retention policy to delete content
+### Task 6 - Create a new retention policy to delete content
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
@@ -654,7 +642,6 @@ After configuring a retention policy to protect data from deletion, you also nee
 	![alt text](media/71.png)
 
 4. Follow the **Create retention policy** wizard with the following information:
-
 
 	1. In the **Name** section, enter the following information 
 	
@@ -685,7 +672,7 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 			![Picture 4](media/MS-700-lab_M02_ak_image4.png)
 
-	3. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page,  
+	4. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page,  
 		- Select **Only delete items when they reach a certain age** 
 		- Delete items older than: Select **Custom** > **1 days**
 		- Delete the content based on: **when items were created**
@@ -699,11 +686,11 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 You have successfully created a second retention policy for testing the deletion capabilities to clean up the **Teams Rollout** team from all conversation messages older than a day.
 
-#### Task 7 – Test the retention policy for deleting content (optional)
+### Task 7 – Test the retention policy for deleting content (optional)
 
 In this task, you will test the retention policy for deleting content from the **Teams Rollout** team after a day. Before you can see the retention policy taking any effect, you must create some conversation content in the team.
 
-**Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policy’s effect.
+>>**Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policy’s effect.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
@@ -723,7 +710,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 You have added a conversation message to a team, which is deleted by the deletion retention policy after 24 hours.
 
-#### Task 8 - Create a DLP policy for GDPR (PII) content from a template
+### Task 8 - Create a DLP policy for GDPR (PII) content from a template
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
@@ -809,7 +796,7 @@ Note: After pressing Submit you may receive an error which reads "Client error: 
 
 After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
-#### Task 9 - Create a DLP policy from scratch
+### Task 9 - Create a DLP policy from scratch
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
@@ -852,7 +839,6 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 		![alt text](media/82.png)
 
 7. In the **Define policy settings** section, stay with the default selection and select **Next**.
-
 
 	1. In the **Define policy settings** section, stay with the default selection and select Next.
 
@@ -904,7 +890,7 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 You have successfully created a new custom DLP policy for protecting credit card numbers from being shared via Teams conversations.
 
-#### Task 10 – Test the DLP Policies
+### Task 10 – Test the DLP Policies
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
@@ -943,15 +929,15 @@ In order to see the **DLP Policy Matches** users must perform the following:
 - Enable org customization upon logging into the tenant by running *Enable-organizationcustomization*. This takes about 2-3 hour to replicate through the tenant.
 -  Run *Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true* to enable audit logging.
 - The audit logging takes about 24hours to show as enabled a well.
-    	**Note:** This explanation may require users to have the SPE5 tenant.
+    >>**Note:** This explanation may require users to have the SPE5 tenant.
     
 You have successfully tested your DLP policy to block sharing of credit card information via Teams chat and channel conversations.
 
-### **Exercise 4: Prepare network deployment**
+## **Exercise 4: Prepare network deployment**
 
 Microsoft Teams provides users with chat, audio, video, and content sharing experience in different network conditions. It includes variable codecs, where media can be negotiated in limited bandwidth environments. However, as a Teams admin, you will need to carefully plan your network bandwidth, because there are other Office 365 services and third-party apps that also need a reliable network connection. Therefore, Teams admins must-have tools that could help to estimate the bandwidth consumption according to specific business requirements and existing network infrastructure and provide the best experience to business users.
 
-#### Task 1 - Calculate network bandwidth capacity
+### Task 1 - Calculate network bandwidth capacity
 
 In this exercise, you will calculate the network requirements for Microsoft teams, depending on your expected Teams usage business requirements. You must ensure enough bandwidth based on your organization network connectivity that is described in the following table:
 
@@ -1077,7 +1063,7 @@ Once you generate the report, you’ll see the recommendation of your bandwidth 
 
 In this lab, you have used Network Planner to estimate the Microsoft Teams impact on the bandwidth in your network infrastructure.
 
-#### Task 2 - Use Microsoft 365 network connectivity test tool
+### Task 2 - Use Microsoft 365 network connectivity test tool
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
@@ -1108,6 +1094,6 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 In this task, you have used Microsoft 365 network connectivity test tool to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
 
-END OF LAB
+### You have successfully completed this lab. Please click on Next >> to proceed with next lab
 
  

@@ -826,4 +826,4 @@ Now you need to assign the custom Update policy to specific users because it doe
 
 5. Select **Apply** then **Confirm** to assign the custom update policy created in task 1.
 
-### You have successfully completed this lab.
+### You have successfully completed this lab. Please click on Next >> to proceed with next lab
