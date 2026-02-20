@@ -555,9 +555,9 @@ Restrict the Microsoft 365 groups creation to the security group.
 6. Install **Azure AD Preview module**
 	-	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
-		```Powershell
-		Install-Module -Name AzureADPreview
-		```
+	```Powershell
+	Install-Module -Name AzureADPreview
+	```
 
 7. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the 
@@ -565,9 +565,9 @@ Restrict the Microsoft 365 groups creation to the security group.
 	-	**Global admin -** **<inject key="AzureAdUserPassword"></inject>**
 	-	**Password-** **<inject key="AzureAdUserEmail"></inject>**
 
-		```Powershell    
-		Connect-AzureAD
-		```
+	```Powershell    
+	Connect-AzureAD
+	```
 8. Load the Azure AD unified group template, by using the following cmdlet:
 
        
@@ -826,4 +826,4 @@ Now you need to assign the custom Update policy to specific users because it doe
 
 5. Select **Apply** then **Confirm** to assign the custom update policy created in task 1.
 
-END OF LAB
+### You have successfully completed this lab.
