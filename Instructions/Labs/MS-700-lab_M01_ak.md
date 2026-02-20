@@ -72,33 +72,33 @@ The labs in this course will use two virtual machines:
 
 - Select **NO** and Click **ACCEPT**.
 
-![alt text](media/image-2.png)
+	![alt text](media/image-2.png)
 
 - Select **NO** and Click **ACCEPT**.
 
-![alt text](media/image-3.png)
+	![alt text](media/image-3.png)
 
 - Select **Required only** and Click **ACCEPT**.
 
-![alt text](media/image-4.png)
+	![alt text](media/image-4.png)
 
 - Select **NO** and Click **ACCEPT**.
 
-![alt text](media/image-5.png)
+	![alt text](media/image-5.png)
 
 - Select **NO** and Click **ACCEPT**.
   
-![alt text](media/image-6.png)
+	![alt text](media/image-6.png)
 
 - Select **NO** and Click **ACCEPT**.
 
-![alt text](media/image-7.png)
+	![alt text](media/image-7.png)
 
-**Note:** You can connect to either of the Virtual Machines by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
+>>**Note:** You can connect to either of the Virtual Machines by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1**
 
 ![alt text](media/image-1.png)
 
-**Note:** **Perform the same steps as above to skip through the welcome wizard on Client2**
+>>**Note:** **Perform the same steps as above to skip through the welcome wizard on Client2**
 
 #### **2. Review installed applications**
 
@@ -106,7 +106,7 @@ Once you sign in to the VM, Just search for **TEAMS (1)** from the search bar av
 
 - **Microsoft Teams**
 
-![alt text](media/image.png)
+	![alt text](media/image.png)
 
 #### **3. Review Microsoft 365 tenant**
 
@@ -136,9 +136,10 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Ensure that you are connected to the **Client1** VM.
 	
-	**Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1** VM.
+		>>**Note:** You can connect to **Client1** VM by switching to it from your Lab Interface. Please refer to below Screenshot. By Default, you will connect to **Client1** VM.
 	
-	![alt text](media/image-1.png)
+		![alt text](media/image-1.png)
+
 	- Open **Microsoft Edge (1)** on **Client1** VM.
 	- Browse to the **Microsoft 365 admin center (2)** at [**https://admin.microsoft.com/**](https://admin.microsoft.com/).
 
@@ -245,7 +246,7 @@ You will review the available settings for managing Teams in the Teams admin cen
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-	**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
+>>**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
 2. In left navigation of the Teams admin center, select **Teams (1)** > **Manage teams (2)**. You will see the teams in your organization once created.
 
@@ -255,7 +256,7 @@ You will review the available settings for managing Teams in the Teams admin cen
 
 	![alt text](media/14.png)
 
-You can explore other settings to familiarize various controls in the Teams admin center.
+	You can explore other settings to familiarize various controls in the Teams admin center.
 
 You have successfully explored several available menus from the Teams admin center for managing teams and configuring policies in your tenant.
 
@@ -317,14 +318,14 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 		- Microsoft PowerShell - ```Get-Module```
 		-Microsoft Graph PowerShell - ```Get-Module -Name Microsoft.Graph -ListAvailable``` or ```Get-Module -Name MicrosoftTeams```
 
-		**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
+		>>**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
 		![alt text](media/16.png)
 
 	- To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module, enter the following cmdlet and then press **Enter**:
 
-		-Microsoft PowerShell - ```Get-Command -Module MicrosoftTeams```
-   		-Microsoft Graph PowerShell - ```Get-Command -Module Microsoft.Graph.Teams```
+		- Microsoft PowerShell - ```Get-Command -Module MicrosoftTeams```
+   		- Microsoft Graph PowerShell - ```Get-Command -Module Microsoft.Graph.Teams```
 
 	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
 
@@ -359,44 +360,33 @@ You will create a new Microsoft 365 Group named “IT-Department,” and then ad
 
 4. Follow the **Add a group** wizard with the following information:
 
-	- Basics:
+	- **Basics:**
 
 		- Name: **IT-Department**
-
-		- Description: **All staff of the IT-Department**
-
+		- Descrption: **All staff of the IT-Department**
 		- Select **Next**
 
-	- Owners:
+	- **Owners:**
 
 		- Select **+ Assign owners (1)**
-
 		- Search and select **Joni Sherman (2)(3)**
-
 		- Select **Add(1) (4)**, and then select **Next (5)**.
 
 			![alt text](media/18.png)
 
-	- Members:
+	- **Members:**
 
 		- Select **+ Add Members**, and add the following users:
-
 			- Patti Fernandez
-
 			- Allan Deyoung
-
 			- Admit Malik
-
 		- Select **Add(3)**, and then select **Next**.
 
-	- Settings:
+	- **Settings:**
 
 		- Enter **IT-Department** for Group email address.
-
 		- Privacy: **Private**
-
 		- Uncheck **Create a team for this group**.
-
 		- Select **Next**
 
 			![alt text](media/19.png)
@@ -428,7 +418,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 	3. Select **Reset password** from the top, then select **Automatically create a password** and uncheck **Require this user to change their password when they first sign in** and **Reset password**. 
 	4. Use the password under column Password to login.
 
-	**Note**: You might need to download and install the latest Teams, desktop client. If so, select **Update Teams** and follow the installation guideline - Select **Download for desktop** > **Download Teams** **Run**.
+	>>**Note**: You might need to download and install the latest Teams, desktop client. If so, select **Update Teams** and follow the installation guideline - Select **Download for desktop** > **Download Teams** **Run**.
 
 4. In the Teams desktop client, select **Teams** from the left menu.
 
@@ -441,9 +431,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 7. On the **Add members to Teams Rollout (1)** window, enter the following names and select **Add (2)**.
 
 	- Joni Sherman
-
 	- Lynne Robbins
-
 	- Diego Siciliani
 
 		![alt text](media/22.png)
@@ -518,7 +506,7 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - MOD Administrator(admin@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - **ODL User**
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
 
@@ -539,7 +527,7 @@ You are an administrator for your Team’s organization. You need to limit which
 		- Select **Next**
     
        - Settings:
-                - Select **Next**
+            - Select **Next**
 
 	- Finish: Select **Create Group** and then select **Close**
 
@@ -565,22 +553,21 @@ Restrict the Microsoft 365 groups creation to the security group.
 5. Open **Windows PowerShell** and run as Administrator.
 
 6. Install **Azure AD Preview module**
-	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
+	-	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
 
-    ```Powershell
-	Install-Module -Name AzureADPreview
-   	```
+		```Powershell
+		Install-Module -Name AzureADPreview
+		```
 
 7. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the 
  
- Global admin - **<inject key="AzureAdUserPassword"></inject>**
+	-	**Global admin -** **<inject key="AzureAdUserPassword"></inject>**
+	-	**Password-** **<inject key="AzureAdUserEmail"></inject>**
 
-Password- **<inject key="AzureAdUserEmail"></inject>**
-
-```Powershell    
-Connect-AzureAD
-```
+		```Powershell    
+		Connect-AzureAD
+		```
 8. Load the Azure AD unified group template, by using the following cmdlet:
 
        
