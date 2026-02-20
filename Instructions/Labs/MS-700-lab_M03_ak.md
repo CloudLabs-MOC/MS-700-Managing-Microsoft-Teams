@@ -52,27 +52,53 @@ After you complete this lab, you will be able to:
 
 As part of your pilot project for Contoso, you need to modify the **IT-Department** Microsoft 365 group, created in an earlier lab, and add Teams features to it.
 
-1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. Select the **Teams** icon on the taskbar to start the Teams desktop client and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.OnMicrosoft.com).
+2. Select the **Teams** icon on the taskbar to start the Teams desktop client and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-3. The Microsoft Teams desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
+   ![alt text](media/m1.png)
+   
+   ![alt text](media/m2.png)
 
-4. In the left-hand navigation pane, select **Teams**, select **Join or create a team**, and then select **Create team** from the middle of the window.
+3. For the password, please navigate to the Environment tab and use the **User 01 Password** mentioned there.
 
-5. In the **Create a team** dialog, select **More create team options** and then **From group**.
+   ![alt text](media/m3.png)
 
-6. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”**. Wait until the **Creating the team…** process is done.
+4. Enter the **password (1)** and **sign in (2)**.
+   
+   ![alt text](media/m4.png)
+   
+5. The Microsoft Teams desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
 
-8. Select the three dots (**…**) right from the new team in the left pane and select **Manage team**.
+6. In the left-hand navigation pane, select **down arrow (1)**, select **Join team (2)**.
 
-9. Check the team owner and members:
+   ![alt text](media/m5.png)
 
-	- Owners: **Joni Sherman**
+7. Select **Create team** from the middle of the window.
 
-	- Members and guests: **Allan Deyoung** , **MOD Administrator** and **Patti Fernandez**
+   ![alt text](media/m6.png)
 
-10. Leave the Teams desktop client open and continue to the next task.
+8. In the **Create a team** dialog, select **From group**.
+
+   ![alt text](media/m7.png)
+
+9. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”** and hover over it, select **Add team**. Wait until the **Creating the team…** process is done.
+
+   ![alt text](media/m8.png)
+
+10. From the left navigation, click on **See allyour teams (1)**. Select the three dots (**…**) **(2)** right from the new team in the left pane and select **Manage team (3)**.
+
+    ![alt text](media/m9.png)
+
+11. Check the team owner and members:
+
+	- Owners: **Joni Sherman (2)**
+
+	- Members and guests: **Allan Deyoung** , **ODL User** and **Patti Fernandez** **(3)**
+
+      ![alt text](media/m10.png)
+
+12. Leave the Teams desktop client open and continue to the next task.
 
 You have successfully created a new team with the Teams desktop client, by using an existing Microsoft 365 group. Leave the Teams client open and continue with the next task.
 
@@ -82,7 +108,9 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. On the taskbar at the bottom of the page, right select the **Start** button and then select **Windows PowerShell**.
+2. On the taskbar at the bottom of the page, right select the **Start (1)** button and then select **Windows PowerShell (2)**.
+
+   ![alt text](media/m11.png)
 
 3. Run the following cmdlet to connect to Microsoft Teams in your tenant:
 
@@ -90,57 +118,63 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
     Connect-MicrosoftTeams
     ```
 
-4. A **Sign in** dialog box will open. Enter the **UPN** of **Joni Sherman’s** credential provided to you (for example, JoniS@&lt;YourTenant&gt;.onmicrosoft.com) and then select **Next**.
+5. A **Sign in** dialog box will open. Select **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**. and then click **Next**.
 
-5. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** credential provided to you and then select **Sign in**.
+   ![alt text](media/m12.png)
 
-6. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
+6. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** credential provided to you and then select **Sign in**.
 
-    ```powershell
-    New-Team -Displayname "CA-Office" -MailNickName "CA-Office" -Visibility Public
-    ```
+   ![alt text](media/m3.png)
 
-7. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.):
+7. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AlexW@<YourTenant>.OnMicrosoft.com
+    New-Team -DisplayName "Group__CA-OfficeCA01" -MailNickName "Group__CA-OfficeCA01" -Visibility Public
     ```
 
-8. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.):
+8. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.): You can find the Microsoft tenant name in the Environment tab, listed behind Alex Wilber.”
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
+    Get-Team -DisplayName "Group__CA-OfficeCA01" | Add-TeamUser -User AlexW@<YourTenant>.OnMicrosoft.com
     ```
 
-9. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+9. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.): You can find the Microsoft tenant name in the Environment tab, listed behind Allan Deyoung.”
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Support"
+    Get-Team -DisplayName "Group__CA-OfficeCA01" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
     ```
 
-10. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+10. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Recruiting"
+    Get-Team -DisplayName "Group__CA-OfficeCA01" | New-TeamChannel -DisplayName "Support"
     ```
 
-11. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+11. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
 
     ```powershell
-    Get-Team -Displayname "CA-Office" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
+    Get-Team -DisplayName "Group__CA-OfficeCA01" | New-TeamChannel -DisplayName "Recruiting"
     ```
 
-12. Disconnect from the Microsoft Teams environment.  
+12. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+
+    ```powershell
+    Get-Team -DisplayName "Group__CA-OfficeCA01" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
+    ```
+
+13. Disconnect from the Microsoft Teams environment.  
 
     ```powershell
     Disconnect-MicrosoftTeams
     ```
 
-13. Close the PowerShell window.
+14. Close the PowerShell window.
 
-14. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **CA-Office** team, where you can see a private channel below, named "Administration".
+15. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **Group__CA-Office** team, where you can see a private channel below, named "Administration".
 
-15. Close all browser windows and the Teams desktop client.
+    ![alt text](media/m13.png)
+
+16. Close all browser windows and the Teams desktop client.
 
 You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in the context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
@@ -453,27 +487,35 @@ In this exercise, you will configure policies to manage the creation of new priv
 
 The company wants to restrict the use of graphic elements in Teams communication. As a Teams service administrator, you will create a new message policy that prohibits pilot users from using GIF files, memes, and stickers in the Teams chat and channel conversation.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In the left navigation of the Teams admin center, select **Messaging** from the left side navigation, then select **Messaging policies**. 
+2. In the left navigation of the Teams admin center, select **Messaging (2)** from the left side navigation, then select **Messaging policies(3)**.
+
+   ![alt text](media/m21.png)
 
 3. Select **+Add** under **Manage Policies** tab and enter the following
 
-	- **Name**: Regular users without fun stuff
+   ![alt text](media/m22.png)
 
-	- **Description**: Policy to disable giphys, stickers, and memes in conversations
+	- **Name (1)**: Regular users without fun stuff
 
-	- **Giphys in conversations**: Off
+	- **Description (2)**: Policy to disable giphys, stickers, and memes in conversations
 
-	- **Memes in conversations**: Off
+	- **Giphys in conversations (3)**: Off
 
-	- **Stickers in conversations**: Off
+	- **Memes in conversations (4)**: Off
 
-	- Leave the rest of the settings as default. Select **Save**.
+	- **Stickers in conversations (5)**: Off
 
-4. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff**. Then select **Assign users** 
+	- Leave the rest of the settings as default. Select **Save (6)**.
 
-	**Note**: If you didn’t see **Assign users**, select **Manage users** to expand the menu.
+      ![alt text](media/m23.png)
+
+4. Back to the **Messaging policies** overview page, select the checkmark left to **Regular users without fun stuff (1)**. Then select **Assign users (2)**
+
+   ![alt text](media/m24.png)
+
+   **Note**: If you didn’t see **Assign users**, select **Manage users** to expand the menu.
 
 5. Search and select **add** for the following pilot users. Then select **Apply** and **Confirm** when prompted.
 
@@ -483,6 +525,8 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 	- **Diego Siciliani**
 
+      ![alt text](media/m25.png)
+
 **Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you have successfully configured a new messaging policy and assigned it to the pilot users. It will now take some time for the policy to take effect. Continue with the next task.
@@ -491,9 +535,11 @@ In this task, you have successfully configured a new messaging policy and assign
 
 As Teams administrator of Contoso, you will create a private channel named **confidential** in the sales team that is only accessible for some team members.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In left navigation of the Teams admin center, select **Teams** > **Manage teams**.
+2. In the left navigation of the Teams admin center, select **Teams (1)** > **Manage teams (2)**.
+
+   ![alt text](media/m27.png) 
 
 3. Select the **Sales** team > **Channels** tab.
 
@@ -501,23 +547,31 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 	1. Select **+ Add** from the top menu.
 
+       ![alt text](media/m28.png)
+
 	2. In the **Add** window, enter the following information:
 
 		- **Name**: Confidential sales
 
 		- **Description**: Confidential private sales channel
 
-		- **Type**: Private
+		- **Privacy**: Private
 
-		- **Channel owner**: Lynne Robbins
+		- **Team owner**: Lynne Robbins
 
-3. Select **Apply**.
+   3. Select **Apply**.
+  
+      ![alt text](media/m29.png)
 
 5. Check the private channel
 
-	1. Connect to the **Client 2 VM** and browse to the **Teams Web Client** [(https://teams.microsoft.com)](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Connect to the **Client 2 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and navigate to the environment tab to get the password.
+
+       ![alt text](media/m30.png)
 
 	2. Select **Teams**, you should see the new private channel **Confidential sales** with a small padlock icon.
+
+       ![alt text](media/m31.png)
 
 In this task, you learned how to create a private channel in the Microsoft Teams admin center and how to configure and check the access.
 
@@ -527,11 +581,13 @@ In this task, you learned how to create a private channel in the Microsoft Teams
 
 In the past, users stored data at various locations, including third-party storage providers. Recently, the company deployed OneDrive for all users and would like to guide the users to use SharePoint and OneDrive as the primary data storage locations with Box as an alternative for all file collaborations. As the Teams admin, you are asked to deactivate all third-party storage providers except Box in Microsoft Teams to align with the direction.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In left navigation of the Teams admin center, select **Teams** > **Teams settings**.
+2. In left navigation of the Teams admin center, select **Teams (1)** > **Teams settings (2)**.
 
-3. On the **Teams settings** page, go to the **Files** section.
+   ![alt text](media/m32.png)
+
+3. On the **Teams settings** page, go to the **Files (1)** section.
 
 4. Configure the following file sharing and cloud file storage options.
 
@@ -545,7 +601,9 @@ In the past, users stored data at various locations, including third-party stora
 
 	- **Egnyte:** Off
 
-5. Scroll down and select **Save**.
+5. Scroll down and select **Save (3)** and confirm.
+
+   ![alt text](media/m33.png)
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
@@ -555,18 +613,24 @@ In this task, you have learned how to enable or disable third-party storage prov
 
 In this task, you will block the Google Analytics app for all tenants
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In the left navigation of the Teams admin center, select **Teams apps** > **Manage apps**.
+2. In the left navigation of the Teams admin center, select **Teams apps(1)** > **Manage apps(2)**.
 
-3. On the **Manage apps** page, type **Google** in the search box. 
+   ![alt text](media/m35.png)
 
-	![Graphical user interface, application Description automatically generated](media/MS-700-lab_M03_ak_image5.png)
+3. On the **Manage apps** page, type **Google** in the search box and select **Google Analytics Insights**. 
 
-4. In the search result, select **Google Analytics** to open.
+   ![Graphical user interface, application Description automatically generated]![alt text](media/m36.png)
 
-5. Select the slider which reads **Allowed** in the center of the screen. Notice it'll change to **Blocked**.
+4. In **Google Analytics Insights** page click on drop near Action and select **Block App**.
 
+  ![alt text](media/m37.png)
+
+5. On the top, you can notice pop up i.e., Blocked .
+
+   ![alt text](media/m38.png)
+   
 **Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you have learned how to block the Google Analytics app for your tenant.
@@ -580,17 +644,27 @@ As a Teams administrator you need to highlight the apps that are most important 
 
 In the pilot project, the company wants to add **Tasks by Planner and To Do** as the default app for all users. To do this, edit the default org-wide app policy. This task may take some time to propagate throughout the tenant.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
 
+   ![alt text](media/m39.png)
+   
 3. On the **App setup policies** page, Under **Manage Policies,** select on **Global (Org-wide default)** to open the org-wide app policy.
 
+   ![alt text](media/m40.png)
+   
 4. In the **Pinned apps** section, select **Add apps**.
 
-5. From the **Add installed apps** page, type in the search box **Tasks by Planner and To Do** app, mouseover the name and select **Add** twice.
+   ![alt text](media/m41.png)
+   
+5. From the **Add pinned apps** page, type in the search box **Planner** app, mouseover the name and select **Add** twice.
 
-6. Make sure that **Tasks by Planner and To Do** is now listed in the **Pinned apps** section then select **Save** and **Confirm**.
+   ![alt text](media/m42.png)
+
+6. Make sure that **Planner** is now listed in the **Pinned apps** section then select **Save** and **Confirm**.
+
+   ![alt text](media/m43.png)
 
 **Note**: It can take up to 24 hours for the settings to take effect.
 
@@ -598,12 +672,14 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 
 #### Task 2 - Create a custom app setup policy
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (**https://admin.teams.microsoft.com**) as **Joni Sherman** ([**JoniS@&lt;YourTenant&gt;.onmicrosoft.com**](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left navigation of the Microsoft Teams admin center, go to **Teams apps** > **Setup policies**.
 
 3. Select **+** **Add**. 
 
+  ![alt text](media/m44.png)
+  
 4. Enter the following information
 
 	- Name: **Sales team**
@@ -612,11 +688,7 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 	- To install apps for users:
 
 		1. Under **Installed apps**, select **Add apps**.
-		2. In the **Add installed apps** pane, search for the apps you want to automatically install for users when they start Teams. 
-		
-			In this exercise search for **Adobe**, choose **Adobe Acrobat Sign** and select **Add** to add to the **Apps to add** list. 
-			
-			You can now select **Add** to finish adding the app under **Installed apps list.**
+		2. In the **Add installed apps** pane, search for the apps you want to automatically install for users when they start Teams. In this exercise search for **Adobe**, choose **Adobe Acrobat Sign** and select **Add** to add to the **Apps to add** list. You can now select **Add** to finish adding the app under **Installed apps list.**
 
 	- To pin apps:
 
@@ -628,6 +700,8 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 
 5. Select **Save.**
 
+   ![alt text](media/m45.png)
+
 You have now created a new custom app set up policy.
 
 #### Task 3 - Assign a custom app setup policy to users
@@ -636,11 +710,17 @@ You have now created a new custom app set up policy.
 
 2. Select **Sales team** app setup policy.
 
-3. Select **Assign users**.
+  ![alt text](media/m46.png)
+  
+3. Search for **Sales(1)** in the search bar. Select **Sales(2)** and from the drop down click **Assign users (3)**.
+  
+   ![alt text](media/m47.png)
 
 4. In the **Manage users** pane, search for **Alex Wilber**, and then select **Add**.
 
-5. Select **Apply**.
+5. Select **Apply and confirm**.
+
+   ![alt text](media/m48.png)
 
  
 ### **Exercise 5: Test configured policy settings**
@@ -651,7 +731,8 @@ In this exercise, you will test the configured policy settings on a client with 
 
 In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user(Joni Sherman).
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**.
+.
 
 2. In the left-hand navigation pane, select **Chat** > **New Chat** icon.
 
@@ -659,33 +740,32 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 3. In the main pane, enter **Joni Sherman** to start the conversation.
 
+   ![alt text](media/m49.png)
+   
 4. Notice there’s no **giphy**, **memes** and **stickers** icons.
 
 #### Task 2 – Test blocked app and storage providers
 
 In this task, you will test the blocked app.
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**.
 
 2. In the left-hand navigation select **Apps**.
 
 3. Search **Google** from the search box.
 
-4. In the search results select **Google Analytics**. Note the lock icon and the "Request " button. 
+4. In the search results select **Google Analytics Insights**. Note the lock icon and the "Request " button.
 
-5. In the left-hand navigation pane, select **Teams**, go to the **General** channel of the **Sales** team.
-
-6. Select the **files** tab and select **+ Add cloud storage** in the navigation pane below.
-
-	**Note**: You can reload the tab or select … if you didn’t see the option. This option is only for classic Teams.
+   ![alt text](media/m53.png) 
    
-   - For the new lient version of Teams, do the following:
-      	- Select the **files** tab
-      	- Select the **Share** icon
-      	- Select **Copy link**
+5. In the left-hand navigation pane, select **Teams**, go to the **Sales (1)** channel, select **shared (2)**, click on **3 dots (3**and slect **copy link (4)**.
 
-8. Notice that you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
+   ![alt text](media/m51.png)
 
-9. Sign out of Teams and close all open windows.
+6. Notice that you only see SharePoint and Box as options, the cloud file storage settings in Teams settings worked as expected.
+
+   ![alt text](media/m52.png)
+
+7. Sign out of Teams and close all open windows.
 
 END OF LAB
