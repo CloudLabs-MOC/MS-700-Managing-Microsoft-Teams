@@ -554,9 +554,17 @@ Once the sensitivity labels are created and published, users can now assign them
 
 4. For the new Microsoft Teams: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Manage team** from the dropdown list, Thern navigate to the**Settings** tab then select **Edit**.
 
-5. On the **Edit “Teams Rollout” team details** window, select the dropdown menu below Sensitivity and select **Internal**.
+	![alt text](media/67.png)
+
+5. On the **Edit Teams Rollout team details** window, select the dropdown menu below Sensitivity and select **Internal**.
 
 6. Select **Done** to save the changes.
+
+	![alt text](media/68.png)
+
+	>>**Note:** If you do not see the Sensitivity Labels, Please publish the labels in https://purview.microsoft.com/ as ODL user.
+
+	>>![alt text](media/69.png)
 
 You have successfully applied a sensitivity label to an existing team. The configured settings of the Internal label are now applied to the Teams Rollout team. Continue with the next task.
 
@@ -582,11 +590,15 @@ You have successfully tested the sensitivity labels setting to prevent guest acc
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal(https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal(https://compliance.microsoft.com/) as **ODL User**.
 
-2. In the left navigation of the Microsoft Purview Portal, select **Solutions** and then **Data lifecycle management**.
+2. In the left navigation of the Microsoft Purview Portal, select **Solutions (1)** and then **Data lifecycle management (2)**.
 
-3. On the **Data lifecycle management** page, select **Policies**, then **Retention policies**, and select **+ New retention policy** to create a new retention policy. 
+	![alt text](media/70.png)
+
+3. On the **Data lifecycle management** page, select **Policies (1)**, then **Retention policies (2)**, and select **+ New retention policy (3)** to create a new retention policy. 
+
+	![alt text](media/71.png)
 
 4. Follow the **Create retention policy** wizard with the following information:
 
@@ -606,19 +618,24 @@ Teams retention settings are very important for managing the lifecycle of compan
 		- **Skype for Business**: Off
 		- **Exchange public folders**: Off
 		- **Teams channel messages**: On
-		- **Teams chats and Copilot interactions**: Off
+		- **Teams chats**: Off
 		- **Teams private channel messages**: Off
 		- **Yammer community messages**: Off
 		- **Yammer user messages**: Off
 		- Select **Edit** in the **Included** column (under the current *All teams* choice) for the **Teams channel messages** line to open the right-side pane.
+
+			![alt text](media/72.png)
+
 		- Select the checkbox left from **Sales** and select **Done**.
 
-			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image3.png)
+			![alt text](media/73.png)
 
 	4. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page, leave as is and select **Next**.
 
 
-5. In the ** Review and Finish** page, review your settings and select **Submit**.
+5. In the **Review and Finish** page, review your settings and select **Submit**.
+
+	![alt text](media/74.png)
 
 6. Select **Done**. Leave the browser open for the next task.
 
@@ -628,11 +645,13 @@ In this task, you have successfully created a new retention policy named **Sales
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **ODL User**.
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions**, **Data lifecycle management**.
 
 3. On the **Data lifecycle management** page, under **Policies** and then **Retention policies**, select **+New retention policy** to add a new retention policy. 
+
+	![alt text](media/71.png)
 
 4. Follow the **Create retention policy** wizard with the following information:
 
@@ -659,6 +678,9 @@ After configuring a retention policy to protect data from deletion, you also nee
 		- **Yammer community message**: Off
 		- **Yammer user messages**: Off
 		- Select **Edit** in the **Included** column (under the current *All teams* choice) for the **Teams channel messages** line to open the right-side pane.
+
+			![alt text](media/75.png)
+
 		- Select the checkbox left from **Teams Rollout** and select **Done**.
 
 			![Picture 4](media/MS-700-lab_M02_ak_image4.png)
@@ -705,17 +727,27 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **ODL User**.
 
 2. In the left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
+	![alt text](media/76.png)
+
 3. On the **Data loss prevention** page, select the **Policies**, then select **+ Create policy**.
+
+	![alt text](media/77.png)
+
+4. In the **What info do you want to protect?** page, Select **Enterprise applications & device**.
+
+	![alt text](media/78.png)
 
 4. In the **Statrt with a template or create a custom policy** page,
 
-	a. Select **Privacy** under **Categories**, then select the **General Data Protection Regulation (GDPR) Enhanced** template from the **Templates** section.
+	a. Select **Privacy** under **Categories**, then select the **GDPR Enhanced** template from the **Regulations** section.
 
 	b. Select **Next**
+
+	![alt text](media/79.png)
 
 5. In the **Name your DLP policy** page, enter the following information:
 
@@ -743,8 +775,10 @@ According to your organization’s compliance requirements, you need to implemen
 
 	- **Power BI (preview)**: Unselect checkbox
 
+		![alt text](media/80.png)
 
-8. In the **Define policy settings** page, stay with the default selection from the template - **Review and customize default settings from the template** and select **Next**.
+
+8. In the **Define policy settings** page, stay with the default selection from the template - **Create or customize adcanced DLP rules** and select **Next**.
 
 	1. In the **Info to protect** page, leave the default settings and select **Next**.
 
@@ -791,6 +825,8 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	2. Select **Next**
 
+		![alt text](media/81.png)
+
 5. In the **Name your policy** section, enter the following information:
 
 	- **Name**: Credit card data DLP Policy
@@ -809,20 +845,21 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 	- **Teams chat and channel messages**:  Select checkbox
 
-	- **Devices**:  Select checkbox
-
-	- **Instances** :  Select checkbox
-
 	- **On-premises repositories**:  Unselect checkbox
 
 	- **Fabric and Power BI workspaces**:   Unselect checkbox 
 
+		![alt text](media/82.png)
+
 7. In the **Define policy settings** section, stay with the default selection and select **Next**.
 
 
-	1. In the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
-		- **Name**: Credit card numbers found
-		- **Description**: Basic rule for protecting credit card numbers forms being shared in Teams.
+	1. In the **Define policy settings** section, stay with the default selection and select Next.
+
+		i. In the **Customize Advanced DLP rules** section, select **+ Create rule** and enter the following information:
+
+		- **Name:** Credit card numbers found
+		- **Description:** Basic rule for protecting credit card numbers forms being shared in Teams.
 
 	2. Below **Conditions**, 
 		- Select **+ Add condition** and **Content contains**.
@@ -830,13 +867,13 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 		- From the right-side pane, check the box left of **Credit Card Number** and select **Add**.
 		- Leave the high **High confidence** and **Instance count (1)** unchanged.
 
-			![Graphical user interface, application Description automatically generated](media/MS-700-lab_M02_ak_image6.png)
+			![alt text](media/83.png)
 
 	3. Below **Action**, 
 		- Select **+ Add an action** and **Restrict access or encrypt the content in Microsoft 365 locations**.
 		- In the **Restrict access or encrypt the content in Microsoft 365 locations** section select **Block everyone** 
 
-			![Graphical user interface, text, application Description automatically generated](media/MS-700-lab_M02_ak_image8.png)
+			![alt text](media/84.png)
 
 	4. Below **User notification**, 
 		- Select the slider to **On**
@@ -845,14 +882,21 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 		- Select **Customize the policy tip text**.
 		- Enter the following text to the textbox: **Credit card numbers are not allowed to be shared!**
 
+		
+			![alt text](media/85.png)
+
 	5. Below **Incident reports**, 
-		- Set the slider **Send an alert to admins when a rule match occurs** to **Off**.
-		- Select **Save**.
+		- Set the slider **Send an alert to admins when a rule match occurs** to **Off (1)**.
+		- Select **Save (2)**.
+
+			![alt text](media/86.png)
 	
 	6. Review the rule settings and select **Next**.
 
 		
 8. In the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
+
+	![alt text](media/87.png)
 
 9. On the **Review and finish** page, review your settings, select **Submit** then **Done**.
 
@@ -922,28 +966,32 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 3. Create a network plan
 	
-	1. On the left-hand navigation pane, expand **Planning**, and select **Network Planner**.
+	1. On the left-hand navigation pane, expand **Planning (1)**, and select **Network Planner (2)**.
 
-	2. On the **Network planner** page, under **Network plans** tab, select **Add** and create a network plan with the following information.
+	2. On the **Network planner** page, under **Network plans** tab, select **Add (3)** and create a network plan with the following information.
 
-		- Network plan name: **Contoso plan**
-		- Description: **Contoso Teams Network plan**
-		- Select **Apply**.
+		- Network plan name: **Contoso plan (4)**
+		- Description: **Contoso Teams Network plan (5)**
+		- Select **Apply (6)**.
+
+			![alt text](media/88.png)
 
 4. Create a custom personas
 
-	1. On the **Network planner** page, select **Personas** tab, and then select **+ Add**. 
+	1. On the **Network planner (1)** page, select **Personas(3)** tab, and then select **+ Add (4)**. 
 
 	2. On the **Add persona** page, create a custom personas with the following information.
 
-		- Persona name: **Calling only**
-		- Description: **Specialized calling only employees**
-		- Permissions: Turn on **Audio**
-		- Select **Apply**.
+		- Persona name: **Calling only (5)**
+		- Description: **Specialized calling only employees (6)**
+		- Permissions: Turn on **Audio (7)**
+		- Select **Apply (8)**.
+
+			![alt text](media/89.png)
 
 	3. Note the default personas recommended by Microsoft.
 	
@@ -953,45 +1001,51 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 	2. Under **Network sites** tab, select **+ Add network site**. 
 	3. Create a network site for **New York HQ** with the following information.
 
-		- Network site name: **New York HQ site**
-		- Description: **New York HQ site network infrastructure**
-		- Network users: **1000**
-		- Network settings - Subnet: **172.16.0.0**
-		- Network settings - Network range: **16**
-		- Turn **On** the **Express Route** button.
-		- Internet link capacity: **1000**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- Network site name: **New York HQ site (1)**
+		- Description: **New York HQ site network infrastructure (2)**
+		- Network users: **1000 (3)**
+		- Network settings - Subnet: **172.16.0.0 (4)**
+		- Network settings - Network range: **16 (5)**
+		- Turn **On (6)** the **Express Route** button.
+		- Internet link capacity: **1000 (7)**
+		- PSTN egress: choose **Use VoIP only (8)**
+		- Select **Save (9)**.
+
+			![alt text](media/90.png)
 
 	4. Repeat the same steps to create a network site for **Los Angeles office** with the following information.
 
-		- Network site name: **Los Angeles site**
-		- Description: **Los Angeles site network infrastructure**
-		- Network users: **250**
-		- Network settings - Subnet: **192.168.10.0**
-		- Network settings - Network range: **24**
+		- Network site name: **Los Angeles site (1)**
+		- Description: **Los Angeles site network infrastructure (2)**
+		- Network users: **250 (3)**
+		- Network settings - Subnet: **192.168.10.0 (4)**
+		- Network settings - Network range: **24 (5)**
 		- Ensure **Express Route** button is **Off**.
-		- Turn **On** the **Connected to WAN** button.
-		- WAN link capacity: **500**
-		- WAN audio queue size: **100**
-		- WAN video queue size: **200**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- Turn **On (6)** the **Connected to WAN** button.
+		- WAN link capacity: **500 (7)**
+		- WAN audio queue size: **100 (8)**
+		- WAN video queue size: **200 (9)**
+		- PSTN egress: choose **Use VoIP only (10)**
+		- Select **Save (11)**.
+
+			![alt text](media/91.png)
 
 	5. Repeat the same steps to create a network site for **Houston office** with the following information.
 
-		- Network site name: **Houston site**
-		- Description: **Houston site network infrastructure**
-		- Network users: **150**
-		- Network settings - Subnet: **192.168.20.0**
-		- Network settings - Network range: **24**
+		- Network site name: **Houston site (1)**
+		- Description: **Houston site network infrastructure (2)**
+		- Network users: **150 (3)**
+		- Network settings - Subnet: **192.168.20.0 (4)**
+		- Network settings - Network range: **24 (5)**
 		- Ensure **Express Route** button is **Off**.
-		- Turn **On** the **Connected to WAN** button.
-		- WAN link capacity: **400**
-		- WAN audio queue size: **50**
-		- WAN video queue size: **100**
-		- PSTN egress: choose **Use VoIP only**
-		- Select **Save**.
+		- Turn **On (6)** the **Connected to WAN** button.
+		- WAN link capacity: **400 (7)**
+		- WAN audio queue size: **50 (8)**
+		- WAN video queue size: **100 (9)**
+		- PSTN egress: choose **Use VoIP only (10)**
+		- Select **Save (11)**.
+	
+			![alt text](media/92.png)
 
 6. Create a report
 	
@@ -1011,9 +1065,13 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 	3. Select **Generate report**.
 
+		![alt text](media/93.png)
+
 7. Under the **Projected impact of Microsoft Teams** section, review the impact of Microsoft Teams on the Contoso network infrastructure by analyzing the report results on bandwidth needed for audio, video, screen sharing, Microsoft 365 traffic, and PSTN.
 
 8. On the report page, select the **Chart view** at the upper-right hand corner to display report results in different views.
+
+![alt text](media/94.png)
 
 Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
 
@@ -1023,7 +1081,7 @@ In this lab, you have used Network Planner to estimate the Microsoft Teams impac
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **MOD Administrator**. 
+1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **ODL User**. 
 
 2. Select **Sign in** at the top-right corner.
 
@@ -1031,9 +1089,13 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
     You can type in your location by city, state, and country or you can have it detected from the web browser. Then press **Run test**.
 
+	![alt text](media/95.png)
+
 4. Select **Open file** when prompted after downloading the advanced client test application.
 
-	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction. 
+	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction.
+
+	![alt text](media/96.png) 
 
 5. Start the advanced tests client application - **Office 365 Network Onboarding Advanced Tests**.
 
