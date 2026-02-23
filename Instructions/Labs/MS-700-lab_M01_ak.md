@@ -174,6 +174,8 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- On the **Manage admin roles** pane, select **Admin center access** and scroll down to expand **Show all by category** to reveal all available roles.
 
+	- Before proceeding with role assignments, please ensure that all users have the required licenses assigned. kindly assign **Microsoft Teams Enterprise** and **Office 365 E5 (No Teams)** licenses to the respective users before continuing with the role assignment process.
+
 	- Select **Teams Administrator (1)** checkbox then select **Save changes (2)**. You will see the message **Admin roles updated** on the upper part of the pane to confirm the update. Close the **Manage admin roles** pane by selecting the X button on the top right side of the pane.
 
 		![alt text](media/08.png)
@@ -204,7 +206,7 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User**.
 
 2. Update **Alex Wilber’s** location to **Canada**
 
