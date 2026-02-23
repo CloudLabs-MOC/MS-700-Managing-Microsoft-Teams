@@ -56,15 +56,19 @@ Contoso organization has deployed Microsoft 365 and is testing pilot projects on
 
 As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in Teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**
 
-2. In left navigation of the Teams admin center, select **Meetings** > **Meeting policies**.
+2. In left navigation of the Teams admin center, select **Meetings (1)** > **Meeting policies (2)**.
 
-3. Select the **Global (Org-wide default)** policy under **Manage policies**.
+3. Select the **Global (Org-wide default) (4)** policy under **Manage policies (3)**.
 
-4. Turn **Off** the **Meeting recording** setting under the **Recording & transcription** section.
+   ![alt text](media/100.png)
 
-5. Select **Save** and **Confirm**.
+4. Turn **Off (1)** the **Meeting recording** setting under the **Recording & transcription** section.
+
+5. Select **Save (2)** and **Confirm**.
+
+   ![alt text](media/101.png)
 
 You have successfully modified the Global (Org-wide default) meeting policy and disabled the recording functionality for meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -72,19 +76,23 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**.
 
-2. Select **Calendar** from the left navigation pane.
+2. Select **Calendar (1)** from the left navigation pane.
 
-3. Select **Meet Now** > **Start meeting** from the upper right corner.
+3. Select **Meet Now (2)** > **Start meeting (3)** from the upper right corner.
+
+   ![alt text](media/102.png)
 
 4. Select **Join now** to start the meeting.
 
 5. Close **Invite people to join your window** by selecting **X** on the upper right corner, if prompted.
 
-6. In the meeting window, select … for **More actions**.
+6. In the meeting window, select … for **More actions (1)**.
 
-7. Notice that you can’t select **Start recording**.
+7. Notice that you can’t select **Start recording (2)**.
+
+	![alt text](media/103.png)
 
 8. End the meeting.
 
@@ -92,13 +100,15 @@ In this task, you need to sign in to the second client and create a meeting with
 
 Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In left navigation of the Teams admin center, select **Meetings** > **Meetings settings**.
+2. In left navigation of the Teams admin center, select **Meetings (1)** > **Meetings settings (2)**.
 
-3. On the **Meetings settings** page, turn **Off** the option **Anonymous users can join a meeting** in the participants section.
+3. On the **Meetings settings** page, turn **Off (3)** the option **Anonymous users can join a meeting** in the participants section.
 
-4. Select **Save** and **Confirm**.
+4. Select **Save (4)** and **Confirm**.
+
+	![alt text](media/104.png)
 
 You have successfully modified the meeting settings for all users in your tenant and disabled anonymous access to any meetings. It will take some time for the changes to be applied to the users, so you will continue with the next task and test the configured settings at the end of this lab.
 
@@ -106,7 +116,7 @@ You have successfully modified the meeting settings for all users in your tenant
 
 Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
-1. Connect to the **Client 1 VM** and browse to the **[Microsoft Teams admin center (https://admin.teams.microsoft.com)](https://admin.teams.microsoft.com)** as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to the **[Microsoft Teams admin center (https://admin.teams.microsoft.com)](https://admin.teams.microsoft.com)** as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**
 
 2. In the left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
 
@@ -114,19 +124,21 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 4. On the **Live events policies\Add** page, enter the following information:
 
-	- Add live events policy Name: **Management Live Events**
+	- Add live events policy Name: **Management Live Events (1)**
 
-	- Description: **Recording Restriction for live events organized by managers**
+	- Description: **Recording Restriction for live events organized by managers (2)**
 
-	- Live events scheduling: **On**
+	- Live events scheduling: **On (3)**
 
-	- Transcription for attendees: **Off**
+	- Transcription for attendees: **Off (4)**
 
-	- Who can join scheduled live events: **Everyone in the organization**
+	- Who can join scheduled live events: **Everyone in the organization (5)**
 
-	- Who can record an event: **Organizer can record**
+	- Who can record an event: **Organizer can record (6)**
 
-5. Select **Save**.
+5. Select **Save (7)**.
+
+	![alt text](media/105.png)
 
 6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Manage Users** select **Assign users** from the top menu.
 
@@ -134,15 +146,19 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 8. Select **Apply** then **Confirm** to assign the policy to the selected user.
 
+	![alt text](media/106.png)
+
 You have successfully created a custom Live event policy and assigned it to a user.
 
 #### Task 5 – Create a webinar
 
 The IT department wants to host a company-wide meeting to answer employees’ questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting.
 
-1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman**  (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In the Teams Calendar, select the dropdown menu **New meeting** and select **Webinar**. The **New webinar | Microsoft Teams** tab will open.
+2. In the Teams Calendar, select the dropdown menu **New (1)** and select **Webinar (2)**. The **New webinar | Microsoft Teams** tab will open.
+
+	![alt text](media/107.png)
 
 3. Enter the **Basic info** and then select **Save and send invites**:
 
@@ -155,6 +171,8 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 	**Note**: When you save the event, invites will be sent to presenters and co-organizers automatically. 
 
+	![alt text](media/108.png)
+
 4. Review the **Meeting options**, the **Presenter bios** and **Theming**, by selecting the options on the left hand side navigation. Press **Save** if prompte first.
 
 5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration**. Enter the following information and then select **Save**: 
@@ -163,8 +181,9 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 	- Under **Form** select **+ Add field** > **Custom question** > **Text input** and enter the following in the textbox below **Custom question**:
 
 		*What is your question about the new reporting system?*
-		 
 
+		![alt text](media/109.png)
+		 
 6. Preview the registration site by selecting **View draft**. The preview of the registration page opens in a new tab. After reviewing the site, close the tab.
 
 7. Publish the Registration site and share the link:
@@ -172,6 +191,8 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and then selet **Publish** to activate the Webinar registration site.
 
 	2. Copy the **Share link**, close the **All set and ready to share** window and the **IT Office Hours | Microsoft Teams** tab.
+
+		![alt text](media/110.png)
 
 	3. Navigate back to **Teams** on the left hand side navigation. 
 	
@@ -181,7 +202,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 		
 8. Test the meeting registration. 
 
-	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **MOD Administrator**.
+	1. Stay in the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **ODL User**.
 
 	2. Go to the **General** channel of the **IT Department** team and select the registration link that you posted.
 
@@ -191,6 +212,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 	
 	5. Sign out and close all browser windows.
 
+		![alt text](media/111.png)
 
 You have successfully created a webinar with a custom registration form.
 
@@ -204,11 +226,13 @@ Your organization could purchase Microsoft Teams Rooms that provide a complete m
 
 During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create a configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez** (PattiF@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez**  **<inject key="PattiFernandez" enableCopy="true" style="color:blue" />**.
 
-2. In **Teams admin center**, on the left navigation pane, select **Phones** under **Teams devices**.
+2. In **Teams admin center**, on the left navigation pane, select **Phones (1)** under **Teams devices (2)**.
 
-3. On the **Phones** page, select **Configuration profiles** tab, and then select **+ Add**.
+3. On the **Phones** page, select **Configuration profiles (3)** tab, and then select **+ Add (4)**.
+
+	![alt text](media/112.png)
 
 4. Enter the following information for the new configuration profile:
 
@@ -232,6 +256,8 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Time format: **12 Hours (AM/PM)**
 
+		![alt text](media/113.png)
+
 6. Under **Device settings** configure following settings:
 
 	- Display screen saver: **On, Timeout 1 minute**
@@ -242,6 +268,8 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 	- Power Saving: **On**
 
+		![alt text](media/114.png)
+
 7. Under **Network settings**, configure following settings:
 
 	- DHCP enabled: **On**
@@ -249,6 +277,10 @@ During the planning phase of Teams Phones devices in your organization, you want
 	- Logging enabled: **Off**
 
 	- Device’s default admin password: **Pass@word1**
+
+		![alt text](media/115.png)
+
+		![alt text](media/116.png)
 
 8. Once you complete with the configuration profile settings, select **Save**.
 
@@ -262,33 +294,40 @@ Your organization has ordered devices for Microsoft Teams room. In the meantime,
 
 **Note:** You may choose to use the Exchange Online PowerShell to complete this task, however, you will need to first install the new Exchange PowerShell module.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User**.
 
 2. Create a Microsoft 365 resource account for Teams Rooms.
-	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources** > **Rooms & equipment**. If you don't find **Resources**, search for **Rooms & equipment** from the top search bar and select.
+	1. In left navigation of the Microsoft 365 admin center, select **Show all** > **Resources (1)** > **Rooms & equipment (2)**. If you don't find **Resources**, search for **Rooms & equipment** from the top search bar and select.
 
-	2. On the Rooms & equipment screen, select the **+ Add resource** option to add a new resource account. 
+	2. On the Rooms & equipment screen, select the **+ Add resource (3)** option to add a new resource account. 
 
 	3. On the **Add resource** page, follow the wizard with the following information. 
 
-		* Resource type: **Room**.
-		* Name: **NY-TeamsRoom1** 
-		* Email: Enter **NY-TeamsRoom1** inside the Email text box and verify your tenant id in the domains
+		* Resource type: **Room (4)**.
+		* Name: **NY-TeamsRoom1 (5)** 
+		* Email: Enter **NY-TeamsRoom1 (4)** inside the Email text box and verify your tenant id in the domains
 
-	4. Select **Save**.
+	4. Select **Save (7)**.
+
+		![alt text](media/118.png)
+
 	5. Select **Edit booking options**, keep the default settings with the following checked.
 
 		* Allow repeating meetings
 		* Automatically decline meetings outside of the limits
 		* auto-accept meeting requests
 
+			![alt text](media/117.png)
+
+			![alt text](media/119.png)
+
 3. Assign the license to the Teams Rooms account.
 
 	1. In the **Microsoft 365 admin center** from the left navigation pane, select **Users**, and then choose **Active Users**.
 
-	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Licenses and Apps** tab.
+	2. Select the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com account, and then select the **Manage product liscenses** tab.
 
-	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Microsoft Teams Rooms Pro** and then select **Save changes**.
+	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **the availble licenses** and then select **Save changes**.
 
 4. Sign out and close all open windows.
 
@@ -439,13 +478,17 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman**.
 
-3. On the left navigation pane, select **Voice**, and then **Calling policies** below.
+3. On the left navigation pane, select **Voice (1)**, and then **Calling policies (2)** below.
 
-4. Select the **Global (Org-wide default)** policy to edit the default settings.
+4. Select the **Global (Org-wide default) (3)** policy to **edit (4)** the default settings.
+
+	![alt text](media/120.png)
 
 5. In **Calling policies\Global**, use the dropdown menu to the right of **Voicemail for inbound calls** and select **Off**. Then select **Save** and **Confirm**.
+
+	![alt text](media/121.png)
 
 6. Back on the **Calling policies** page, select **+ Add** on the top pane, to create a new policy.
 
@@ -459,9 +502,13 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 8. Select **Save** to create the new policy.
 
-9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users** policy and then select **Manage Users** then **Assign users** from the top pane.
+9. Back on the **Calling policies** page, use the checkbox left to the **Voicemail enabled pilot users (1)** policy and then select **Manage Users** then **Assign users (2)** from the top pane.
 
-10. In the right-side pane, type into the search field **Megan** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
+	![alt text](media/122.png)
+
+10. In the right-side pane, type into the search field **Diego** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
+
+	![alt text](media/123.png)
 
 11. Select **Apply** to assign the policy to the selected users, then **Confirm**.
 
@@ -481,7 +528,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
 
@@ -497,19 +544,31 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 6. Select **Save**.
 
+	![alt text](media/125.png)
+
+>>Note: If you get a pemission issue creating a queue. Please attach the **User Administrator role** to Joni Sherman from  `https://admin.cloud.microsoft/` as a OLD User.
+
 7. Download the file **Alarm03.wav** from the following link and save to the Downloads folder.
 
    [https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav](https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav)
+
+	![alt text](media/126.png)
 
 8. On the left navigation pane, select **Voice** and **Call queues**, to create a call queue.
 
 9. Select **+ Add** from the top pane.
 
+10. Click on **Classic Setup**.
+
+	![alt text](media/127.png)
+
 10. Enter the following information:
 
-	- Call queue name: **Contoso Call Queue Resource Account**
+	- Call queue name: **Contoso Call Queue Resource Account (1)**
 
-	- You haven’t added any resource accounts yet: Select **Add**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
+	- You haven’t added any resource accounts yet: Select **Add (2)**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue (3))**, and then select **Add (4)**.
+
+		![alt text](media/128.png)
 	
 	- Language: **English (United States)**, then select **Next**.
 
@@ -519,23 +578,31 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Music on hold: **Play default music**, then select **Next**.
 
+		![alt text](media/129.png)
+
 	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane. Select **Next**.
 
-	- Routing method: **Round robin**
+		![alt text](media/130.png)
 
-	- Presence-based routing: **Off**
+	- Routing method: **Round robin (1)**
 
-	- Call agents can opt out of taking calls: **On**
+	- Presence-based routing: **Off (2)**
 
-	- Call agent alert time: **30 seconds**, select **Next**.
+	- Call agents can opt out of taking calls: **On (3)**
 
-	- Under the **Exception handling** page, expand **Call overflow** and et Maximum calls in the queue: **50**
+	- Call agent alert time: **30 seconds (4)**, select **Next (5)**.
+
+		![alt text](media/131.png)
+
+	- Under the **Exception handling** page, expand **Call overflow** and Maximum calls in the queue: **50**
 
 	- When the maximum number of calls is reached: **Disconnect**
 
 	-  Expand **Call timeout** and set Maximum wait time: **5 minutes**
 
 	- When call times out: **Disconnect**
+
+		![alt text](media/132.png)
 
 11. Select **Submit** to create the new call queue.
 
@@ -549,25 +616,29 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
 
-4. On the **Resource accounts** page, select **+ Add** from the top pane.
+4. On the **Resource accounts** page, select **+ Add (1)** from the top pane.
 
 5. On the right pane, enter the following information:
 
-	- Display name: **Contoso Auto Attendant**
+	- Display name: **Contoso Auto Attendant (2)**
 
-	- Username: **pilot_autoattendant1**
+	- Username: **pilot_autoattendant1 (3)**
 
-	- Resource Account Type: **Auto attendant**
+	- Resource Account Type: **Auto attendant (5)**
 
-6. Select **Save**.
+6. Select **Save (6)**.
+
+	![alt text](media/123.png)
 
 7. On the left navigation pane, select **Voice** and then **Auto attendants** below.
 
 8. Select **+ Add** from the top pane, to create a new auto-attendant.
+
+9. Click on **classic Setup** 
 
 9. Enter the following information:
 
@@ -585,19 +656,23 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 10. Select **Next**.
 
+	![alt text](media/134.png)
+
 11. On the **Call flow** page, configure the following:
 
-	- First, play a greeting message: Select **Add a greeting message**
+	- First, play a greeting message: Select **Add a greeting message (1)**
 
-	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
+	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator. (2)**
 
-	- Then under Call routing options select **Redirect call**
+	- Then under Call routing options select **Redirect call (3)**
 
-	- Redirect to: **Voice app**
+	- Redirect to: **Voice app (4)**
 
-	- Search by resource account: **Contoso Call Queue Resource Account**
+	- Search by resource account: **Contoso Call Queue Resource Account (5)**
 
-12. Select **Next**.
+12. Select **Next (6)**.
+
+	![alt text](media/135.png)
 
 13. On the **Busines and after hours** page, configure the following:
 
@@ -612,6 +687,8 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 	- Call routing options: **Disconnect**
 
 14. Select **Next**.
+
+	![alt text](media/136.png)
 
 15. On the **Holiday call settings** page, select **Next**.
 
@@ -635,7 +712,7 @@ Note: As we have not made any calls in this environment, reports will be blank a
 
 #### Task 1 – Explore call analytics for users, calls, and meetings
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left-hand navigation pane, select **Users&gt;Manage users**, and then select a user.
 
@@ -653,7 +730,7 @@ CQD is designed to help Microsoft Teams administrators and network engineers mon
 
 In this task you navigate to Call Quality Dashboard
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left-hand navigation pane, select **Analytics & reports** then **Call Quality Dashboard**.
 
@@ -667,6 +744,6 @@ In this task you navigate to Call Quality Dashboard
 
 In this exercise you have learnt how to access and navigate call analytics and Call Quality Dashboard.
 
-END OF LAB
+You have Successfully Completed the lab
 
  
