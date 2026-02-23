@@ -334,11 +334,11 @@ After activating sensitivity labels for groups, you will now create three sensit
 	>>**Note:** If the General Label does not exist please create a new label
 	
 	a. In the **Name &amp; description** section, enter the following information:
-		- **Name** : Leave unchanged
-		- **Display name** : General
-		- **Description for users** : Leave unchanged
-		- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
-    		Then select **Next**.
+	- **Name** : Leave unchanged
+	- **Display name** : General
+	- **Description for users** : Leave unchanged
+	- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
+		Then select **Next**.
 
 	![alt text](media/51.png)
 
@@ -382,10 +382,10 @@ After activating sensitivity labels for groups, you will now create three sensit
 	
 	a. In the **label details** section, under the **Provide basic details for this label** page, enter the following information:
 
-	-	**Name**: Internal
-	- 	**Display name**: Internal
-	-	**Description for users**: Internal information with sharing protection
-	-	**Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
+	- **Name**: Internal
+	- **Display name**: Internal
+	- **Description for users**: Internal information with sharing protection
+	- **Description for admins**: Internal information with moderate encryption, marking and sharing restriction settings activated
 
 	b. In the **Scope** section, under the **Define the scope for this label** page, leave the marked checkboxes as is and Click on **Next**
 
@@ -486,9 +486,9 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	i. In the **External sharing & conditional access** section, under the **Define external sharing and conditional access settings** page: 
 
-	-	Select **Control external sharing from labeled SharePoint sites (1)** and select **Only people in your organization (2)**.
-	-	Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites (3)** and select **Block access (4)**
-	-	Click on **Next (5)**
+	- Select **Control external sharing from labeled SharePoint sites (1)** and select **Only people in your organization (2)**.
+	- Select **Use Microsoft Entra Conditional Access to protect labeled SharePoint sites (3)** and select **Block access (4)**
+	- Click on **Next (5)**
 
 		![alt text](media/65.png)
 
