@@ -509,7 +509,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 10. In the right-side pane, type into the search field **Diego** then select **add**. Repeat the same steps for **Alex, Joni and Lynne**.
 
 	![alt text](media/123.png)
-	
+
 11. Select **Apply** to assign the policy to the selected users, then **Confirm**.
 
 In this task, you have disabled voicemail for all users in the organizations, and then you have created a calling policy that will enable voicemail for several users.
@@ -528,7 +528,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
 
@@ -544,19 +544,31 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 6. Select **Save**.
 
+	![alt text](media/125.png)
+
+>>Note: If you get a pemission issue creating a queue. Please attach the **User Administrator role** to Joni Sherman from  `https://admin.cloud.microsoft/` as a OLD User.
+
 7. Download the file **Alarm03.wav** from the following link and save to the Downloads folder.
 
    [https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav](https://github.com/MicrosoftLearning/MS-700-Managing-Microsoft-Teams/blob/master/Instructions/Labs/media/Alarm03.wav)
+
+	![alt text](media/126.png)
 
 8. On the left navigation pane, select **Voice** and **Call queues**, to create a call queue.
 
 9. Select **+ Add** from the top pane.
 
+10. Click on **Classic Setup**.
+
+	![alt text](media/127.png)
+
 10. Enter the following information:
 
-	- Call queue name: **Contoso Call Queue Resource Account**
+	- Call queue name: **Contoso Call Queue Resource Account (1)**
 
-	- You haven’t added any resource accounts yet: Select **Add**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue**, and then select **Add**.
+	- You haven’t added any resource accounts yet: Select **Add (2)**. On the right-side pane, search for **Contoso**, select **Add** from **Contoso Call Queue (3))**, and then select **Add (4)**.
+
+		![alt text](media/128.png)
 	
 	- Language: **English (United States)**, then select **Next**.
 
@@ -566,23 +578,31 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 	- Music on hold: **Play default music**, then select **Next**.
 
+		![alt text](media/129.png)
+
 	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane. Select **Next**.
 
-	- Routing method: **Round robin**
+		![alt text](media/130.png)
 
-	- Presence-based routing: **Off**
+	- Routing method: **Round robin (1)**
 
-	- Call agents can opt out of taking calls: **On**
+	- Presence-based routing: **Off (2)**
 
-	- Call agent alert time: **30 seconds**, select **Next**.
+	- Call agents can opt out of taking calls: **On (3)**
 
-	- Under the **Exception handling** page, expand **Call overflow** and et Maximum calls in the queue: **50**
+	- Call agent alert time: **30 seconds (4)**, select **Next (5)**.
+
+		![alt text](media/131.png)
+
+	- Under the **Exception handling** page, expand **Call overflow** and Maximum calls in the queue: **50**
 
 	- When the maximum number of calls is reached: **Disconnect**
 
 	-  Expand **Call timeout** and set Maximum wait time: **5 minutes**
 
 	- When call times out: **Disconnect**
+
+		![alt text](media/132.png)
 
 11. Select **Submit** to create the new call queue.
 
@@ -596,25 +616,29 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
 
-4. On the **Resource accounts** page, select **+ Add** from the top pane.
+4. On the **Resource accounts** page, select **+ Add (1)** from the top pane.
 
 5. On the right pane, enter the following information:
 
-	- Display name: **Contoso Auto Attendant**
+	- Display name: **Contoso Auto Attendant (2)**
 
-	- Username: **pilot_autoattendant1**
+	- Username: **pilot_autoattendant1 (3)**
 
-	- Resource Account Type: **Auto attendant**
+	- Resource Account Type: **Auto attendant (5)**
 
-6. Select **Save**.
+6. Select **Save (6)**.
+
+	![alt text](media/123.png)
 
 7. On the left navigation pane, select **Voice** and then **Auto attendants** below.
 
 8. Select **+ Add** from the top pane, to create a new auto-attendant.
+
+9. Click on **classic Setup** 
 
 9. Enter the following information:
 
@@ -632,19 +656,23 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 10. Select **Next**.
 
+	![alt text](media/134.png)
+
 11. On the **Call flow** page, configure the following:
 
-	- First, play a greeting message: Select **Add a greeting message**
+	- First, play a greeting message: Select **Add a greeting message (1)**
 
-	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator.**
+	- Type in: **Welcome. The person you called is currently on vacation, your call will be redirected to an operator. (2)**
 
-	- Then under Call routing options select **Redirect call**
+	- Then under Call routing options select **Redirect call (3)**
 
-	- Redirect to: **Voice app**
+	- Redirect to: **Voice app (4)**
 
-	- Search by resource account: **Contoso Call Queue Resource Account**
+	- Search by resource account: **Contoso Call Queue Resource Account (5)**
 
-12. Select **Next**.
+12. Select **Next (6)**.
+
+	![alt text](media/135.png)
 
 13. On the **Busines and after hours** page, configure the following:
 
@@ -659,6 +687,8 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 	- Call routing options: **Disconnect**
 
 14. Select **Next**.
+
+	![alt text](media/136.png)
 
 15. On the **Holiday call settings** page, select **Next**.
 
@@ -682,7 +712,7 @@ Note: As we have not made any calls in this environment, reports will be blank a
 
 #### Task 1 – Explore call analytics for users, calls, and meetings
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left-hand navigation pane, select **Users&gt;Manage users**, and then select a user.
 
@@ -700,7 +730,7 @@ CQD is designed to help Microsoft Teams administrators and network engineers mon
 
 In this task you navigate to Call Quality Dashboard
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com)).
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
 2. In the left-hand navigation pane, select **Analytics & reports** then **Call Quality Dashboard**.
 
@@ -714,6 +744,6 @@ In this task you navigate to Call Quality Dashboard
 
 In this exercise you have learnt how to access and navigate call analytics and Call Quality Dashboard.
 
-END OF LAB
+You have Successfully Completed the lab
 
  
