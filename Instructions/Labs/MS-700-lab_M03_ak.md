@@ -204,7 +204,11 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 9. Scroll to the right and select the **Consent** button for the permissions **Team.Create**.
 
+   ![alt text](media/m55.png)
+
 10. Another **Permissions requested** page appears. Select **Accept**.
+
+    ![alt text](media/m16.png)
 
 11. If you are redirected to the Microsoft Developers site, navigate back to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
 
@@ -347,6 +351,8 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 17. After a moment, you should see a green bar with a checkmark and **Accepted** inside again.
 
+    ![alt text](media/m54.png)
+    
 18. Open the Teams Desktop App. Select **Teams** from the left-side pane and inspect the newly created teams “**Early Adopters"** and”**Tech Meetings**".
 
 You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
