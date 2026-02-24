@@ -800,7 +800,7 @@ After completing this task, you have created a DLP Policy from the template “G
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **ODL User**.
 
 2. In left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 

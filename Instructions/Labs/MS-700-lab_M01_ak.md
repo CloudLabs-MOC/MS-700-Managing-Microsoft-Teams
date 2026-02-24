@@ -564,8 +564,8 @@ Restrict the Microsoft 365 groups creation to the security group.
 7. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the 
  
-	-	**Global admin -** **<inject key="AzureAdUserPassword"></inject>**
-	-	**Password-** **<inject key="AzureAdUserEmail"></inject>**
+	-	**Global admin -** **<inject key="AzureAdUserEmail"></inject>**
+	-	**Password-** **<inject key="AzureAdUserPassword"></inject>**
 
 	```Powershell    
 	Connect-AzureAD
