@@ -204,7 +204,7 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **MOD Administrator**.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User**.
 
 2. Update **Alex Wilber’s** location to **Canada**
 
@@ -562,8 +562,8 @@ Restrict the Microsoft 365 groups creation to the security group.
 7. Connect to your AAD tenant.
  Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the 
  
-	-	**Global admin -** **<inject key="AzureAdUserPassword"></inject>**
-	-	**Password-** **<inject key="AzureAdUserEmail"></inject>**
+	-	**Global admin -** **<inject key="AzureAdUserEmail"></inject>**
+	-	**Password-** **<inject key="AzureAdUserPassword"></inject>**
 
 	```Powershell    
 	Connect-AzureAD
