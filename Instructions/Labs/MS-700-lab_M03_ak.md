@@ -1,10 +1,12 @@
 
 
-# **Lab 03: Manage teams, collaboration and app settings for Teams**
+# Lab 03: Manage teams, collaboration and app settings for Teams
 
-# **Student lab answer key**
+## Estimated Duration: 110 Minutes
 
-## **Lab Scenario**
+# Student lab answer key
+
+## Lab Scenario
 
 In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership, and recovering deleted teams.
 
@@ -62,7 +64,7 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 3. For the password, please navigate to the Environment tab and use the **User 01 Password** mentioned there.
 
-   ![alt text](media/m3.png)
+   ![alt text](media/L3-e1-03.png)
 
 4. Enter the **password (1)** and **sign in (2)**.
    
@@ -70,33 +72,33 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
    
 5. The Microsoft Teams desktop client will start. If a **Bring your team together**, or **Get the Teams mobile app** window appears, close both windows.
 
-6. In the left-hand navigation pane, select **down arrow (1)**, select **Join team (2)**.
+6. In the left-hand navigation pane in **Chat**, select **Teams and Channels (1)** and **...** icon **(2)** under select **Your teams and channel (3)**, top right corner select **Create team (4)**.
 
-   ![alt text](media/m5.png)
+   ![alt text](media/L3-e1-06.png)
 
-7. Select **Create team** from the middle of the window.
+7. In the **Create a team dialog**, select **More create team options** and then select From group.
 
-   ![alt text](media/m6.png)
+  	![alt text](media/L3-e3-04.png)
 
-8. In the **Create a team** dialog, select **From group**.
+8. In the **Create a team** dialog, select **From group**. In the **Which Microsoft 365 group do you want to use?** dialog, on the **IT-Department card**, select **Add team**. Wait until the **Creating the team…** process completes.
 
-   ![alt text](media/m7.png)
+  	![alt text](media/L3-e3-08.png)
 
 9. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”** and hover over it, select **Add team**. Wait until the **Creating the team…** process is done.
 
    ![alt text](media/m8.png)
 
-10. From the left navigation, click on **See allyour teams (1)**. Select the three dots (**…**) **(2)** right from the new team in the left pane and select **Manage team (3)**.
+10. Select the **three dots (…)** right from the new team **IT-Department** in the left pane and select **Manage team**.
 
-    ![alt text](media/m9.png)
+	![alt text](media/L3-e3-09.png)
 
 11. Check the team owner and members:
 
-	- Owners: **Joni Sherman (2)**
+	- Owners: **Joni Sherman (3)**
 
-	- Members and guests: **Allan Deyoung** , **ODL User** and **Patti Fernandez** **(3)**
+	- Members and guests: **Allan Deyoung** , **ODL User** and **Patti Fernandez (5)**
 
-      ![alt text](media/m10.png)
+      ![alt text](L3-e3-10.png)
 
 12. Leave the Teams desktop client open and continue to the next task.
 
@@ -104,7 +106,7 @@ You have successfully created a new team with the Teams desktop client, by using
 
 #### Task 2 - Create a team by using PowerShell
 
-In this task, you will create via the Teams PowerShell a new team **“CA-Office”**. You will create the public channels **“Support”** and **“Recruiting”**. Additionally, you will create the private channel **“Administration”** via Teams PowerShell.
+In this task, you will create via the Teams PowerShell a new team **“Group_CA-OfficeCA01_”**. You will create the public channels **“Support”** and **“Recruiting”**. Additionally, you will create the private channel **“Administration”** via Teams PowerShell.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -124,42 +126,48 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
 
 6. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** credential provided to you and then select **Sign in**.
 
-   ![alt text](media/m3.png)
+   ![alt text](media/L3-e1-03.png)
 
-7. Type the following cmdlet to the PowerShell window to create the new team **CA-Office**:
+   ![alt text](media/L3-e1-t2-02.png)
+
+   ![alt text](media/L3-e1-t2-03.png)
+
+7. Type the following cmdlet to the PowerShell window to create the new team **Group_CA-OfficeCA01_**:
 
     ```powershell
-    New-Team -DisplayName "Group__CA-OfficeCA01" -MailNickName "Group__CA-OfficeCA01" -Visibility Public
+    New-Team -DisplayName "Group_CA-OfficeCA01_" -MailNickName "Group_CA-Office01_" -Visibility Public
     ```
 
 8. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.): You can find the Microsoft tenant name in the Environment tab, listed behind Alex Wilber.”
 
     ```powershell
-    Get-Team -DisplayName "Group__CA-OfficeCA01" | Add-TeamUser -User AlexW@<YourTenant>.OnMicrosoft.com
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
     ```
 
 9. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.): You can find the Microsoft tenant name in the Environment tab, listed behind Allan Deyoung.”
 
     ```powershell
-    Get-Team -DisplayName "Group__CA-OfficeCA01" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
     ```
 
-10. Create a channel **Support** in the **CA-Office** team by using the following cmdlet:
+10. Create a channel **Support** in the **Group_CA-OfficeCA01_** team by using the following cmdlet:
 
     ```powershell
-    Get-Team -DisplayName "Group__CA-OfficeCA01" | New-TeamChannel -DisplayName "Support"
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | New-TeamChannel -DisplayName "Support"
     ```
 
-11. Create another channel **Recruiting** in the **CA-Office** team by using the following cmdlet:
+	![alt text](L3-e1-t3-ps-support-1.png)
+
+11. Create another channel **Recruiting** in the **Group_CA-OfficeCA01_** team by using the following cmdlet:
 
     ```powershell
-    Get-Team -DisplayName "Group__CA-OfficeCA01" | New-TeamChannel -DisplayName "Recruiting"
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | New-TeamChannel -DisplayName "Recruiting"
     ```
 
-12. Create a private channel **Administration** in the **CA-Office** team by using the following cmdlet:
+12. Create a private channel **Administration** in the **Group_CA-Office01_** team by using the following cmdlet:
 
     ```powershell
-    Get-Team -DisplayName "Group__CA-OfficeCA01" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | New-TeamChannel -DisplayName "Administration" -MembershipType Private
     ```
 
 13. Disconnect from the Microsoft Teams environment.  
@@ -170,13 +178,13 @@ In this task, you will create via the Teams PowerShell a new team **“CA-Office
 
 14. Close the PowerShell window.
 
-15. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **Group__CA-Office** team, where you can see a private channel below, named "Administration".
+15. Open the Teams desktop client from the taskbar. On the left side pane with all teams, Joni is a member of the new **Group_CA-OfficeCA01_** team, where you can see a private channel below, named "Administration".
 
-    ![alt text](media/m13.png)
+    ![alt text](media/L3-e1-t3-overview.png)
 
 16. Close all browser windows and the Teams desktop client.
 
-You have successfully created a team named **CA-Office** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in the context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
+You have successfully created a team named **Group_CA-Office01_** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in the context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
 #### Task 3 - Create a team by using Graph API
 
@@ -200,7 +208,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 8. Select **Modify permissions (Preview)** from the top pane.
 
-	![Graphical user interface, text, application, email Description automatically generated](media/MS-700-lab_M03_ak_image1.png)
+	![Graphical user interface, text, application, email Description automatically generated](media/L3-e1-t3-01.png) 
 
 9. Scroll to the right and select the **Consent** button for the permissions **Team.Create**.
 
@@ -216,15 +224,11 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
     ```json
 	{
-
-	"template@odata.bind":"https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
-
-	"displayName": "Early Adopters",
-
-	"description": "The Early Adopters Workspace.",
-
-	"visibility": "Public" 
-
+  	"template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+ 	 "displayName": "Group_EarlyAdopters_",
+ 	 "mailNickname": "Group_EarlyAdopters_",
+  	 "description": "The Early Adopters Workspace.",
+  	"visibility": "Public"
 	}
 	```
 
@@ -236,116 +240,62 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
     ```json
 	{
-
-	"template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
-
-	"visibility": "Public",
-
-	"displayName": "Tech Meetings",
-
-	"description": "Space for all employees participating in the champions program, who want exchange each other about the newest features.",
-
-	"channels": [
-
+  	"template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+ 	 "visibility": "Public",
+  	 "displayName": "Group_TechMeetings_",
+  	 "mailNickname": "Group_TechMeetings_",
+  	 "description": "Space for all employees participating in the champions program, who want exchange each other about the newest features.",
+  	 "channels": [
 	{
-
-	"displayName": "Welcome Hall",
-
-	"isFavoriteByDefault": true,
-
-	"description": "Channel for introducing yourself as a member of the tech meeting participants."
-
-	},
-
-	{
-
-	"displayName": "Tech Lunch and Dinner",
-
-	"isFavoriteByDefault": true,
-
-	"description": "When will be the next tech lunch and who has any suggestions where to meet."
-
-	},
-
-	{
-
-	"displayName": "Q and A",
-
-	"description": "Questions and answers: Teams users giving a helping hand to other users.",
-
-	"isFavoriteByDefault": true
-
-	},
-
-	{
-
-	"displayName": "Issues and Feedback 🐞",
-
-	"description": "Leave some feedback for the IT-Staff.",
-
-	"isFavoriteByDefault": false
-
-	}
-
-	],
-
-	"memberSettings": {
-
-	"allowCreateUpdateChannels": true,
-
-	"allowDeleteChannels": false,
-
-	"allowAddRemoveApps": true,
-
-	"allowCreateUpdateRemoveTabs": true,
-
-	"allowCreateUpdateRemoveConnectors": true
-
-	},
-
-	"guestSettings": {
-
-	"allowCreateUpdateChannels": true,
-
-	"allowDeleteChannels": false
-
-	},
-
-	"funSettings": {
-
-	"allowGiphy": true,
-
-	"giphyContentRating": "Moderate",
-
-	"allowStickersAndMemes": true,
-
-	"allowCustomMemes": true
-
-	},
-
-	"messagingSettings": {
-
-	"allowUserEditMessages": true,
-
-	"allowUserDeleteMessages": true,
-
-	"allowOwnerDeleteMessages": true,
-
-	"allowTeamMentions": true,
-
-	"allowChannelMentions": true
-
-	},
-
-	"discoverySettings": {
-
-	"showInTeamsSearchAndSuggestions": true
-
-	}
-
-	}
+      "displayName": "Welcome Hall",
+      "isFavoriteByDefault": true,
+      "description": "Channel for introducing yourself as a 	 member of the tech meeting participants."
+   	},
+    {
+      "displayName": "Tech Lunch and Dinner",
+      "isFavoriteByDefault": true,
+      "description": "When will be the next tech lunch and who has any suggestions where to meet."
+    },
+    {
+      "displayName": "Q and A",
+      "description": "Questions and answers: Teams users giving a helping hand to other users.",
+      "isFavoriteByDefault": true
+    },
+    {
+      "displayName": "Issues and Feedback",
+      "description": "Leave some feedback for the IT-Staff.",
+      "isFavoriteByDefault": false
+    }
+ 	 ],
+ 		"memberSettings": {
+    	"allowCreateUpdateChannels": true,
+    	"allowDeleteChannels": false,
+    	"allowAddRemoveApps": true,
+    	"allowCreateUpdateRemoveTabs": true,
+    	"allowCreateUpdateRemoveConnectors": true
+ 	 },
+ 	 "guestSettings": {
+     "allowCreateUpdateChannels": true,
+     "allowDeleteChannels": false
+  	},
+  	"funSettings": {
+    "allowGiphy": true,
+    "giphyContentRating": "Moderate",
+    "allowStickersAndMemes": true,
+    "allowCustomMemes": true
+ 	 },
+ 	 "messagingSettings": {
+    "allowUserEditMessages": true,
+    "allowUserDeleteMessages": true,
+    "allowOwnerDeleteMessages": true,
+    "allowTeamMentions": true,
+    "allowChannelMentions": true
+  	},
+ 	 "discoverySettings": {
+    "showInTeamsSearchAndSuggestions": true
+ 	 }
+		}
 	```
-
 
 16. Select **Run** **query** from the upper right of the page.
 
@@ -363,31 +313,49 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
 
-2. Select **Teams** from the left-side pane and select the **...** icon next to Teams and click on **Your teams and channels**.
+2. Select **Teams** from the left-side pane and select the **Manage Teams**
 
 3. Archive the **Sales** team
 
 	1. Select the checkmark left from the **Sales** team and select **Archive** from the top pane.
 
+		![](media/L3-e1-t4-01.png)
+
 	2. Select the checkbox of **Make the SharePoint site read-only for team members** and select **Archive**.
 
+		![](media/L3-e1-t4-02.png)
+
 	3. The **Status** column should now have changed to **Archived**, written in orange color. Leave the browser open and proceed. If you have problems with the **Sales** team - archive another team (you can undo this action in the unarchive step).
+
+		![](media/L3-e1-t4-03.png)
 
 4. Check the archived team
 
 	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
 
-	2. Select Teams and then select the **...**, then select **Your teams and channels**.
+	2. Select Teams and channnels then select the **...**, then select **Your teams and channels**.
 
-	3. Expand **Archived** section, and select **Sales** team. You can see the **Sales** team under the **Hidden teams** section. 
+	1. In the **Your teams and channels** page, select **3 more** and filter by **Archived Teams**. The **Sales** team appears with an archive icon. 
 
-	4. Select **General** channel under the **Sales** team, notice the **New conversation** option is not available.
+		![alt text](media/L3-e1-t4-04.png)
+
+		![alt text](L3-e1-t4-05-1.png)
+
+	3. The **Sales team** appears with an archive icon. 
+
+		![alt text](L3-e1-t4-06.png)
+
+	4. Select the **Sales team**, and then select the **Sales channel**. At the bottom of the conversation pane, confirm the **Post in channel** option is not available.
+
+		![alt text](media/L3-e1-t4-07.png)
 
 5. Unarchive the **Sales** team
 
 	1. Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman**.
 
 	2. Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
+
+		![alt text](media/L2-e1-t4-08.png)
 
 6. Check the unarchived team
 
@@ -411,19 +379,25 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 2. In the left-hand navigation pane of the Teams web client, select the three dots (…) right from the **Sales** team and select **Delete the team** from the list.
 
+	![alt text](media/t5-01.png)
+
 3. In the **Delete the Sales team**, select **I understand that everything will be deleted**. and select **Delete team**.
+
+	![alt text](media/t5-02.png)
 
 4. Restore group
 
 	1.Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
 
-	2. On the left navigation pane, select **Identity* > **Groups**.
+	2. On the left navigation pane, select **Identity** > **Groups**.
 
 	3. On the **Groups** page, select **Deleted groups** in the left side pane.
 
 	4. Now you can see all deleted groups, including the **Sales** group.
 
 	5. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
+
+		![alt text](media/t5-03.png)
 
 5. Check the restored group.
 
@@ -432,6 +406,8 @@ In this task, you will delete one of the teams created in the previous lesson an
 	2. The **Sales** team appears in the list of teams again. Press **F5** to refresh the page if needed.
 
 	3. Select the three dots (…) right from the team name and select **Manage team**. You can see the owner and all members again in the **Members** tab.
+
+		![alt text](media/t5-06.png)
 
 **Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
 
@@ -445,11 +421,15 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
-3. On the **Groups | All groups** page, search and select **CA-Office** group.
+3. On the **Groups | All groups** page, search and select **Group_CA-OfficeCA01_** group.
 
-4. On the **CA-Office** page, select **Properties** from the left-hand navigation pane.
+	![alt text](media/t6-01.png)
 
-5. Change the **Membership type** from **Assigned** to **Dynamic User**.
+4. On the **CA-Office** page, select **Properties (1)** from the left-hand navigation pane.
+
+5. Change the **Membership type (2)** from **Assigned** to **Dynamic User (3)**.
+
+	![alt text](media/t6-02.png)
 
 6. Select **Add dynamic query** below **Dynamic user members**.
 
@@ -471,15 +451,21 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 9. Select **Save** twice.
 
+	![alt text](media/t6-03.png)
+
 	A warning message is displayed, that the membership will change according to the new dynamic membership rules. Select **Yes** to confirm the message.
 
-11. Select **Overview** in the left-hand navigation pane of the **CA-Office** group window.
+11. Select **Overview** in the left-hand navigation pane of the **Group_CA-OfficeCA01_** group window.
 
 12. In the Overview window, locate **Dynamic rule processing status** field.
+
+	![alt text](media/t6-11.png)
 
 	Wait and refresh your browser, until the status says **Succeeded**. It may take several minutes for the change to be processed.
 
 13. Then select **Members** in the left-hand navigation pane and then select **Refresh**. Verify that **Alex Wilber** is in the list of members, but that **Allan Deyoung** has been removed from the group.
+
+	![alt text](media/t6-12.png)
 
 14. Select Owners from the left-hand navigation pane and verify, that Joni is still the Owner of the group, even if she does not match the dynamic group criteria.
 
@@ -495,7 +481,7 @@ The company wants to restrict the use of graphic elements in Teams communication
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In the left navigation of the Teams admin center, select **Messaging (2)** from the left side navigation, then select **Messaging policies(3)**.
+2. In the left navigation of the Teams admin center, Scroll down and click on **Show all** . Select **Messaging (2)** from the left side navigation, then select **Messaging policies(3)**.
 
    ![alt text](media/m21.png)
 
@@ -553,7 +539,7 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 	1. Select **+ Add** from the top menu.
 
-       ![alt text](media/m28.png)
+       ![alt text](media/L3-e2-t2-01.png)
 
 	2. In the **Add** window, enter the following information:
 
@@ -566,8 +552,9 @@ As Teams administrator of Contoso, you will create a private channel named **con
 		- **Team owner**: Lynne Robbins
 
    3. Select **Apply**.
+
+		![alt text](media/L3-e2-t2-02.png)
   
-      ![alt text](media/m29.png)
 
 5. Check the private channel
 
@@ -631,7 +618,7 @@ In this task, you will block the Google Analytics app for all tenants
 
 4. In **Google Analytics Insights** page click on drop near Action and select **Block App**.
 
-  ![alt text](media/m37.png)
+   ![alt text](media/m37.png)
 
 5. On the top, you can notice pop up i.e., Blocked .
 
@@ -640,7 +627,6 @@ In this task, you will block the Google Analytics app for all tenants
 **Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you have learned how to block the Google Analytics app for your tenant.
-
 
 ### **Exercise 4: Create and manage app setup policies**
 
@@ -684,7 +670,7 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 
 3. Select **+** **Add**. 
 
-  ![alt text](media/m44.png)
+  	![alt text](media/m44.png)
   
 4. Enter the following information
 
@@ -693,20 +679,26 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 	- User pinning: **On**
 	- To install apps for users:
 
-		1. Under **Installed apps**, select **Add apps**.
-		2. In the **Add installed apps** pane, search for the apps you want to automatically install for users when they start Teams. In this exercise search for **Adobe**, choose **Adobe Acrobat Sign** and select **Add** to add to the **Apps to add** list. You can now select **Add** to finish adding the app under **Installed apps list.**
+		1. Under **Pinned apps**, select **Add apps**.
+
+		2. In the **Add pinned apps** pane, search for the apps you want to automatically install for users when they start Teams. 
+		
+		3. In the **Add pinned apps** pane, in the search box, type **Adobe**, and then next to **Adobe Acrobat Sign**, select **Select**.
+			
+		4. Select **Add** to add the app to the **Pinned apps** list.
 
 	- To pin apps:
 
-		1. Under **Pinned apps**, select **Add apps**.
+		1. Under **Pinned apps**, select **+ Add apps**.
 
-		2. In the **Add pinned apps** pane, search for **Viva Goals** and then select **Add**. 
+		2. In the **Add pinned apps** pane, in the search box, type **Viva Goals**, and then next to **Viva Goals**, select **Select**. 
 
-		3. Select **Save.**  
+		3. Select **Add**. 
 
 5. Select **Save.**
 
-   ![alt text](media/m45.png)
+	![alt text](e4-t2-01.png)
+  
 
 You have now created a new custom app set up policy.
 
@@ -716,7 +708,7 @@ You have now created a new custom app set up policy.
 
 2. Select **Sales team** app setup policy.
 
-  ![alt text](media/m46.png)
+   ![alt text](media/m46.png)
   
 3. Search for **Sales(1)** in the search bar. Select **Sales(2)** and from the drop down click **Assign users (3)**.
   
@@ -764,7 +756,7 @@ In this task, you will test the blocked app.
 
    ![alt text](media/m53.png) 
    
-5. In the left-hand navigation pane, select **Teams**, go to the **Sales (1)** channel, select **shared (2)**, click on **3 dots (3**and slect **copy link (4)**.
+5. In the left-hand navigation pane, select **Teams**, go to the **Sales (1)** channel, select **shared (2)**, click on **3 dots (3)**and select **copy link (4)**.
 
    ![alt text](media/m51.png)
 
@@ -774,4 +766,10 @@ In this task, you will test the blocked app.
 
 7. Sign out of Teams and close all open windows.
 
-END OF LAB
+### You have successfully completed this lab. 
+
+“For support, contact: cloudlabs-support@spektrasystems.com” and Live chat - https://cloudlabs.ai/labs-support 
+ 
+### Now, click on **Next >>** from the lower right corner to move on to the next page.
+
+![](media/Next.png)

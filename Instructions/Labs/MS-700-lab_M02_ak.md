@@ -2,6 +2,8 @@
 
 # **Lab 02: Prepare the environment for a Microsoft Teams deployment**
 
+## Estimated Duration: 120 Minutes
+
 # **Student lab answer key**
 
 ## **Lab Scenario**
@@ -69,11 +71,11 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
 
-2. In the left navigation of the Teams admin center, select **Users** > **Guest access**.
+2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
 3. On the **Guest access** page, check if **Guest Access** is enabled. If not, select **On**.
 
-	![alt text](media/35.png)
+	![alt text](media/e1-t1-01.png)
 
 4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
@@ -131,7 +133,11 @@ As a part of your system administrator role, you need to review access to resour
 
 	In left navigation of the Entra admin center,  type and select **Identity Governance** > and select **Access Reviews** and select **+ New access** review. Follow the wizard with the following information:
 
-	![alt text](media/40.png)
+	![alt text](media/e1-t4-01.png)
+
+	On the Create an **access review page**, under **Choose an Access Review template**, select **Select** under **Review access to a resource type**
+
+	![alt text](media/e1-t4-02.png)
 
 	1. On the **Review type** tab:
 	
@@ -140,12 +146,19 @@ As a part of your system administrator role, you need to review access to resour
 		* In the **Scope** section, ensure **Guest users only** is selected.
 		* Select **Next: Reviews**.
 
+			![alt text](media/e1-t4-03.png)
+
+
 	2. On the **Reviews** tab:
 	 
 		* In the **Select reviewers** section, select **Group owner(s)**.* In the **Review recurrence** section, select **Weekly** and keep rest as default. 
 		* Select on **Next: Settings**.
 
+			![alt text](media/e1-t4-04.png)
+
 	3. On the **Settings** tab, leave the settings as default. Select on **Next: Review+Create** > **Create**. 
+
+		![alt text](media/e1-t4-05.png)
 
 3. Review the access review dashboard from Azure AD.
 
@@ -153,9 +166,15 @@ As a part of your system administrator role, you need to review access to resour
 
 	2. Wait for a few minutes, when the **Status** of the report shows as **Active**, select the name of the report - **Review guest access across Microsoft 365 groups**.
 
+		![alt text](media/e1-t4-06.png)
+
 	3. On the **Review guest access across Microsoft 365 groups | Overview** page, select **Group_Afterwork_** under the group name.
 
+		![alt text](media/e1-t4-07.png)
+
 	4. On the **Access review details | Overview** page, you can see there is one user shown under **Not reviewed** category. 
+
+		![alt text](media/e1-t4-08.png)
 
 4. Review the access review and approve the guest user. 
 
@@ -213,47 +232,51 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
 
 	![alt text](media/43.png)
 
-3. Connect to your AAD tenant.
+3. Install the **Microsoft Graph Beta** module if not already installed. Enter `Y` and press **Enter** to confirm installation from an untrusted repository.
 
-Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the Global admin - ODL User.
-  
-```PowerShell
-Connect-AzureAD
-```
-   
-4. Fetch the current group settings for the Azure AD organization.
-   
-	```PowerShell
-	$Setting = Get-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where -Property DisplayName -Value "Group.Unified" -EQ).id
+	```powershell
+   Install-Module Microsoft.Graph.Beta
 	```
    
-5. Enable the Microsoft Identity Protection (MIP) support in your configuration:
-    
-	```PowerShell   
-	$Setting["EnableMIPLabels"] = "True"
+4. Connect to your Microsoft Entra ID tenant.
+
+	Connect to Microsoft Graph with the required scopes. Sign in as **ODL User** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+
+	```powershell
+   	 Connect-MgGraph -Scopes "Directory.ReadWrite.All"
 	```
    
-6. To verify the new configuration, run the following cmdlet:
+5. Load the existing directory setting for unified groups:
    
-	```PowerShell 
-    $Setting.Values
+	```powershell
+   	$Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq (Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }).Id }
+	```
+   
+6.  Enable Microsoft Information Protection (MIP) label support in your configuration:
+
+	```powershell
+   	$params = @{
+       Values = @(
+           @{ Name = "EnableMIPLabels"; Value = 	"True" }
+      	 )
+   		}
+   		Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
 	```
 
-	![alt text](media/44.png)
+7.  To verify the new configuration, run the following cmdlet:
 
-7. Then save the changes and apply the settings:
-
-	```PowerShell 
-	Set-AzureADDirectorySetting -Id $Setting.Id -DirectorySetting $Setting
+	```powershell
+   	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
 	```
 
-**Note:** If there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
+Verify that **EnableMIPLabels** is now **True**.
 
-8. Disconnects the current session from an Azure Active Directory tenant and closes the PowerShell window.
+8. Disconnect the current session from Microsoft Graph and close the PowerShell window:
 
-	```PowerShell	
-    Disconnect-AzureAD
+	```powershell
+  	 Disconnect-MgGraph
 	```
+
 	![alt text](media/45.png)
 
 You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
