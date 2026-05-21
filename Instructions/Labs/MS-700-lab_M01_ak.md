@@ -1,12 +1,14 @@
-# **Lab 01: Manage collaboration and communiction with Microsoft Teams**
+# Lab 01: Manage collaboration and communiction with Microsoft Teams
 
-## **Microsoft 365 user interface**
+## Estimated Duration: 100 Minutes
+
+## Microsoft 365 user interface
 
 Given the dynamic nature of Microsoft cloud tools, you may experience user interface (UI) changes that were made following the development of this training content. This will manifest itself in UI changes that do not match up with the detailed instructions presented in this lab manual.
 
 The CloudLabs team will update this training course as soon as any such changes are brought to our attention. However, given the dynamic nature of cloud updates, you may run into UI changes before this training content is updated. **If this occurs, you will have to adapt to the changes and work through them in the lab exercises as needed.**
 
-## **Lab Scenario**
+## Lab Scenario
 
 In the labs, of this course, you will assume the role of Joni Sherman, a Teams Administrator. You are asked to ensure the required Teams admin roles are assigned to your pilot team members and check license assignment to users. As part of the Microsoft Teams rollout in M365 Organization, you need to make sure the pilot team members are well versed with the usage of Teams admin center, its menus and PowerShell cmdlets to handle day to day administrative tasks. You have implemented Microsoft 365 in a virtualized lab environment already and were commissioned to test the creation Microsoft 365 Groups from the M365 admin center and new teams using Teams desktop and web clients. You will also enable access to explore Teams Preview features using Teams update policy. Once the pilot team completes exploring and testing the features in Teams admin center and Microsoft 365 admin center, you need to guide them to follow best practices in creating and configuring naming and expiration policies for the groups and teams while enforcing the restriction on the creation of teams. 
 
@@ -24,7 +26,7 @@ You have just started the pilot project, and you’ve already got two virtual ma
 
 - Diego Siciliani **<inject key="DiegoSiciliani" enableCopy="true" style="color:blue" />** **Regular pilot user**
 
-## **Objectives**
+## Objectives
 
 After you complete this lab, you will be able to:
 
@@ -50,17 +52,17 @@ After you complete this lab, you will be able to:
 
 - Enable access to Teams Preview features
 
-## **Lab Setup**
+## Lab Setup
 
-- **Estimated Time:** 100 minutes.
+- Estimated Time: 100 minutes.
 
-## **Instructions**
+## Instructions
 
-### **Before you start**
+### Before you start
 
 The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
 
-#### **1. Sign in to the lab virtual machines**
+### 1. Sign in to the lab virtual machines
 
 The labs in this course will use two virtual machines:
 
@@ -100,7 +102,7 @@ The labs in this course will use two virtual machines:
 
 >>**Note:** **Perform the same steps as above to skip through the welcome wizard on Client2**
 
-#### **2. Review installed applications**
+### 2. Review installed applications
 
 Once you sign in to the VM, Just search for **TEAMS (1)** from the search bar available on the taskbar, and verify following applications have been installed:
 
@@ -108,7 +110,7 @@ Once you sign in to the VM, Just search for **TEAMS (1)** from the search bar av
 
 	![alt text](media/image.png)
 
-#### **3. Review Microsoft 365 tenant**
+### 3. Review Microsoft 365 tenant
 
 Besides two VMs, you will also be provided with a Microsoft 365 tenant with the following highlights:
 
@@ -124,11 +126,11 @@ Besides two VMs, you will also be provided with a Microsoft 365 tenant with the 
 
 ![alt text](media/image-8.png)
 
-### **Exercise 1: Prepare Teams admin roles and licenses**
+### Exercise 1: Prepare Teams admin roles and licenses
 
 In the first exercise, you will assign required administrative roles to users and check license assignments for the Teams license. To perform these tasks, you will use default tenant global admin.
 
-#### **Task 1 - Assign Teams admin roles to users**
+#### Task 1 - Assign Teams admin roles to users
 
 In this task, you will use the default global admin to sign in to the Microsoft 365 admin center and assign several Teams admin roles to different users. This task is crucial for later tasks and exercises as you will perform most of the tasks in the context of Joni Sherman’s account.
 
@@ -230,6 +232,8 @@ In this task, you will check the license assignment of all users participating i
 
 	- Scroll down the list of all apps, and verify **Microsoft Teams** is selected.
 
+		![alt text](media/e1-t2-03.png)
+
 4. You can repeat the same steps to check other users’ licenses. Do not change their locations.
 
 You have successfully validated that all Users participating in the pilot own Teams licenses and are ready to start working with Teams. You have also changed the location of Alex Wilber to Canada, as a preparation for a later task. Continue with the next task.
@@ -275,6 +279,8 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 2. Open **Windows PowerShell (1)** and **run as Administrator (2)**.
 
 	- Select **Start** and search for **Windows PowerShell (Admin)**, then right select **Run as administrator**. 
+
+		![alt text](media/e2-t2-02.png)
 
 3. Install **Microsoft Teams PowerShell module**
 
@@ -417,8 +423,18 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 	
 	1. Login to **Microsoft 365 Admin Center** as **ODL User**. 
 	2. On the **Users &gt; Active users** page, select the name of **Alex Wilber**. 
-	3. Select **Reset password** from the top, then select **Automatically create a password** and uncheck **Require this user to change their password when they first sign in** and **Reset password**. 
+
+		![alt text](media/e3-t2-03.png)
+
+	3. Select **Reset password** from the top, then select **Automatically create a password** and uncheck **Require this user to change their password when they first sign in** and **Reset password**.
+
+		![alt text](media/e3-t2-04.png) 
+
+		![alt text](media/e3-t2-05.png)
+
 	4. Use the password under column Password to login.
+
+	
 
 	>>**Note**: You might need to download and install the latest Teams, desktop client. If so, select **Update Teams** and follow the installation guideline - Select **Download for desktop** > **Download Teams** **Run**.
 
@@ -460,9 +476,13 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
-4. Select **Teams** from the upper-left corner.
+4. In the left navigation pane, select the ellipsis (…) next to **Teams and channels** or **See all your teams** , and then select **Your teams and channels** and click on **Create team** on top right-corner, select **Create team**
+
+	![alt text](media/e3-t3-01.png)
 
 5. Select + at the top left > **Create team** >Enter the team name **Sales** > Enter anything you want for **Description** > Select Team type to **Private** > Enter **Sales** in Name the first channel. Select **Create**.
+
+	![alt text](media/e3-t3-02.png)
 
 6. On the **Add members to Sales** window, enter the following names and select **Add** > **Close**.
 
@@ -470,7 +490,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 The newly created team is displayed in the list of your teams. You have successfully created a new team with the Teams web client.
 
-### **Exercise 4: Implement lifecycle management and governance for Microsoft Teams**
+### Exercise 4: Implement lifecycle management and governance for Microsoft Teams
 
 Your organization has started the planning process for Microsoft 365 services adoption. You are assigned a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating **Microsoft 365 groups expiration policies**, configuring **Microsoft 365 Group creation policy permissions**, configuring and testing **Microsoft 365 Groups naming policies**.
 
@@ -494,6 +514,8 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 
 	- Right from **Enable expiration for the Office 365 groups**, select **Selected**.
 
+		![alt text](media/e4-t1-04.png)
+
 	- Select **+ Add** to open the **Select groups** right-side pane.
 
 	- In the **Select groups** pane, type **Teams Rollout** into the textbox and select the group.
@@ -501,6 +523,8 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 	- Use the **Select** button on the lower end of the right-side pane to apply the policy to the **Selected group**.
 
 	- Back on the **Groups | Expiration** page, select **Save**.
+
+		![alt text](media/e4-t1-05.png)
 
 You have successfully created a new expiration policy and configured the **Teams Rollout** team to expire after 90 days. If the team doesn’t have an owner after 90 days, Joni Sherman will be notified about the expiration.
 
@@ -550,56 +574,66 @@ Restrict the Microsoft 365 groups creation to the security group.
    
 **Please note:** Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
 
-**Please note:** The Microsoft Graph PowerShell commands for this task needs to be added. Please proceed to use the Microsoft PowerShell commands below. 
+**Please note:** The **AzureADPreview** module is no longer functional on this tenant as the AAD Graph API has been deprecated. Complete all steps below using **Microsoft Graph PowerShell** only.
 
 5. Open **Windows PowerShell** and run as Administrator.
 
-6. Install **Azure AD Preview module**
-	-	In the PowerShell window, enter the following cmdlet and press **Enter**. Enter **Y** and press **Enter** to confirm the installation of an untrusted repository.
+6. Install the **Microsoft Graph Beta** module. Enter `Y` and press **Enter**
+   to confirm installation from an untrusted repository.
 
-	```Powershell
-	Install-Module -Name AzureADPreview
+   ```powershell
+    Install-Module Microsoft.Graph.Beta
 	```
 
-7. Connect to your AAD tenant.
- Enter the following cmdlet in the PowerShell window and press **Enter**. In the Sign-in window, sign in as the 
- 
-	-	**Global admin -** **<inject key="AzureAdUserEmail"></inject>**
+8. Connect to Microsoft Graph with the required scopes. Sign in as
+   **ODL User**(admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+
+   -	**Global admin -** **<inject key="AzureAdUserEmail"></inject>**
 	-	**Password-** **<inject key="AzureAdUserPassword"></inject>**
 
-	```Powershell    
-	Connect-AzureAD
+	```powershell
+    Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
 	```
-8. Load the Azure AD unified group template, by using the following cmdlet:
-
-       
-        $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
 	
-9. Check if an Azure AD setting is already existing and load it, if yes. If not, create a blank Azure AD setting object. Run the following cmdlet to populate the "$Setting" variable:
+9. Load the unified group directory setting template:
 
-       
-        if(!($Setting = Get-AzureADDirectorySetting | Where {$_.TemplateId -eq $Template.Id})) {$Setting = $Template.CreateDirectorySetting()}
+	```powershell
+   $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+	```  
 
-10. Run the following cmdlet to modify the group creation setting for your tenant with the "EnableGroupCreation" attribute:
+10. Check whether a directory setting already exists for this template. If not,
+    create one:
 
-        
-        $Setting["EnableGroupCreation"] = "False"
+	```powershell
+    $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
+    if (-not $Setting) {
+        $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
+    }
+	```
 	
-11. Run the following cmdlet to add the just created security group **GroupCreators** as a permitted group to create groups, by their ObjectID:
+11. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
 
+	```powershell
+    $params = @{
+        Values = @(
+            @{ Name = "EnableGroupCreation"; Value = "false" }
+            @{ Name = "GroupCreationAllowedGroupId"; Value = (Get-MgGroup -Filter "displayName eq 'GroupCreators'").Id }
+        )
+    }
+
+    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+	```
        
-        $Setting["GroupCreationAllowedGroupId"] = (Get-AzureADGroup -SearchString "GroupCreators").objectid
-       
-12. Review the changes you have just configured with the following command:
+12. Review the applied settings and confirm the values are correct:
 
-        
-        $Setting.Values
+	```powershell
+    (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+	```
 
-13. Save the changes and apply the setting:
+Verify that the output shows:
+-  **EnableGroupCreation** → false
+-  **GroupCreationAllowedGroupId** → populated with a GUID
 
-        
-        New-AzureADDirectorySetting -DirectorySetting $Setting
-       
     **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 	
 14. Test the newly configured settings.
@@ -617,28 +651,39 @@ Restrict the Microsoft 365 groups creation to the security group.
 
 16. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
     
-17. Load the Azure AD unified group template, by using the following cmdlet:
+17. Load the existing directory setting:
 
-     
-        $Template = Get-AzureADDirectorySettingTemplate | Where {$_.DisplayName -eq "Group.Unified"}
+	```powershell
+    $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
+	```  
  
-18.	Create a blank Azure AD tenant settings object:
+18.	Reset group creation to allow all users:
 
-      
-        $Setting = $Template.CreateDirectorySetting()
+	```powershell
+	$params = @{
+        Values = @(
+            @{ Name = "EnableGroupCreation"; Value = "true" }
+            @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
+        )
+    }
+    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+	```  
 	
-19. Apply the configured settings, to revert previous changes:
-         
-        
-        Set-AzureADDirectorySetting -Id (Get-AzureADDirectorySetting | where {$_.DisplayName -eq "Group.Unified"}).id -DirectorySetting $Setting
- 
-20.   In the PowerShell window, enter the following cmdlet to disconnect the current session from your Azure Active Directory tenant.
+19. Verify the revert was applied:
 
-   
-    Disconnect-AzureAD
+	```powershell
+	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+	```  
+         
+ Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
+
+20. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
+
+	```powershell
+	Disconnect-MgGraph
+	```
 	
 21. Close the PowerShell window and continue to the next task.
-	
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
@@ -654,7 +699,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 4. Configure **Blocked words**
 
-    1. Under the **Blocked words** tab on the **Groups | Naming policy (** page, select **Download (4)** to download a sample file. 
+    1. Under the **Blocked words** tab on the **Groups | Naming policy** page, select **Download (4)** to download a sample file. 
 
 		![alt text](media/27.png)
     
@@ -709,9 +754,13 @@ You need to test the newly created naming policy to see its effects in your pilo
    
 	Below the entered name, you can see the configured prefix and suffix for new teams.
 
+	![alt text](media/e4-t4-04.png)
+
 5. Select **Create** to create the new team.
 
 6. Add **Lynne Robbins** to the team member.
+
+	![alt text](media/e4-t4-05.png)
 
 7. Review the name of the newly created team.
 
@@ -727,7 +776,11 @@ You can remove the naming policy after the test. In the following task, you will
 
 3. Navigate to the **Group naming policy** tab.
 
-5. Select **Delete policy** at the top ribbon > **Yes**.
+5. Select **Delete policy** at the top ribbon > click **No**.
+
+	> **Note:** Don't **delete the naming policy** where it is used in upcoming lab exercises.
+
+	![alt text](media/e4-t5-01.png)
 
 #### Task 6 – Manage policy packages
 
@@ -807,6 +860,8 @@ In this exercise, you will configure users to explore and evaluate upcoming feat
 	- Show preview features: select **On for everyone** 
 	- Select **Apply** 
 
+		![alt text](media/e5-t1-01.png)
+
 You now completed creating a custom **Teams Update policy.**
  
 
@@ -828,4 +883,12 @@ Now you need to assign the custom Update policy to specific users because it doe
 
 5. Select **Apply** then **Confirm** to assign the custom update policy created in task 1.
 
-### You have successfully completed this lab. Please click on Next >> to proceed with next lab
+	![alt text](media/e5-t2-01.png)
+
+### You have successfully completed this lab. 
+
+“For support, contact: cloudlabs-support@spektrasystems.com” and Live chat - https://cloudlabs.ai/labs-support 
+ 
+### Now, click on **Next >>** from the lower right corner to move on to the next page. 
+
+ ![](media/Next.png)
