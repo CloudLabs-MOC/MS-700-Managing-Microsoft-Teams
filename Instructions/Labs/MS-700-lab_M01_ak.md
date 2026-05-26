@@ -190,12 +190,12 @@ You have finished the first exercise, and you can continue with the next one.
 
 In this exercise, you will explore the Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
 
-To perform these tasks, you will use **Joni Sherman’s account** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password <inject key="User04Password" enableCopy="true"/>
+To perform these tasks, you will use **Joni Sherman’s account** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and navigate to **environment tab** to get password.
 #### **Task 1 - Explore Teams admin center**
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password <inject key="User04Password" enableCopy="true"/>
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 	>**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -268,7 +268,7 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 			![alt text](media/15.png) 
 
-		- Enter the password - <inject key="User04Password" enableCopy="true"/> 
+		- Enter the password - navigate to **environment tab** to get password.
 
 			![alt text](media/03.png)
 
@@ -324,7 +324,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department,” and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password. 
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
 
@@ -383,7 +383,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 2. Select the **Microsoft Teams** icon on the taskbar to start the Teams, desktop client.
 
-3. Select on **"Get Started"** and Sign in as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** Enter the password - <inject key="User02Password" enableCopy="true"/> . At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
+3. Select on **"Get Started"** and Sign in as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
 	>**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
 	
@@ -444,7 +444,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 	![alt text](media/20.png)
 
-2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** Enter the password - <inject key="User01Password" enableCopy="true"/> 
+2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**  navigate to **environment tab** to get password.
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
@@ -483,7 +483,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 	- In the dropdown menu of **Group lifetime (in days)**, select **Custom** and enter **90** to the text box.
 
-	- In the text box right from **Email contact for groups with no owners**, enter **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+	- In the text box right from **Email contact for groups with no owners**, enter **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 	- Right from **Enable expiration for the Office 365 groups**, select **Selected**.
 
@@ -729,7 +729,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 >**Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User02Password" enableCopy="true"/> 
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the Teams desktop client, select **Teams** from the left menu.
 
@@ -772,7 +772,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>.
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left navigation of the Teams admin center,click on **Show all**  select **Policy packages**.
 
@@ -826,7 +826,7 @@ In this exercise, you will configure users to explore and evaluate upcoming feat
 
 #### **Task 1 - Create a custom Update policy**
 
-1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 	>**Note**: You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 

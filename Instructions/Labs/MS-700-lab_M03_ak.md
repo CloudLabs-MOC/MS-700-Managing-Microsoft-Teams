@@ -54,7 +54,7 @@ After you complete this lab, you will be able to:
 
 As part of your pilot project for Contoso, you need to modify the **IT-Department** Microsoft 365 group, created in an earlier lab, and add Teams features to it.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. Select the **Teams** icon on the taskbar to start the Teams desktop client and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**
 
@@ -62,7 +62,7 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
    
    ![alt text](media/m2.png)
 
-4. Enter the **password (1)** - <inject key="User04Password" enableCopy="true"/> and **sign in (2)**.
+4. Enter the **password (1)** -  navigate to **environment tab** to get password and **sign in (2)**.
    
    ![alt text](media/m4.png)
    
@@ -116,7 +116,7 @@ In this task, you will create via the Teams PowerShell a new team **“Group_CA-
 
    ![alt text](media/m12.png)
 
-6. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** - <inject key="User04Password" enableCopy="true"/> and then select **Sign in**.
+6. In the **Enter password** dialog box, enter the **password** of **Joni Sherman’s** -  navigate to **environment tab** to get password.
 
    ![alt text](media/03.png)
 
@@ -185,7 +185,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
 
-3. Select the **Sign in to Graph Explorer** button in the left of the page and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+3. Select the **Sign in to Graph Explorer** button in the left of the page and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 4. If you access the Graph Explorer for the first time, you will see a **Permissions requested** page. Select **Accept**.
 
@@ -302,7 +302,7 @@ You have successfully created two teams via Graph API. Your test of the Graph fu
 
 After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task, you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
 
-1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. Select **Teams** from the left-side pane and select the **Manage Teams**
 
@@ -322,7 +322,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 4. Check the archived team
 
-	- Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+	- Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 	- Select Teams and channnels then select the **...**, then select **Your teams and channels**.
 
@@ -342,7 +342,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 5. Unarchive the **Sales** team
 
-	- Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman** <inject key="JoniSherman" enableCopy="true"/>  Enter the password - <inject key="User04Password" enableCopy="true"/> 
+	- Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman** <inject key="JoniSherman" enableCopy="true"/> and  navigate to **environment tab** to get password.
 
 	- Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
 
@@ -350,7 +350,7 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 6. Check the unarchived team
 
-	- Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** Enter the password - <inject key="User01Password" enableCopy="true"/> 
+	- Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 	- On the left side, select **Teams**.
 
@@ -366,7 +366,7 @@ You have successfully archived a team and reviewed the limited functionality of 
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User01Password" enableCopy="true"/> 
+1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left-hand navigation pane of the Teams web client, select the three dots (…) right from the **Sales** team and select **Delete the team** from the list.
 
@@ -393,7 +393,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 5. Check the restored group.
 
-	1. Connect to **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User01Password" enableCopy="true"/> 
+	1. Connect to **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 	2. The **Sales** team appears in the list of teams again. Press **F5** to refresh the page if needed.
 
@@ -472,7 +472,7 @@ In this exercise, you will configure policies to manage the creation of new priv
 
 The company wants to restrict the use of graphic elements in Teams communication. As a Teams service administrator, you will create a new message policy that prohibits pilot users from using GIF files, memes, and stickers in the Teams chat and channel conversation.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left navigation of the Teams admin center, Scroll down and click on **Show all** . Select **Messaging (2)** from the left side navigation, then select **Messaging policies(3)**.
 
@@ -520,7 +520,7 @@ In this task, you have successfully configured a new messaging policy and assign
 
 As Teams administrator of Contoso, you will create a private channel named **confidential** in the sales team that is only accessible for some team members.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left navigation of the Teams admin center, select **Teams (1)** > **Manage teams (2)**.
 
@@ -551,7 +551,7 @@ As Teams administrator of Contoso, you will create a private channel named **con
 
 5. Check the private channel
 
-	1. Connect to the **Client 2 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User01Password" enableCopy="true"/> 
+	1. Connect to the **Client 2 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
        ![alt text](media/m30.png)
 
@@ -567,8 +567,7 @@ In the past, users stored data at various locations, including third-party stora
 
 #### **Task 1 - Disable third-party storage providers**
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04Password" enableCopy="true"/> 
-
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 2. In left navigation of the Teams admin center, select **Teams (1)** > **Teams settings (2)**.
 
    ![alt text](media/m32.png)
@@ -599,7 +598,7 @@ In this task, you have learned how to enable or disable third-party storage prov
 
 In this task, you will block the Google Analytics app for all tenants
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left navigation of the Teams admin center, select **Teams apps(1)** > **Manage apps(2)**.
 
@@ -629,7 +628,7 @@ As a Teams administrator you need to highlight the apps that are most important 
 
 In the pilot project, the company wants to add **Tasks by Planner and To Do** as the default app for all users. To do this, edit the default org-wide app policy. This task may take some time to propagate throughout the tenant.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
 
@@ -657,8 +656,7 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 
 #### **Task 2 - Create a custom app setup policy**
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04Password" enableCopy="true"/> 
-
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 2. In the left navigation of the Microsoft Teams admin center, go to **Teams apps** > **Setup policies**.
 
 3. Select **+** **Add**. 
@@ -722,7 +720,7 @@ In this exercise, you will test the configured policy settings on a client with 
 
 In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user(Joni Sherman).
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User01Password" enableCopy="true"/> 
+1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password. 
 
 2. In the left-hand navigation pane, select **Chat** > **New Chat** icon.
 
@@ -738,7 +736,7 @@ In this task, you will test the **messaging policies** configured in exercise 1 
 
 In this task, you will test the blocked app.
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and Enter the **password** - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left-hand navigation select **Apps**.
 
