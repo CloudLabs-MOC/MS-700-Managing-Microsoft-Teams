@@ -37,8 +37,8 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 ### **Task 1 - Review guest access settings (optional)**
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>.
 
 2. In left navigation of the Azure AD admin center, select **Entra ID (1)** > **Users (2)**> **User settings (3)** > **Manage external collaboration settings (4)** under the External users. Review and ensure the following settings for external users at the Azure AD level:
 
@@ -52,8 +52,8 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
 
 		![alt text](media/32.png)
 
-3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
+3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>.
 
 4. In the left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings (1)** > **Org settings (2)**.
 
@@ -71,7 +71,7 @@ You have now reviewed guest access settings across different admin centers. You 
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
 
 2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
@@ -119,7 +119,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 		- **First Name (1)**: **GuestUser**
 
-		- **Last Name  (2)**: <inject key="DeploymentID" enableCopy="false"/>
+		- **Last Name  (2)**: <inject key="DeploymentID" enableCopy="true"/>
 
 		- Click **Next (3)**
 
@@ -175,8 +175,8 @@ You have successfully invited a guest to a team and validated the guest access s
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. Create an access review to monitor guest users.
 
@@ -226,7 +226,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 4. Review the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> Enter the password - <inject key="User02UPN" enableCopy="false"/> 
+	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> Enter the password - <inject key="User02Password" enableCopy="true"/> 
 
 	1. Select the **message (1)** from Inbox area.
 
@@ -258,8 +258,8 @@ In this exercise, you will increase the security level in your organization by c
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that block documents that contain malware.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. In left navigation of the Microsoft 365 Defender portal, expand **Email & Collaboration (1)** section, select **Policies &amp; rules (2)** > **Threat policies (3)** > **Safe Attachments (4)** in the **Policies** section.
 
@@ -299,8 +299,8 @@ You need to evaluate governance for Microsoft 365 Groups before deploying them i
    
 4. Connect to your Microsoft Entra ID tenant.
 
-	Connect to Microsoft Graph with the required scopes. Sign in as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/> when prompted.
+	Connect to Microsoft Graph with the required scopes. Sign in as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/> when prompted.
 
 	```powershell
    	 Connect-MgGraph -Scopes "Directory.ReadWrite.All"
@@ -345,8 +345,8 @@ You have successfully changed your tenant’s Azure AD settings and activated se
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 1. On the getting started page, click on **Get Started**.
 
@@ -366,8 +366,8 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 	>**Note:** Please skip this step if you have already installed it in previous lab.
 
-4. Connect to your tenant as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
+4. Connect to your tenant as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
 
 	```PowerShell
 	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
@@ -404,8 +404,8 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>. When y
 
 	![alt text](media/48.png)
 
-8. Connect to the Client 1 VM and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+8. Connect to the Client 1 VM and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 	![alt text](media/46.png)
    
@@ -626,7 +626,7 @@ Once the sensitivity labels are created and published, users can now assign them
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
+2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the password - <inject key="User02Password" enableCopy="true"/> 
 
 3. For Microsoft Teams Classic: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
 
@@ -652,7 +652,7 @@ In this task, you will try to add a guest user to an internal team.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
+2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the password - <inject key="User02Password" enableCopy="true"/> 
 
 3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
 
@@ -668,8 +668,8 @@ You have successfully tested the sensitivity labels setting to prevent guest acc
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions (1)** and then **Data lifecycle management (2)**.
 
@@ -723,8 +723,8 @@ In this task, you have successfully created a new retention policy named **Sales
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions**, **Data lifecycle management**.
 
@@ -785,7 +785,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
+2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the password - <inject key="User02Password" enableCopy="true"/> 
 
 3. Select the **Teams Rollout** team and the **General** channel.
 
@@ -805,8 +805,8 @@ You have added a conversation message to a team, which is deleted by the deletio
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. In the left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
@@ -886,8 +886,8 @@ After completing this task, you have created a DLP Policy from the template “G
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. In left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
@@ -984,7 +984,7 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
+2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the **password** - <inject key="User02Password" enableCopy="true"/> 
 
 3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
 
@@ -1040,7 +1040,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
 3. Create a network plan
 	
 	1. On the left-hand navigation pane, expand **Planning (1)**, and select **Network Planner (2)**.
@@ -1154,8 +1154,8 @@ In this lab, you have used Network Planner to estimate the Microsoft Teams impac
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. Select **Sign in** at the top-right corner.
 
