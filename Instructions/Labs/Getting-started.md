@@ -1,7 +1,9 @@
 # Managing Microsoft Teams
  
 ### Overall Estimated Duration: 10 Hours
- 
+
+>**Note**: You have a **3-day window** with a **maximum of 32 hours of combined uptime** shared between **Client1** and **Client2** (running both drains time twice as fast). If this limit is exhausted, access is lost permanently. To preserve your time, always **Stop or Deallocate both VMs** from the *Resources* tab when finished; note that VMs automatically deallocate after **15 minutes of idling** and can be restarted via **Actions** > **Start** (see [Managing Your Virtual Machine](#managing-your-virtual-machine) for details).
+
 ## Overview
  
 The MS-700 Managing Microsoft Teams lab provides a comprehensive, hands-on environment designed to teach administrators how to configure, deploy, and secure the Microsoft Teams ecosystem. The lab structure begins with governance and lifecycle management, focusing on setting up administrative roles, managing group creation permissions, and establishing retention and archiving policies. It then moves into external collaboration, demonstrating how to securely manage guest access and configure external domain federation. A major portion of the lab is dedicated to structural organization and the compliance policy engine, where admins learn to create Standard, Private, and Shared channels, manage app permission sets, and configure distinct meeting, calling, and messaging policies for different user groups. Finally, the lab covers advanced telephony features, such as setting up phone numbers, call queues, and auto-attendants, while leveraging the Call Quality Dashboard (CQD) for troubleshooting. Ultimately, the lab aims to ensure administrators are equally proficient using the visual Teams Admin Center (TAC) and scripting automated bulk changes using a combination of the Microsoft Teams and Microsoft Graph PowerShell modules.
@@ -67,8 +69,8 @@ Once you're ready to dive in, your virtual machine and **Guide** will be right a
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
- 
-![](./media/zoom.png)
+
+![](media/zoom-in.png)
  
 ## Virtual Machine & Lab Guide
  
@@ -88,9 +90,15 @@ For convenience, you can open the lab guide in a separate window by selecting th
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
- 
-![Manage Your Virtual Machine](./media/resource.png)
- 
+
+- Under **Actions** select the **third option from left** to Stop or Deallocate the vm when you finish your work.
+
+    ![Manage Your Virtual Machine](./media/resource.png)
+
+- If the **VM remains idle for 15 minutes**, it will **automatically deallocate** to save time. You can launch it again by navigating to **Actions (2) > start** and clicking the **Start** button from **Environment Status (3)**
+
+    ![](media/vm-start.png)
+
 ## Let's Get Started with VM 
 
 The lab environments have been specifically designed in this manner to give you experience managing Microsoft Teams in a Microsoft 365 deployment. You will be provided with two virtual machines and a Microsoft 365 tenant to complete the lab steps.
