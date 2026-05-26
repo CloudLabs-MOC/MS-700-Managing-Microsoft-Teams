@@ -37,7 +37,8 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 ### **Task 1 - Review guest access settings (optional)**
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
 
 2. In left navigation of the Azure AD admin center, select **Entra ID (1)** > **Users (2)**> **User settings (3)** > **Manage external collaboration settings (4)** under the External users. Review and ensure the following settings for external users at the Azure AD level:
 
@@ -70,7 +71,7 @@ You have now reviewed guest access settings across different admin centers. You 
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
@@ -118,7 +119,7 @@ You will change the default settings for inviting/creating guest users and then 
 
 		- **First Name (1)**: **GuestUser**
 
-		- **Last Name  (2)**: <inject key="DeploymentID" enableCopy="false"/>**
+		- **Last Name  (2)**: <inject key="DeploymentID" enableCopy="false"/>
 
 		- Click **Next (3)**
 
@@ -196,7 +197,6 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 			![alt text](media/e1-t4-03.png)
 
-
 	2. On the **Reviews** tab:
 	 
 		* In the **Select reviewers** section, select **Group owner(s)**. In the **Review recurrence** section, select **Weekly** and keep rest as default. 
@@ -226,7 +226,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 4. Review the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/>
+	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> Enter the password - <inject key="User02UPN" enableCopy="false"/> 
 
 	1. Select the **message (1)** from Inbox area.
 
@@ -412,6 +412,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 9. In the left navigation of the Microsoft Purview compliance portal, select **Solutions (1)**, **Information Protection (2)** and then select **Sensitivity labels (3)** from the menu.
 
 	![alt text](media/49.png)
+
 	![alt text](media/50.png)
 
 10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
@@ -463,7 +464,6 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 		![alt text](media/56.png)
 
- 
 	h. Select **Save label / Create label** > **Done**.
 
 12. Create the second sensitivity label - **Internal**.
@@ -535,9 +535,9 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 	
 	a. In the **Name & description** section, enter the following information:
 
-	-	**Name**: Leave unchanged
+	-	**Name**: Confidential
 	-	**Display name**: Confidential
-	-	**Description for users**: Leave unchanged
+	-	**Description for users**: Confidential
 	-	**Description for admins**: Confidential information with all restrictive encryption, marking and sharing settings activated
 
 	b. In the **Scope** section, under the **Define the scope for thislabel** page select **File &amp; other data assets** and **Groups &amp; Sites (1)** and click on **Next (2)** 
@@ -596,7 +596,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 	![alt text](media/66.png)
 
- 	e. In the **Assign admin units** page, leave as is.
+ 	e. In the **Assign admin units** page, leave as it is.
 
 	f. In the **Publish to users and groups** page, keep the default settings. 
 
@@ -626,7 +626,7 @@ Once the sensitivity labels are created and published, users can now assign them
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**.
+2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
 
 3. For Microsoft Teams Classic: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
 
@@ -652,7 +652,7 @@ In this task, you will try to add a guest user to an internal team.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**..
+2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
 
 3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
 
@@ -785,7 +785,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**.
+2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
 
 3. Select the **Teams Rollout** team and the **General** channel.
 
@@ -984,7 +984,7 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**.
+2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
 
 3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
 
@@ -1040,8 +1040,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
-
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
 3. Create a network plan
 	
 	1. On the left-hand navigation pane, expand **Planning (1)**, and select **Network Planner (2)**.

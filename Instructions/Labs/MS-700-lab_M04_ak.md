@@ -58,7 +58,7 @@ Contoso organization has deployed Microsoft 365 and is testing pilot projects on
 
 As part of your pilot project for setting up the events and meetings in your organization, you need to fulfill the requirement for all meetings in Teams, including prohibiting meeting recording. You will edit the default meeting policy to ensure that this requirement is met.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In left navigation of the Teams admin center, select **Meetings (1)** > **Meeting policies (2)**.
 
@@ -78,7 +78,7 @@ You have successfully modified the Global (Org-wide default) meeting policy and 
 
 In this task, you need to sign in to the second client and create a meeting with a user. You will see how the configured policy works and users won’t be able to record a meeting.
 
-1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **<inject key="LynneRobbins" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User01UPN" enableCopy="false"/> 
 
 2. Select **Calendar (1)** from the left navigation pane.
 
@@ -102,7 +102,7 @@ In this task, you need to sign in to the second client and create a meeting with
 
 Contoso Ltd. works with several external partners, and users often schedule meetings with external partners for projects collaboration. However, according to the company regulations, external partners need to identify themselves with a valid account, and anonymous access needs to be forbidden. You need to configure Microsoft Teams to disable anonymous access to meetings.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In left navigation of the Teams admin center, select **Meetings (1)** > **Meetings settings (2)**.
 
@@ -118,7 +118,7 @@ You have successfully modified the meeting settings for all users in your tenant
 
 Contoso Ltd. wants to broadcast video and meeting content to large online audiences. As a Teams admin, you need to evaluate live events functionalities, including creating live events and configuring live event policies. According to Contoso Ltd. business requirements, you will need to restrict the recording options for participants of meetings and only allow recording options to manage users. Only the organizer of a live event should be able to record his meetings.
 
-1. Connect to the **Client 1 VM** and browse to the **[Microsoft Teams admin center (https://admin.teams.microsoft.com)](https://admin.teams.microsoft.com)** as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to the **[Microsoft Teams admin center (https://admin.teams.microsoft.com)](https://admin.teams.microsoft.com)** as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In the left navigation of the Teams admin center, select **Meetings** > **Live events policies**.
 
@@ -156,7 +156,7 @@ You have successfully created a custom Live event policy and assigned it to a us
 
 The IT department wants to host a company-wide meeting to answer employees’ questions regarding the new reporting system. As a Teams admin, you will create a webinar allowing employees to submit their questions before the meeting.
 
-1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to **[Microsoft Teams web client (https://teams.microsoft.com/)](https://teams.microsoft.com/)** as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In the Teams Calendar, select the dropdown menu **New (1)** and select **Webinar (2)**. The **New webinar | Microsoft Teams** tab will open.
 
@@ -236,7 +236,7 @@ Your organization could purchase Microsoft Teams Rooms that provide a complete m
 
 During the planning phase of Teams Phones devices in your organization, you want to evaluate settings that can be applied to Teams devices by using configuration profiles in Teams admin center. You will create a configuration profile for Teams device and analyze settings that will include in the configuration profile. Once devices are deployed into your organization, you will be ready to apply configuration profiles to those devices.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez**  **<inject key="PattiFernandez" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as the Teams device administrator - **Patti Fernandez**  **<inject key="PattiFernandez" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User03UPN" enableCopy="false"/> 
 
 2. In **Teams admin center**, on the left navigation pane, select **Phones (1)** under **Teams devices (2)**.
 
@@ -361,7 +361,7 @@ In this exercise, you will set up one of your users with a Calling Plan Trial. Y
 
 In this task, you will add a new emergency address “One Microsoft Way, Redmond, WA 98052, USA” for users in the United States. It is used to route emergency calls to the appropriate dispatch authorities and to assist in locating the emergency caller.
 
-1. Connect to the **Client 1 VM** and browse to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) as **Joni Sherman**  **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/) as **Joni Sherman**  **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. On the left navigation pane select **Locations (1)** > **Emergency addresses (2)**.
 
@@ -396,7 +396,7 @@ In this task, you will assign the calling plan license to a user to allow them t
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
 2. You should still be in the **Microsoft 365 admin center** and signed in as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/> from **Environment** tab.
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 3. Open the Navigation Menu in the upper left corner and select **Users (1)**.
 
@@ -420,7 +420,7 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. In the **Microsoft Teams client** sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+2. In the **Microsoft Teams client** sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
 
@@ -478,7 +478,7 @@ In this Task, you will assign an existing phone number to a user.
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 3. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
 
@@ -502,7 +502,7 @@ As part of your pilot project for calling functionalities with Microsoft Teams, 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 3. On the left navigation pane, select **Voice (1)**, and then **Calling policies (2)** below.
 
@@ -556,7 +556,7 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
 
@@ -651,9 +651,9 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>. Select
 
 11. Select **Submit** to create the new call queue.
 
-Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
+	Creating the new call queue may take some time, but you have successfully created a new custom call queue based on a resource account in your tenant.
 
->**Note:** Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
+	>**Note:** Because this call queue shall have a custom greeting, you need to upload some wav files for demonstration purposes. In a real-world scenario, you would record and prepare a greeting audio file and upload the audio file as shown in this task.
 
 ### Task 3 - Create an auto attendant
 
@@ -663,7 +663,7 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 
 1. Connect to the **Client 1 VM** and sign in with the Credentials that have been provided to you.
 
-2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+2. You should still be in the **Teams admin center** and signed in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create the resource account first.
 
@@ -684,7 +684,9 @@ As Teams admin, you were tasked to create an auto attendant with a transcribed w
 6. Select **Save (5)**.
 
 1. open the **Microsoft 365 admin center** (https://admin.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/> . Select **Users** > **Active users**, select **Contoso Auto Attendant**
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/> . 
+
+1. Select **Users** > **Active users**, select **Contoso Auto Attendant**
 
  	![](media/rc-auto.png)
 
@@ -775,7 +777,7 @@ Note: As we have not made any calls in this environment, reports will be blank a
 
 ### Task 1 – Explore call analytics for users, calls, and meetings
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In the left-hand navigation pane, select **Users&gt;Manage users**, and then select a **user**.
 
@@ -795,7 +797,7 @@ CQD is designed to help Microsoft Teams administrators and network engineers mon
 
 In this task you navigate to Call Quality Dashboard
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the **password** - <inject key="User04UPN" enableCopy="false"/> 
 
 2. In the left-hand navigation pane, select **Analytics & reports** then **Call Quality Dashboard**.
 
