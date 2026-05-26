@@ -2,7 +2,7 @@
  
 ### Overall Estimated Duration: 10 Hours
 
->**Note**: You have a **3-day window** with a **maximum of 32 hours of combined uptime** shared between **Client1** and **Client2** (running both drains time twice as fast). If this limit is exhausted, access is lost permanently. To preserve your time, always **Stop or Deallocate both VMs** from the *Resources* tab when finished; note that VMs automatically deallocate after **15 minutes of idling** and can be restarted via **Actions** > **Start** (see [Managing Your Virtual Machine](#managing-your-virtual-machine) for details).
+>**Note**: You have a **3-day + 8 hrs access window** with a maximum **combined VM uptime of 32 hours** shared between **Client1 and Client2**. Please note that running both VMs simultaneously will consume the allotted time at twice the rate. Once the 32-hour limit is reached, access will be permanently unavailable. To conserve your allocated time, always Stop or Deallocate both VMs from the Resources tab after use. The VMs will automatically deallocate after 15 minutes of inactivity and can be restarted anytime through Actions > Start. (see [Managing Your Virtual Machine](#managing-your-virtual-machine) for details).
 
 ## Overview
  
