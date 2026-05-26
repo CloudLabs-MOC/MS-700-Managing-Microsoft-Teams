@@ -71,7 +71,7 @@ You have now reviewed guest access settings across different admin centers. You 
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
 2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
@@ -226,7 +226,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 4. Review the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> Enter the password - <inject key="User02Password" enableCopy="true"/> 
+	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and  navigate to **environment tab** to get password.
 
 	1. Select the **message (1)** from Inbox area.
 
@@ -626,7 +626,7 @@ Once the sensitivity labels are created and published, users can now assign them
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the password - <inject key="User02Password" enableCopy="true"/> 
+2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and  navigate to **environment tab** to get password.
 
 3. For Microsoft Teams Classic: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
 
@@ -652,7 +652,7 @@ In this task, you will try to add a guest user to an internal team.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the password - <inject key="User02Password" enableCopy="true"/> 
+2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and  navigate to **environment tab** to get password.
 
 3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
 
@@ -785,7 +785,7 @@ In this task, you will test the retention policy for deleting content from the *
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the password - <inject key="User02Password" enableCopy="true"/> 
+2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and  navigate to **environment tab** to get password.
 
 3. Select the **Teams Rollout** team and the **General** channel.
 
@@ -984,7 +984,7 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and Enter the **password** - <inject key="User02Password" enableCopy="true"/> 
+2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="true"/> and  navigate to **environment tab** to get password.
 
 3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
 
@@ -1040,7 +1040,8 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
+
 3. Create a network plan
 	
 	1. On the left-hand navigation pane, expand **Planning (1)**, and select **Network Planner (2)**.
