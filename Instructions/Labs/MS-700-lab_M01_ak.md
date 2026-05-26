@@ -1,6 +1,6 @@
 # Lab 01: Manage collaboration and communiction with Microsoft Teams
 
-## Estimated Duration: 100 Minutes
+## Estimated Duration: 120 Minutes
 
 ## Microsoft 365 user interface
 
@@ -149,10 +149,11 @@ In this task, you will use the default global admin to sign in to the Microsoft 
 
 	- Enter the **Global Admin User Name (1)** and click on **Next (2)**:
 		**<inject key="AzureAdUserEmail"></inject>** `← 📋 Copy`
-	- Enter the **Temporary Admin Password (3)** and click on **Sign in (4)**:
-		**<inject key="AzureAdUserPassword"></inject>** `← 📋 Copy`
 
 		![alt text](media/02.png)
+
+	- Enter the **Temporary Admin Password (3)** and click on **Sign in (4)**:
+		**<inject key="AzureAdUserPassword"></inject>** `← 📋 Copy`
 
 		![alt text](media/03.png)
 	
@@ -208,7 +209,8 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. Update **Alex Wilber’s** location to **Canada**
 
@@ -224,7 +226,7 @@ In this task, you will check the license assignment of all users participating i
 
 3. Check **Alex Wilber’s** licenses
 
-	- On the same tab, under **Licenses** section, verify that **Office 365 E5 ** and **Microsoft Teams Enterprise** is selected.
+	- On the same tab, under **Licenses** section, verify that **Office 365 E5** and **Microsoft Teams Enterprise** is selected.
 
 		![alt text](media/12.png)
 
@@ -244,15 +246,15 @@ You have finished the first exercise, and you can continue with the next one.
 
 In this exercise, you will explore the Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
 
-To perform these tasks, you will use Joni Sherman’s account **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+To perform these tasks, you will use **Joni Sherman’s account** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 #### **Task 1 - Explore Teams admin center**
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
->>**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
+	>**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
 2. In left navigation of the Teams admin center, select **Teams (1)** > **Manage teams (2)**. You will see the teams in your organization once created.
 
@@ -270,7 +272,7 @@ You have successfully explored several available menus from the Teams admin cent
 
 In this task, you will install and connect with the Teams PowerShell module to your tenant and explore the available cmdlets and functions to manage your tenant. You can install the Teams PowerShell module from the available repositories preconfigured in your Windows 10 operating system and do not need to download any executables via the browser.
 
-Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
+**Please note:** Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
 
 The Microsoft Graph PowerShell commands for this task are provided after the Microsoft PowerShell commands.
 
@@ -308,16 +310,20 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 		Connect-MicrosoftTeams
 		```
 		Microsoft Graph PowerShell:
+
 		```PowerShell
-		Connect-MgGraph
+		Connect-MgGraph 
 		```
 
-	- In the Sign-in window, sign in as the Teams admin - Joni Sherman **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
-	- Password for this user is available in the Lab envrionment page.
+	- In the Sign-in window, sign in as the Teams admin - Joni Sherman **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
+
+		![alt text](media/15.png)
+
+	- Password for this user is available in the Lab envrionment tab.
 
 	- When the sign-in was successful, several information about the signed-in user and the tenant are displayed.
 
-		![alt text](media/15.png)
+		![](media/L1-e2-t2-4-2.png)
 
 5. Explore **Microsoft Teams PowerShell module**
 
@@ -326,25 +332,30 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 		- Microsoft PowerShell - ```Get-Module```
 		-Microsoft Graph PowerShell - ```Get-Module -Name Microsoft.Graph -ListAvailable``` or ```Get-Module -Name MicrosoftTeams```
 
-		>>**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
+			>**Note**: To the left of the **Name** column, the version of the PowerShell module is displayed.
 
-		![alt text](media/16.png)
+			![alt text](media/16.png)
 
 	- To get an overview of the available Teams PowerShell cmdlets from the MicrosoftTeams module, enter the following cmdlet and then press **Enter**:
 
 		- Microsoft PowerShell - ```Get-Command -Module MicrosoftTeams```
+
+			![](media/L1-e2-t2-5-overview.png)
+
    		- Microsoft Graph PowerShell - ```Get-Command -Module Microsoft.Graph.Teams```
 
 	- The Get-Help cmdlet is used to explore the available cmdlets. For example, to get more information about how to create a team with PowerShell, enter the following cmdlet and press **Enter**:
 
-		```Get-Help New-Team```
+		-  ```Get-Help New-Team```
 
-		**Note**: If you receive a message to update the help libraries, type **Y** for yes.
+			>**Note**: If you receive a message to update the help libraries, type **Y** for yes.
 
 	- Disconnect from the Microsoft Teams environment.
 
 		- Microsoft PowerShell - ```Disconnect-MicrosoftTeams```
 		-Microsoft Graph PowerShell - ```Disconnect-MgGraph```
+
+			![](media/L1-e2-t2-4-4.png)
 
 6. Close the PowerShell window and continue to the next task.
 
@@ -358,7 +369,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department,” and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
 
@@ -419,9 +430,11 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 3. Select on **"Get Started"** and Sign in as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />**. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
-	**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
+	>**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
 	
-	1. Login to **Microsoft 365 Admin Center** as **ODL User**. 
+	1. Login to **Microsoft 365 Admin Center** (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>. 
+
 	2. On the **Users &gt; Active users** page, select the name of **Alex Wilber**. 
 
 		![alt text](media/e3-t2-03.png)
@@ -434,13 +447,17 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 	4. Use the password under column Password to login.
 
-	
+		>**Note**: You might need to download and install the latest Teams, desktop client. If so, select **Update Teams** and follow the installation guideline - Select **Download for desktop** > **Download Teams** **Run**.
 
-	>>**Note**: You might need to download and install the latest Teams, desktop client. If so, select **Update Teams** and follow the installation guideline - Select **Download for desktop** > **Download Teams** **Run**.
+4. In the Teams desktop client, select **Chat** from the left menu.
 
-4. In the Teams desktop client, select **Teams** from the left menu.
+5. Select **... (3)** dots right to **Teams and channels (2)** and select **Your teams and channels (4)**.
 
-5. Select **+** in the upper left hand corner to create and join teams and channels.
+	![](media/L1-e3-t2-2-1.png)
+
+1.  Click on **Create team dropdown (1)** and select **Create team (2)**.
+
+	![](media/L1-e3-t2-6.png)
 
 6. Select **Create team > From Scratch** > Enter the team name ``Teams Rollout`` **(1)** > Enter anything you want for **Description (2)** > Set Team type to **Public (3)** > Type ``Teams Rollout`` **(4)** for Name the first channel. Select **Create (5)**.
 
@@ -454,7 +471,7 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 		![alt text](media/22.png)
 
-8. Select **Teams** from left ahnd corner and click the **...** button next to **Teams Rollout** > **Manage Team**.
+8. Select **Teams** from left and corner and click the **...** button next to **Teams Rollout** > **Manage Team**.
 
 8. Select the dropdown menu next to **Joni Sherman** and switch from **Member** to **Owner**.
 
@@ -472,7 +489,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 	![alt text](media/20.png)
 
-2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**.
+2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**. 
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
@@ -494,11 +511,12 @@ The newly created team is displayed in the list of your teams. You have successf
 
 Your organization has started the planning process for Microsoft 365 services adoption. You are assigned a Teams admin role to plan Teams governance. Since Teams relies on Microsoft 365 groups, you need to plan governance procedures for Microsoft 365 groups, including creating **Microsoft 365 groups expiration policies**, configuring **Microsoft 365 Group creation policy permissions**, configuring and testing **Microsoft 365 Groups naming policies**.
 
-#### Task 1 - Create and assign an expiration policy
+#### **Task 1 - Create and assign an expiration policy**
 
 Based on the organization’s requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the expiration feature for Teams, you will configure a group expiration policy that will expire the **Teams Rollout** group after 90 days.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. On the left navigation pane, select **Entra ID (1)** > **Groups (2)** > **All groups (3)**.
 
@@ -510,7 +528,7 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 
 	- In the dropdown menu of **Group lifetime (in days)**, select **Custom** and enter **90** to the text box.
 
-	- In the text box right from **Email contact for groups with no owners**, enter **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+	- In the text box right from **Email contact for groups with no owners**, enter **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 	- Right from **Enable expiration for the Office 365 groups**, select **Selected**.
 
@@ -528,11 +546,12 @@ Based on the organization’s requirement, unneeded groups should be deleted aut
 
 You have successfully created a new expiration policy and configured the **Teams Rollout** team to expire after 90 days. If the team doesn’t have an owner after 90 days, Joni Sherman will be notified about the expiration.
 
-#### Task 2 - Configure a group creation policy
+#### **Task 2 - Configure a group creation policy**
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - **ODL User**
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
 
@@ -541,40 +560,43 @@ You are an administrator for your Team’s organization. You need to limit which
 4. Create a security group. 
 
 	- Navigate to the **Security groups (3)** tab.
+
         - Select the **+ Add a security group (4)** button.
 
-		![alt text](media/25.png)
+			![alt text](media/25.png)
           
-- Fill out the following information:
-	- Basics:
+	- Fill out the following information:
 
-		- Name: **GroupCreators**
-		- Description: **Users who can create Microsoft 365 Groups for new teams**
-		- Select **Next**
+		- Basics:
+
+			- Name: **GroupCreators**
+			- Description: **Users who can create Microsoft 365 Groups for new teams**
+			- Select **Next**
     
-       - Settings:
+       	- Settings:
+
             - Select **Next**
 
-	- Finish: Select **Create Group** and then select **Close**
+		- Finish: Select **Create Group** and then select **Close**
 
 	- Back to **Active teams &amp; group** page, select **Security groups** tab and Select on the security group **GroupCreators** you just created.
 
 	- Select **Members** tab to configure the **Owners** and **Members**.
 
-		- Owners: Select **View all and manage owners** and select **+ Add owners.** Select **ODL User<****>**.
+	- Owners: Select **View all and manage owners** and select **+ Add owners.** Select **ODL User**.
 
-			![alt text](media/26.png)
+		![alt text](media/26.png)
 
-		- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
+	- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
 
-			- Joni Sherman
-			- Alex Wilber
+		- Joni Sherman
+		- Alex Wilber
 
-Restrict the Microsoft 365 groups creation to the security group.
+		Restrict the Microsoft 365 groups creation to the security group.
    
-**Please note:** Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
+	**Please note:** Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
 
-**Please note:** The **AzureADPreview** module is no longer functional on this tenant as the AAD Graph API has been deprecated. Complete all steps below using **Microsoft Graph PowerShell** only.
+	**Please note:** The **AzureADPreview** module is no longer functional on this tenant as the AAD Graph API has been deprecated. Complete all steps below using **Microsoft Graph PowerShell** only.
 
 5. Open **Windows PowerShell** and run as Administrator.
 
@@ -586,9 +608,10 @@ Restrict the Microsoft 365 groups creation to the security group.
 	```
 
 8. Connect to Microsoft Graph with the required scopes. Sign in as
-   **ODL User**(admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+   **ODL User** when prompted.
 
    -	**Global admin -** **<inject key="AzureAdUserEmail"></inject>**
+
 	-	**Password-** **<inject key="AzureAdUserPassword"></inject>**
 
 	```powershell
@@ -630,11 +653,12 @@ Restrict the Microsoft 365 groups creation to the security group.
     (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
 	```
 
-Verify that the output shows:
--  **EnableGroupCreation** → false
--  **GroupCreationAllowedGroupId** → populated with a GUID
+13. Verify that the output shows:
 
-    **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
+	-  **EnableGroupCreation** → false
+	-  **GroupCreationAllowedGroupId** → populated with a GUID
+
+    	>**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
 	
 14. Test the newly configured settings.
 
@@ -642,9 +666,11 @@ Verify that the output shows:
 
     2. Test as **Alex Willber** from Teams desktop client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.     
 
-    3. Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available.
+    3. Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available. 
+	
+		If **Create team** option available try to create. It throws an error that **you don't have permission**.
 
-        **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
+        >**Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
 
 15. Revert the change for enabling users to create new teams.
@@ -656,7 +682,13 @@ Verify that the output shows:
 	```powershell
     $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
 	```  
- 
+18. Get the existing active group settings in your tenant
+
+	```powershell
+ 	$Setting = Get-MgBetaDirectorySetting | Where-Object { $_.DisplayName -eq "Group.Unified" }
+
+	$Setting.Id
+ 	```
 18.	Reset group creation to allow all users:
 
 	```powershell
@@ -675,7 +707,7 @@ Verify that the output shows:
 	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
 	```  
          
- Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
+ 	Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
 
 20. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
 
@@ -687,11 +719,12 @@ Verify that the output shows:
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
-#### Task 3 - Configure a new naming policy
+#### **Task 3 - Configure a new naming policy**
 
 As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with the letters **Group** and end with the **Country** attribute of the owners’ location. Furthermore, there is an internal regulation that forbids using the following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **<inject key="AzureAdUserEmail"></inject>**. 
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. On the left navigation pane, select **Entra ID (1)** > **All Groups**.
 
@@ -703,9 +736,7 @@ As part of your Teams planning project, you will configure the naming policy whe
 
 		![alt text](media/27.png)
     
-    2. Navigate and right-select the downloaded file **BlockedWords.csv (5)** and select **Open with** > **Notepad**.
-
-		![alt text](media/27.png)
+    2. Navigate and right-select the downloaded file **BlockedWords.csv Open **Notepad** in desktop and select file in tab and click open and select the file you downloaded.
 
     3. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and saving the file. 
     
@@ -733,30 +764,26 @@ As part of your Teams planning project, you will configure the naming policy whe
         
     4. Select **Save** to apply the new blocked words setting.
 
-		![alt text](media/29.png)
+		![alt text](media/.png)
 
 
 In this task, you have configured a naming policy that will block specific words to be used in a Microsoft 365 group name, as well as you have configured a new naming policy for the names of Microsoft 365 groups and teams.
 
-#### Task 4 - Test the new naming policy
+#### **Task 4 - Test the new naming policy**
 
 You need to test the newly created naming policy to see its effects in your pilot environment. In the following task, you will try to create a new team and see the configured naming policy template completing the configured name for your new team.
 
-**Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
+>**Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />**
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the Teams desktop client, select **Teams** from the left menu.
 
-3. Select **+** in the upper left hand corenre to create and join teams and channels.
+3. Select **+** in the upper right hand corner to **create and join teams and channels**.
 
 4. Select **Create team** >Enter **Afterwork** for the **Team name** > **Public** > Enter **Afterwork** for Name the first channel.
-   
-	Below the entered name, you can see the configured prefix and suffix for new teams.
 
-	![alt text](media/e4-t4-04.png)
-
-5. Select **Create** to create the new team.
+5. Select **Create** to create the new team.It won't create. 
 
 6. Add **Lynne Robbins** to the team member.
 
@@ -766,11 +793,12 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 You have successfully tested the naming policy for managing the prefix and suffixes of user-created teams.
 
-#### Task 5 - Delete the naming policy
+#### **Task 5 - Delete the naming policy**
 
 You can remove the naming policy after the test. In the following task, you will remove the naming policy you just created.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as ODL User.
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User:** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
 
 2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
@@ -782,13 +810,13 @@ You can remove the naming policy after the test. In the following task, you will
 
 	![alt text](media/e4-t5-01.png)
 
-#### Task 6 – Manage policy packages
+#### **Task 6 – Manage policy packages**
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
-2. In the left navigation of the Teams admin center, select **Policy packages**.
+2. In the left navigation of the Teams admin center,click on **Show all**  select **Policy packages**.
 
 3. On the **Policy packages** page, select **Frontline worker (default)** policy package.
 
@@ -797,14 +825,10 @@ To avoid administrative overhead with managing large numbers of policies individ
 4. Check the box next to **Frontline Worker (Default)** and select **Manage Users** from the navigation ribbon.
    
 5. Search **“Joni”** and select **Add** from the drop down. Then select **Apply** at the bottom.
-   
-6. On the left Navigation, select **Users** and then **Manage Users**.
-   
-7. From the list of users select **Joni Sherman**.
 
 	![alt text](media/30.png)
    
-8. Navigate to the **Policies Tab** and Select **Frontline_Worker** next to **Messaging Policies**.
+8. Navigate to the **Policies Tab** and click **Frontline_worker** and again Select **Frontline_Worker** next to **Messaging Policies**.
 
 9. Turn on the setting - **Send urgent messages using priotiy notification** and select **Save**, if this setting is not already turned on.
 
@@ -818,7 +842,7 @@ To avoid administrative overhead with managing large numbers of policies individ
 	4. Turn **On** the setting - **Prevent toll bypass and send calls through the PSTN**.
 	5. Update **Busy on busy when in a call** to **On**.
 	6. Select **Save**.
-    7. Select **Confirm**.
+    7. Select **Confirm** and click **Back** button.
 
 13. Navigate to **Policy Packages** from the left navigation pane.
 
@@ -843,11 +867,11 @@ You have successfully modified included policies from an existing policy package
 
 In this exercise, you will configure users to explore and evaluate upcoming features using Teams update policies. Public preview is enabled on a per-user basis, and Update policies are used to manage Teams and Office preview users who will see pre-release or preview features in the Teams app.
 
-#### Task 1 - Create a custom Update policy
+#### **Task 1 - Create a custom Update policy**
 
-1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** ([JoniS@&lt;YourTenant&gt;.onmicrosoft.com](mailto:JoniS@&lt;YourTenant&gt;.onmicrosoft.com))
+1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
-	**Note**: You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
+	>**Note**: You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
 2. In left navigation of the Teams admin center, select **Teams** > **Teams update policies**. 
 
@@ -864,10 +888,9 @@ In this exercise, you will configure users to explore and evaluate upcoming feat
 
 You now completed creating a custom **Teams Update policy.**
  
+#### **Task 2 - Assign the custom Update policy to users**
 
-#### Task 2 - Assign the custom Update policy to users
-
-Now you need to assign the custom Update policy to specific users because it doesn’t over-write the global policy.
+Continue as **Joni Sherman** and you need to assign the custom Update policy to specific users because it doesn’t over-write the global policy.
 
 1. Go to **Teams admin center** > **Teams** > **Teams update policies**.
 
@@ -887,8 +910,19 @@ Now you need to assign the custom Update policy to specific users because it doe
 
 ### You have successfully completed this lab. 
 
-“For support, contact: cloudlabs-support@spektrasystems.com” and Live chat - https://cloudlabs.ai/labs-support 
+## Support Contact
  
-### Now, click on **Next >>** from the lower right corner to move on to the next page. 
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+ 
+Learner Support Contacts:
+ 
+- Email Support: [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)
+- Live Chat Support: https://cloudlabs.ai/labs-support
+ 
+### Click **Next >>** from the bottom right corner to embark on your Lab journey!
+ 
+![Start Your Azure Journey](./media/Next.png)
+ 
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+ 
 
- ![](media/Next.png)

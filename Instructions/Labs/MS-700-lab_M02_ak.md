@@ -35,7 +35,7 @@ After you complete this lab, you will be able to:
 
 In this exercise, you will test the guest access features in Microsoft 365. To do so, you will configure guest access in Azure AD, add a new external guest user and revoke the guest access by using access reviews.
 
-### Task 1 - Review guest access settings (optional)
+### **Task 1 - Review guest access settings (optional)**
 
 1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
 
@@ -51,7 +51,8 @@ In this exercise, you will test the guest access features in Microsoft 365. To d
 
 		![alt text](media/32.png)
 
-3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User**.
+3. Browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
 
 4. In the left navigation of the Microsoft 365 admin center, select the **Show all** and select **Settings (1)** > **Org settings (2)**.
 
@@ -69,7 +70,7 @@ You have now reviewed guest access settings across different admin centers. You 
 
 Now that you have explored the Teams admin center it is time to configure the first setting. Since this task will take some time to replicate through the tenant, you will configure the guest user access for Microsoft Teams right now, so it is available for later use.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left navigation of the Teams admin center, select **External collaboration** > **Guest access**.
 
@@ -79,43 +80,89 @@ Now that you have explored the Teams admin center it is time to configure the fi
 
 4. Scroll down and under **Messaging** section, disable **Delete sent messages**
 
-5. Scroll down and select **Save**.
+5. Scroll down and select **Save** and **Confirm**.
 
 	![alt text](media/36.png)
 
 You have now successfully activated guest access and disallowed guests to delete their sent messages for Teams in your tenant.
 
-### Task 3 - Add a guest to a team
+### **Task 3 - Add a guest to a team**
 
 In this task, you will add a guest user by inviting the guest to the team **Group_Afterwork_** you created from Lab 1.
 
 You will change the default settings for inviting/creating guest users and then add your personal Outlook.com account as a guest user to your tenant.
 
-**Note**: You will need an Outlook.com account for this exercise. If you don’t have an outlook account, you can create a new account from [**https://outlook.com**](https://outlook.com/).
+>**Note**: You will need an outlook account for this exercise. If you don’t have an outlook account, you can create a new account from [**https://outlook.com**](https://outlook.com/).
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />**
+### How to Create a New Outlook Account
+
+1. Open your web browser and go to [**https://outlook.com**](https://outlook.com/). 
+
+1. Click the Create free account button (usually found in the center or top-right of the page).
+
+	![](media/outlook-page-sign-in.png)
+
+1. Type **username** as GuestUser<inject key="DeploymentID" enableCopy="false"/>
+
+	- Use the dropdown menu on the right to choose between **@outlook.com** and click **Next**.
+
+		![](media/guest-user-mail.png)
+    
+1. Type in a **strong password** that you will remember and copy that to **Notepad** and click **Next**.
+
+	![](media/create-password.png)
+
+1. Enter your First Name and Last Name, then click Next.
+
+	- Guest Username: GuestUser<inject key="DeploymentID" enableCopy="false"/>
+
+		- **First Name (1)**: **GuestUser**
+
+		- **Last Name  (2)**: <inject key="DeploymentID" enableCopy="false"/>**
+
+		- Click **Next (3)**
+
+			![](media/add-fl-name.png)
+
+	- Select your **Country/region** and enter your **Birthdate**. Click **Next**
+	
+	- Complete the **Security Puzzle (Robot Check)**
+
+	- A prompt will ask if you want to **"Stay signed in?"** Click **No**
+
+1. Your new Outlook inbox will load automatically.
+
+	![](media/account-created-outlook.png)
+
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** Enter your First Name and Last Name, then click Next.
 
 2. Add the guest to **Group_Afterwork_** team.
 
 	- Select **Teams** > Select **…** next to the **Group_Afterwork_** team.
+
 	- Select **Add member** and enter your outlook account.
-	- You will see a message **add &lt;Your outlook account&gt; as a guest**. Select the message and select **Add**.
+
+	- You will see a message **add &lt;Your outlook account&gt; as a guest** GuestUser<inject key="DeploymentID" enableCopy="false"/>@outlook.com Select the message and select **Add**.
 
 		![alt text](media/37.png)
 
-3. Accept the guest invite
+3. Accept the guest invitation in outlook.
+
+	>**Note:** Wait a few minutes for the invitation link and check your junk email if needed. If it hasn’t arrived, skip to the next task and come back to check later.
 
 	- Open a **New InPrivate window** and check the email with subject **You have been added as a guest to Contoso in Microsoft Teams** from **Outlook Web Portal** (https://outlook.live.com/owa/).
 
 		![alt text](media/38.png)
 
-	- Select **Open Microsoft Teams** from the email. You will be redirected to the sign-in page with a permission consent request.
-	- Select **Accept** and sign in to Teams web client with your outlook account.
+	- Select **Open Microsoft Teams** from the email and click on **Visit Link** pop-up. You will be redirected to the sign-in page with a permission consent request.
+
+	- Select **Accept** and sign in to Teams web client with your outlook account and select **use the web app instead** option.
+
 	- From the Teams client, select **Teams**, you will see the team **Group_Afterwork_**.
 
 4. Test the guest access
 
-	- Under the team **Group_Afterwork_United States**, select **General** channel, select **Start a post** and send the message: **Hello!**.
+	- Under the team **Group_Afterwork_**, select **General** channel, select **Post in Channel** and send the message: **Hello!**.
 
 		![alt text](media/39.png)
 
@@ -123,11 +170,12 @@ You will change the default settings for inviting/creating guest users and then 
 
 You have successfully invited a guest to a team and validated the guest access setting from the previous task.
 
-### Task 4 - Create access reviews
+### **Task 4 - Create access reviews**
 
 As a part of your system administrator role, you need to review access to resources in your tenant regularly. You can do that by creating an access review.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**. 
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. Create an access review to monitor guest users.
 
@@ -151,7 +199,7 @@ As a part of your system administrator role, you need to review access to resour
 
 	2. On the **Reviews** tab:
 	 
-		* In the **Select reviewers** section, select **Group owner(s)**.* In the **Review recurrence** section, select **Weekly** and keep rest as default. 
+		* In the **Select reviewers** section, select **Group owner(s)**. In the **Review recurrence** section, select **Weekly** and keep rest as default. 
 		* Select on **Next: Settings**.
 
 			![alt text](media/e1-t4-04.png)
@@ -178,17 +226,27 @@ As a part of your system administrator role, you need to review access to resour
 
 4. Review the access review and approve the guest user. 
 
-	1. Connect to the **Client 2 VM** and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber**. You can open an InPrivate window.
+	1. Connect to the **Client 2 VM** and open an InPrivate window and browse to the **Outlook.com** (https://outlook.office.com/) as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/>
 
-	2. Check the email with the subject **Action required: Review group access**.
+	1. Select the **message (1)** from Inbox area.
 
-	3. Select **Start review >** in the content of the email. 
+	2. Check the email with the subject **Action required: Review group access (2)**.
 
-	4. From the **My Access** (https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups**. 
+	3. Select **Start review (3)>** in the content of the email. 
 
-	5. On the **Review guest access across Microsoft 365 groups** page, select the guest account and select **Approve**. 
+		![](media/access-review-alex.png)
+
+	4. From the **My Access (1)** (https://myaccess.microsoft.com) page, select **Review guest access across Microsoft 365 groups (2)**. 
+
+		![](media/my-access-review.png)
+
+	5. On the **Review guest access across Microsoft 365 groups (1)** page, select the **guest account (2)** and select **Approve (3)**. 
+
+		![](media/approve-user.png)
 	
 	6. From the **Approve continued access** window, enter **Approved.** to the textbox, and select **Submit**
+
+		![](media/approved.png)
 
 You have successfully created an access review and approved a guest user in your tenant.
 
@@ -196,11 +254,12 @@ You have successfully created an access review and approved a guest user in your
 
 In this exercise, you will increase the security level in your organization by configuring Safe Attachments to ensure that no malicious content is sent through documents shared in Teams by blocking attachments that contain malware.
 
-### Task 1 - Configure Safe Attachments for Microsoft Teams
+### **Task 1 - Configure Safe Attachments for Microsoft Teams**
 
 Users in your organization are using Microsoft Teams for communication and collaboration. Business managers are concerned that documents that are shared within Microsoft Teams may contain malware. You will need to ensure that no malicious content is sent through documents shared in Teams by configuring Safe Attachments that block documents that contain malware.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 Defender portal (https://security.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. In left navigation of the Microsoft 365 Defender portal, expand **Email & Collaboration (1)** section, select **Policies &amp; rules (2)** > **Threat policies (3)** > **Safe Attachments (4)** in the **Policies** section.
 
@@ -220,11 +279,11 @@ In this task, you have activated Safe Attachments scanning for SharePoint, OneDr
 
 Before deploying Microsoft Teams in your organization, you need to evaluate Microsoft Team’s compliance features to meet the organization’s requirements.
 
-### Task 1 – Activate sensitivity lables for Teams
+### **Task 1 – Activate sensitivity lables for Teams**
 
 You need to evaluate governance for Microsoft 365 Groups before deploying them in your organizations. In this task, you will activate the sensitivity lables for Teams in Azure AD, for being able to assign labels to teams.
 
-Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, Microsoft Graph PowerShell commands will be provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands.  For now, please proceed with using PowerShell commands.
+**Please note:** **Microsoft PowerShell** is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, **Microsoft Graph PowerShell commands** will be provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands.  For now, please proceed with using PowerShell commands.
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
@@ -240,7 +299,8 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
    
 4. Connect to your Microsoft Entra ID tenant.
 
-	Connect to Microsoft Graph with the required scopes. Sign in as **ODL User** (admin@&lt;YourTenant&gt;.onmicrosoft.com) when prompted.
+	Connect to Microsoft Graph with the required scopes. Sign in as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/> when prompted.
 
 	```powershell
    	 Connect-MgGraph -Scopes "Directory.ReadWrite.All"
@@ -269,7 +329,7 @@ Please note: Microsoft PowerShell is soon to be deprecated and Microsoft Graph P
    	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
 	```
 
-Verify that **EnableMIPLabels** is now **True**.
+	Verify that **EnableMIPLabels** is now **True**.
 
 8. Disconnect the current session from Microsoft Graph and close the PowerShell window:
 
@@ -281,11 +341,12 @@ Verify that **EnableMIPLabels** is now **True**.
 
 You have successfully changed your tenant’s Azure AD settings and activated sensitivity labels for Microsoft 365 Groups and Microsoft Teams.
 
-### Task 2 - Configure sensitivity labels for Teams
+### **Task 2 - Configure sensitivity labels for Teams**
 
 After activating sensitivity labels for groups, you will now create three sensitivity labels. In this task, you will create and update three sensitivity labels **General**, **Internal**, and **Confidential**. For each of them, you will create appropriate user and admin descriptions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 1. On the getting started page, click on **Get Started**.
 
@@ -299,12 +360,14 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	```PowerShell		
 	Install-Module Microsoft.Graph -Scope CurrentUser
+
 	Install-Module Microsoft.Graph.Beta -Scope CurrentUser
 	```
 
-	**Note:** Please skip this step if you have already installed it in previous lab.
+	>**Note:** Please skip this step if you have already installed it in previous lab.
 
-4. Connect to your tenant as **ODL User**. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
+4. Connect to your tenant as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>. When you sign in, a pop up screen will appear. Ensure you select the checkbox **Consent on behalf of your organization** and then press **Accept** . 
 
 	```PowerShell
 	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
@@ -323,7 +386,10 @@ After activating sensitivity labels for groups, you will now create three sensit
 	```
 
 	>> **Note:** If you get an error, please relogin using the command below and try running the above command again
-	```
+
+7.  Disconnect the current session from Microsoft Graph and close the PowerShell window:
+
+	```powershell
 	Disconnect-MgGraph
 	Connect-MgGraph -Scopes "Directory.ReadWrite.All"
 	```
@@ -338,7 +404,8 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 	![alt text](media/48.png)
 
-8. Connect to the Client 1 VM and browse to Microsoft Purview Portal https://compliance.microsoft.com/) as ODL User.
+8. Connect to the Client 1 VM and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 	![alt text](media/46.png)
    
@@ -349,7 +416,7 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 10. Select **Turn on now** next to the following warning message to activate content processing in Office online files:
 
-*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
+	*Your organization has not turned on the ability to process content in Office online files that have encrypted sensitivity labels applied and are stored in OneDrive and SharePoint. You can turn it on here, but note that additional configuration is required for Multi-Geo environments. Learn more*
 
 11. Update the first sensitivity label - **General**.
 
@@ -357,13 +424,13 @@ After activating sensitivity labels for groups, you will now create three sensit
 	>>**Note:** If the General Label does not exist please create a new label
 	
 	a. In the **Name &amp; description** section, enter the following information:
-	- **Name** : Leave unchanged
+	- **Name** : General
 	- **Display name** : General
-	- **Description for users** : Leave unchanged
+	- **Description for users** : General
 	- **Description for admins** : General information without encryption, marking or sharing restriction settings activated.
 		Then select **Next**.
 
-	![alt text](media/51.png)
+		![alt text](media/51.png)
 
 	b. In the **Scope** section, select **Files &amp; other data assets (1)** and **Groups &amp; sites (2)**. Then select **Next (3)**.
 
@@ -551,15 +618,15 @@ After activating sensitivity labels for groups, you will now create three sensit
 
 In this task, you have created and published three new sensitivity labels available for all users, which can be assigned to new and existing teams.
 
-### Task 3 - Assign sensitivity labels to teams
+### **Task 3 - Assign sensitivity labels to teams**
 
 Once the sensitivity labels are created and published, users can now assign them to teams. Furthermore, users can modify assigned labels if needed. In this task, you will assign the **Internal** label to the **Teams Rollout** team.
 
-**Note:** It can take several minutes till the newly created sensitivity labels are available to users.
+>**Note:** It can take several minutes till the newly created sensitivity labels are available to users.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber**.
+2. Open the Teams Desktop client, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**.
 
 3. For Microsoft Teams Classic: On the Teams overview select the **…** on the right side next to the Team "**Teams Rollout,"** then select **Edit team** from the dropdown list.
 
@@ -579,13 +646,13 @@ Once the sensitivity labels are created and published, users can now assign them
 
 You have successfully applied a sensitivity label to an existing team. The configured settings of the Internal label are now applied to the Teams Rollout team. Continue with the next task.
 
-### Task 4 – Test external access with sensitivity labels (optional)
+### **Task 4 – Test external access with sensitivity labels (optional)**
 
 In this task, you will try to add a guest user to an internal team.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber**.
+2. Open the Microsoft Teams Desktop Client, where you are signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**..
 
 3. On the Teams overview select **…** right next to the Team "**Teams Rollout"** then select **Add member** from the dropdown list.
 
@@ -597,11 +664,12 @@ In this task, you will try to add a guest user to an internal team.
 
 You have successfully tested the sensitivity labels setting to prevent guest access to a protected team and you can confirm, the labels are working as predicted.
 
-### Task 5 - Create a new retention policy to retain content
+### **Task 5 - Create a new retention policy to retain content**
 
 Teams retention settings are very important for managing the lifecycle of company data, therefore, the capabilities of retention policies need to be evaluated in the Teams pilot. In this task, you will create a new retention policy that retains the Teams channel messages of the **Sales** team for **7 years** after the last modification.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal(https://compliance.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions (1)** and then **Data lifecycle management (2)**.
 
@@ -643,7 +711,6 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 	4. In the **Retention settings** section, under the **Decide if you want to retain content, delete it, or both** page, leave as is and select **Next**.
 
-
 5. In the **Review and Finish** page, review your settings and select **Submit**.
 
 	![alt text](media/74.png)
@@ -652,11 +719,12 @@ Teams retention settings are very important for managing the lifecycle of compan
 
 In this task, you have successfully created a new retention policy named **Sales retention policy** that retains the channel messages and chat of the **Sales** Team for **7 years after the last modification**.
 
-### Task 6 - Create a new retention policy to delete content
+### **Task 6 - Create a new retention policy to delete content**
 
 After configuring a retention policy to protect data from deletion, you also need to evaluate the capabilities of retention policies to delete content automatically. For demonstration purposes, you will set the deletion threshold to a single day and apply the retention policy to the **Teams Rollout** team, to remove all channel messages older than a day automatically.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. In the left navigation of the Microsoft Purview Portal, select **Solutions**, **Data lifecycle management**.
 
@@ -709,23 +777,23 @@ After configuring a retention policy to protect data from deletion, you also nee
 
 You have successfully created a second retention policy for testing the deletion capabilities to clean up the **Teams Rollout** team from all conversation messages older than a day.
 
-### Task 7 – Test the retention policy for deleting content (optional)
+### **Task 7 – Test the retention policy for deleting content (optional)**
 
 In this task, you will test the retention policy for deleting content from the **Teams Rollout** team after a day. Before you can see the retention policy taking any effect, you must create some conversation content in the team.
 
->>**Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policy’s effect.
+>**Note:** Because you need to wait for 24 hours till the retention policy deletes anything, this task is marked as optional. After creating content in the Teams Rollout team, you need to return to this task after waiting 24 hours to see the retention policy’s effect.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber**.
+2. Open the Teams, desktop client, from the taskbar, where you are still signed in as **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**.
 
 3. Select the **Teams Rollout** team and the **General** channel.
 
-4. Select **Start a post** from the lower end of the main window.
+4. Select **Post in Channel** from the lower end of the main window.
 
 5. Write the following text to the text box:
 
-- Hello world!
+	- Hello world!
 
 6. Leave the client open and add other content to the team, as you like.
 
@@ -733,11 +801,12 @@ In this task, you will test the retention policy for deleting content from the *
 
 You have added a conversation message to a team, which is deleted by the deletion retention policy after 24 hours.
 
-### Task 8 - Create a DLP policy for GDPR (PII) content from a template
+### **Task 8 - Create a DLP policy for GDPR (PII) content from a template**
 
 According to your organization’s compliance requirements, you need to implement basic protection of PII data for European users. You will create a new DLP Policy named **GDPR DLP Policy** from the template “General Data Protection Regulation (GDPR),” The DLP policy you create will detect if GDPR sensitive content is shared with people outside of your organization. If the policy detects at least one occurrence of the GDPR sensitive information, it will send an email to the **Teams admin - Joni Sherman** and block people from sharing the content and restricting access to shared content. Furthermore, it will display a tip to users who tried to share the sensitive content, and it will allow them to override the policy with business justification. Since you are evaluating the DLP policies, you will create the DLP policy in a test mode with policy tips enabled.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. In the left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
@@ -790,25 +859,19 @@ According to your organization’s compliance requirements, you need to implemen
 
 8. In the **Define policy settings** page, stay with the default selection from the template - **Create or customize adcanced DLP rules** and select **Next**.
 
-	1. In the **Info to protect** page, leave the default settings and select **Next**.
+	1. On the **Customize advanced DLP rules** page, leave the default settings and select **Next**.
 
-	2. In the **Protection actions** page, ensure that the following settings are configured, and then select **Next**:
+	2. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
-		- A checkbox is selected for: **Detect when a specific amount of sensitive info is being shared at one time**
-		- In the **At least __ or more instances of the same sensitive info type** box, type: **1**
-		- Select the checkbox **Send incident reports in email**
-		- Select **Choose what to include in the report and who receives it** to open the right-side pane
-		- Select **Add or remove people**, select the checkbox for **Joni Sherman**. 
-		- Select **Add** and **Save**
-		- Select the checkbox **Send alerts if any of the DLP rules match**
-		- Select the checkbox **Restrict access or encrypt the content in Microsoft 365 locations**
+	3. On the **Review and finish**  page, review your settings, select **Submit** then **Done**.
 
-	3. In the **Customize access and override settings** page, ensure that the following settings are configured, and then select **Next**:
+		 > **Note:** After you select **Submit**, you may receive the following error: *"Client error: to block only people outside your organization, you must select the conditions 'content is shared with people outside my organization'."* Select **OK** to dismiss the message, then select **Cancel** to return to the **Data Loss Prevention** page and select **Confirm**.
 
-		- A checkbox is selected for: **Restrict access or encrypt the content in Microsoft 365 locations**
-		- Select **Block users from receiving email or accessing shared SharePoint, OneDrive, and Teams content**.
-		- Select **Block only people outside your organization.**.
-		- Select **Override the rule automatically if they report it as false positive**.
+	4. On the **Data loss prevention** page, select **Refresh**. Leave the browser open.
+
+After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
+
+#### **Task 9 - Create a DLP policy from scratch**
 
 9. In the **Policy mode** page, select **Turn the policy on immediately** and select **Next**.
 
@@ -819,11 +882,12 @@ Note: After pressing Submit you may receive an error which reads "Client error: 
 
 After completing this task, you have created a DLP Policy from the template “General Data Protection Regulation (GDPR)” that detects if GDPR sensitive content is shared with people outside of your organization. The policy is extra sensitive for the configured threshold of **1** rule match and **Joni Sherman** will be notified if a matching occurs.
 
-### Task 9 - Create a DLP policy from scratch
+### **Task 9 - Create a DLP policy from scratch**
 
 After creating a DLP Policy for protecting GDPR relevant data, you will create another policy from scratch. Instead of using a template, you will configure rules directly with custom rules and actions.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://compliance.microsoft.com/) as **ODL User**.
+1. Connect to the **Client 1 VM** and browse to Microsoft Purview Portal (https://purview.microsoft.com) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. In left navigation of the Microsoft Purview Portal, select **Data loss prevention** under **Solutions**.
 
@@ -902,7 +966,6 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 	
 	6. Review the rule settings and select **Next**.
 
-		
 8. In the **Policy Mode** page, select **Turn the policy on immediately** and select **Next**.
 
 	![alt text](media/87.png)
@@ -913,15 +976,15 @@ After creating a DLP Policy for protecting GDPR relevant data, you will create a
 
 You have successfully created a new custom DLP policy for protecting credit card numbers from being shared via Teams conversations.
 
-### Task 10 – Test the DLP Policies
+### **Task 10 – Test the DLP Policies**
 
 To make sure your configured DLP policies are working as expected, you need to perform some testing with your pilot users.
 
-**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn’t work, continue with the lab, and perform a task at a later point of working through this lab.
+>**Note:** It can take up to 24 hours till new DLP policies take effect. If the step doesn’t work, continue with the lab, and perform a task at a later point of working through this lab.
 
 1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber**.
+2. Open the Teams desktop client from the taskbar, where you are still signed in as **Alex Wilber** **Alex Wilber** <inject key="AlexWilber" enableCopy="false"/> and password can be copied from **Envirnoment tab**.
 
 3. In the left-hand navigation pane, select **Teams**, and then select the **General** channel below **Teams Rollout**.
 
@@ -943,15 +1006,17 @@ To make sure your configured DLP policies are working as expected, you need to p
 
 9. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-10. You should still be logged in to the **Microsoft Purview Portal**. If not, open Microsoft Edge, maximize the browser, and navigate to the **Microsoft Purview Portal**: [**https://compliance.microsoft.com**](https://compliance.microsoft.com/).
+10. You should still be logged in to the **Microsoft Purview Portal**. If not, open Microsoft Edge, maximize the browser, and navigate to the **Microsoft Purview Portal**: [**https://purview.microsoft.com**]
 
-
-11. Note this step is an optional step and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
+11. Note this step is an **optional step** and not designed for users to complete in this lab. This step is meant to explain how to see the **DLP Policy Matches**. Previously, you would have been able to see it via the **Reports** page which has now been deprecated.
     
 In order to see the **DLP Policy Matches** users must perform the following:
+
 - Enable org customization upon logging into the tenant by running *Enable-organizationcustomization*. This takes about 2-3 hour to replicate through the tenant.
+
 -  Run *Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true* to enable audit logging.
 - The audit logging takes about 24hours to show as enabled a well.
+
     >>**Note:** This explanation may require users to have the SPE5 tenant.
     
 You have successfully tested your DLP policy to block sharing of credit card information via Teams chat and channel conversations.
@@ -960,7 +1025,7 @@ You have successfully tested your DLP policy to block sharing of credit card inf
 
 Microsoft Teams provides users with chat, audio, video, and content sharing experience in different network conditions. It includes variable codecs, where media can be negotiated in limited bandwidth environments. However, as a Teams admin, you will need to carefully plan your network bandwidth, because there are other Office 365 services and third-party apps that also need a reliable network connection. Therefore, Teams admins must-have tools that could help to estimate the bandwidth consumption according to specific business requirements and existing network infrastructure and provide the best experience to business users.
 
-### Task 1 - Calculate network bandwidth capacity
+### **Task 1 - Calculate network bandwidth capacity**
 
 In this exercise, you will calculate the network requirements for Microsoft teams, depending on your expected Teams usage business requirements. You must ensure enough bandwidth based on your organization network connectivity that is described in the following table:
 
@@ -975,7 +1040,7 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 1. Connect to the **Client 1 VM** with the credentials that have been provided to you.
 
-2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+2. Sign in to the **Teams admin center** ([**https://admin.teams.microsoft.com**](https://admin.teams.microsoft.com/)) using **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 3. Create a network plan
 	
@@ -1080,17 +1145,18 @@ Next, you will analyze your current bandwidth usage and test your network qualit
 
 8. On the report page, select the **Chart view** at the upper-right hand corner to display report results in different views.
 
-![alt text](media/94.png)
+	![alt text](media/94.png)
 
-Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
+	Once you generate the report, you’ll see the recommendation of your bandwidth requirements. The allowed bandwidth shows how much of your overall traffic is reserved for real-time communications. Thirty percent is the recommended threshold. By changing this value and selecting **Run report**, you can see the different impacts on the bandwidth for your network. Any areas that need more bandwidth will be highlighted in red. Work with your instructor to modify the parameters in the Network Planner and verify different results based on the input data.
 
 In this lab, you have used Network Planner to estimate the Microsoft Teams impact on the bandwidth in your network infrastructure.
 
-### Task 2 - Use Microsoft 365 network connectivity test tool
+### **Task 2 - Use Microsoft 365 network connectivity test tool**
 
 You are in the planning phase of a Microsoft Teams deployment. Before deploying Microsoft Teams in your organization, you want to test your network quality and connection to Microsoft Teams. After completing the test, you will interpret the results and gain insights into potential network issues.
 
-1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **ODL User**. 
+1. Connect to the **Client 1 VM** and browse to the [Microsoft 365 network connectivity test tool(https://connectivity.office.com)](https://connectivity.office.com?azure-portal=true) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. Select **Sign in** at the top-right corner.
 
@@ -1102,7 +1168,7 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 4. Select **Open file** when prompted after downloading the advanced client test application.
 
-	**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction.
+	>**Note**: The application requires .NET Core installed. Select **Yes** if you get prompted to install .NET Core. Select **Download x64** under **Run desktop apps** section then follow the installation instruction.
 
 	![alt text](media/96.png) 
 
@@ -1117,6 +1183,19 @@ You are in the planning phase of a Microsoft Teams deployment. Before deploying 
 
 In this task, you have used Microsoft 365 network connectivity test tool to test the connectivity and connection quality of your network infrastructure for Microsoft Teams.
 
-### You have successfully completed this lab. Please click on Next >> to proceed with next lab
+### You have successfully completed this lab. 
 
+## Support Contact
  
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+ 
+Learner Support Contacts:
+ 
+- Email Support: [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)
+- Live Chat Support: https://cloudlabs.ai/labs-support
+ 
+### Click **Next >>** from the bottom right corner to embark on your Lab journey!
+ 
+![Start Your Azure Journey](./media/Next.png)
+ 
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
