@@ -153,8 +153,8 @@ Proceed to the next task.
 
 In this task, you will check the license assignment of all users participating in the pilot. At the end of the task, you will confirm that all pilot users are licensed correctly and Alex Wilber’s location is updated to Canada as preparation for a later task.
 
-1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Microsoft 365 admin center (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. Update **Alex Wilber’s** location to **Canada**
 
@@ -190,12 +190,12 @@ You have finished the first exercise, and you can continue with the next one.
 
 In this exercise, you will explore the Teams admin center and install the Teams PowerShell module, required to manage teams, policy packages, calling features, and all other settings for Teams in your tenant. You can perform most of the tasks possible from the Teams admin center and the PowerShell. You can create scripts for automation and even access several settings not available in the GUI.
 
-To perform these tasks, you will use **Joni Sherman’s account** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and password <inject key="User04UPN" enableCopy="false"/>
+To perform these tasks, you will use **Joni Sherman’s account** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password <inject key="User04Password" enableCopy="true"/>
 #### **Task 1 - Explore Teams admin center**
 
 You will review the available settings for managing Teams in the Teams admin center.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password <inject key="User04UPN" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password <inject key="User04Password" enableCopy="true"/>
 
 	>**Note:** You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
@@ -264,11 +264,11 @@ The Microsoft Graph PowerShell commands for this task are provided after the Mic
 
 		![](media/L1-e2-t2-4.png)
 
-		- Sign in using Joni Sherman - **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** 
+		- Sign in using Joni Sherman - **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** 
 
 			![alt text](media/15.png) 
 
-		- Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+		- Enter the password - <inject key="User04Password" enableCopy="true"/> 
 
 			![alt text](media/03.png)
 
@@ -324,7 +324,7 @@ In this exercise, you will create a Microsoft 365 group from the Microsoft 365 a
 
 You will create a new Microsoft 365 Group named “IT-Department,” and then add the pilot members serving as a basis for your future teams and licensing.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
 
@@ -383,12 +383,12 @@ To test the self-service capabilities of Teams, in this task, **Alex Wilber** wi
 
 2. Select the **Microsoft Teams** icon on the taskbar to start the Teams, desktop client.
 
-3. Select on **"Get Started"** and Sign in as **Alex Wilber** **<inject key="AlexWilber" enableCopy="false" style="color:blue" />**. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
+3. Select on **"Get Started"** and Sign in as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** Enter the password - <inject key="User02Password" enableCopy="true"/> . At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
 	>**Note**: If you don’t have Alex's password, you can reset Alex's password with the following steps:
 	
-	1. Login to **Microsoft 365 Admin Center** (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>. 
+	1. Login to **Microsoft 365 Admin Center** (https://admin.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>. 
 
 	2. On the **Users &gt; Active users** page, select the name of **Alex Wilber**. 
 
@@ -444,7 +444,7 @@ In this task, **Lynne Robbins** will continue testing the self-service capabilit
 
 	![alt text](media/20.png)
 
-2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="false" style="color:blue" />** Enter the password - <inject key="User01UPN" enableCopy="false"/> 
+2. Browse to the **Microsoft Teams web client** at [**https://teams.microsoft.com**](https://teams.microsoft.com/) and sign in as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** Enter the password - <inject key="User01Password" enableCopy="true"/> 
 
 3. Select **Use the Web app instead** if prompted to download the Teams Desktop app. At the ‘Stay signed in to all your apps’ window, select **No, sign in to this app only**.
 
@@ -470,8 +470,8 @@ Your organization has started the planning process for Microsoft 365 services ad
 
 Based on the organization’s requirement, unneeded groups should be deleted automatically after 90 days. To evaluate the expiration feature for Teams, you will configure a group expiration policy that will expire the **Teams Rollout** group after 90 days.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. On the left navigation pane, select **Entra ID (1)** > **Groups (2)** > **All groups (3)**.
 
@@ -483,7 +483,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 	- In the dropdown menu of **Group lifetime (in days)**, select **Custom** and enter **90** to the text box.
 
-	- In the text box right from **Email contact for groups with no owners**, enter **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+	- In the text box right from **Email contact for groups with no owners**, enter **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
 
 	- Right from **Enable expiration for the Office 365 groups**, select **Selected**.
 
@@ -505,8 +505,8 @@ You have successfully created a new expiration policy and configured the **Teams
 
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
-1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
 
@@ -647,13 +647,13 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 	```powershell
 	$params = @{
-        Values = @(
-            @{ Name = "EnableGroupCreation"; Value = "true" }
-            @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
-        	)
-    	}
+       	 	Values = @(
+           	 	@{ Name = "EnableGroupCreation"; Value = "true" }
+            	@{ Name = "GroupCreationAllowedGroupId"; Value = "" }
+        		)
+    		}
 
-    	Update-MgBetaDirectorySetting 	-DirectorySettingId $Setting.Id @params
+    Update-MgBetaDirectorySetting 	-DirectorySettingId $Setting.Id @params
 	```  
 	
 19. Verify the revert was applied:
@@ -678,8 +678,8 @@ In this task, you have successfully created a new security group and configured 
 
 As part of your Teams planning project, you will configure the naming policy where each new Microsoft 365 group or team needs to comply with the organization’s regulations on naming objects. Each group name should start with the letters **Group** and end with the **Country** attribute of the owners’ location. Furthermore, there is an internal regulation that forbids using the following specific keywords in Teams names: **CEO**, **Payroll**, and **HR**.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 2. On the left navigation pane, select **Entra ID (1)** > **All Groups**.
 
@@ -729,7 +729,7 @@ You need to test the newly created naming policy to see its effects in your pilo
 
 >**Note:** It can take up to 24 hours till the blocked words setting will take effect. Therefore, you will only test the configured naming policy, which takes effect immediately.
 
-1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="false" style="color:blue" />** and Enter the password - <inject key="User02UPN" enableCopy="false"/> 
+1. Connect to the **Client 2 VM** and open the **Teams desktop client** (https://teams.microsoft.com/) as **Alex Wilber** **<inject key="AlexWilber" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User02Password" enableCopy="true"/> 
 
 2. In the Teams desktop client, select **Teams** from the left menu.
 
@@ -755,8 +755,8 @@ You have successfully tested the naming policy for managing the prefix and suffi
 
 You can remove the naming policy after the test. In the following task, you will remove the naming policy you just created.
 
-1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User:** <inject key="AzureAdUserEmail" enableCopy="false"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
+1. Connect to the Client1 VM and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User:** <inject key="AzureAdUserEmail" enableCopy="true"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>.
 
 2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
@@ -772,7 +772,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>.
 
 To avoid administrative overhead with managing large numbers of policies individually for groups of different users, you need to evaluate using policy packages to group policies into logical units. In this task, you need to review the default policy packages and change a default policy package for first-line workers.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
 
 2. In the left navigation of the Teams admin center,click on **Show all**  select **Policy packages**.
 
@@ -826,7 +826,7 @@ In this exercise, you will configure users to explore and evaluate upcoming feat
 
 #### **Task 1 - Create a custom Update policy**
 
-1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="false" style="color:blue" />** and Enter the password - <inject key="User04UPN" enableCopy="false"/> 
+1. Connect to the **CLIENT1 VM** and browse to **Teams Admin Center** [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and Enter the password - <inject key="User04Password" enableCopy="true"/> 
 
 	>**Note**: You can use **InPrivate window** of Microsoft Edge for logging in with different credentials.
 
