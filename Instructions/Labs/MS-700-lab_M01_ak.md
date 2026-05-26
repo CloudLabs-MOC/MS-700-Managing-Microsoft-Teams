@@ -643,7 +643,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 	$Setting.Id
  	```
-1.	Reset group creation to allow all users:
+19.	Reset group creation to allow all users:
 
 	```powershell
 	$params = @{
@@ -656,7 +656,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
     Update-MgBetaDirectorySetting 	-DirectorySettingId $Setting.Id @params
 	```  
 	
-19. Verify the revert was applied:
+20. Verify the revert was applied:
 
 	```powershell
 	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
@@ -664,13 +664,13 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
          
  	Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
 
-20. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
+21. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
 
 	```powershell
 	Disconnect-MgGraph
 	```
 	
-21. Close the PowerShell window and continue to the next task.
+22. Close the PowerShell window and continue to the next task.
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
