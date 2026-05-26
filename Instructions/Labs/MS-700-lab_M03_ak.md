@@ -2,11 +2,11 @@
 
 # Lab 03: Manage teams, collaboration and app settings for Teams
 
-## Estimated Duration: 110 Minutes
+## Estimated Duration: 120 Minutes
 
 # Student lab answer key
 
-## Lab Scenario
+## **Lab Scenario**
 
 In the labs of this course, you will assume the role of Joni Sherman, a Teams Administrator for Contoso Ltd. In this lab, you will perform operational tasks as a Teams administrator, such as creating and modifying teams, managing membership, and recovering deleted teams.
 
@@ -50,13 +50,13 @@ After you complete this lab, you will be able to:
 
 ### **Exercise 1: Manage team resources**
 
-#### Task 1 - Create a team from an existing Microsoft 365 group
+#### **Task 1 - Create a team from an existing Microsoft 365 group**
 
 As part of your pilot project for Contoso, you need to modify the **IT-Department** Microsoft 365 group, created in an earlier lab, and add Teams features to it.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
-2. Select the **Teams** icon on the taskbar to start the Teams desktop client and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+2. Select the **Teams** icon on the taskbar to start the Teams desktop client and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
    ![alt text](media/m1.png)
    
@@ -84,10 +84,6 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
   	![alt text](media/L3-e3-08.png)
 
-9. In the **Which Microsoft 365 group do you want to use?** dialog, select the group **“IT-Department”** and hover over it, select **Add team**. Wait until the **Creating the team…** process is done.
-
-   ![alt text](media/m8.png)
-
 10. Select the **three dots (…)** right from the new team **IT-Department** in the left pane and select **Manage team**.
 
 	![alt text](media/L3-e3-09.png)
@@ -98,13 +94,13 @@ As part of your pilot project for Contoso, you need to modify the **IT-Departmen
 
 	- Members and guests: **Allan Deyoung** , **ODL User** and **Patti Fernandez (5)**
 
-      ![alt text](L3-e3-10.png)
+    	![alt text](media/L3-e3-10.png)
 
 12. Leave the Teams desktop client open and continue to the next task.
 
 You have successfully created a new team with the Teams desktop client, by using an existing Microsoft 365 group. Leave the Teams client open and continue with the next task.
 
-#### Task 2 - Create a team by using PowerShell
+#### **Task 2 - Create a team by using PowerShell**
 
 In this task, you will create via the Teams PowerShell a new team **“Group_CA-OfficeCA01_”**. You will create the public channels **“Support”** and **“Recruiting”**. Additionally, you will create the private channel **“Administration”** via Teams PowerShell.
 
@@ -120,7 +116,7 @@ In this task, you will create via the Teams PowerShell a new team **“Group_CA-
     Connect-MicrosoftTeams
     ```
 
-5. A **Sign in** dialog box will open. Select **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**. and then click **Next**.
+5. A **Sign in** dialog box will open. Select **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**. and then click **Next**.
 
    ![alt text](media/m12.png)
 
@@ -141,13 +137,13 @@ In this task, you will create via the Teams PowerShell a new team **“Group_CA-
 8. To add the user **Alex Wilber** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.): You can find the Microsoft tenant name in the Environment tab, listed behind Alex Wilber.”
 
     ```powershell
-    Get-Team -DisplayName "Group_CA-OfficeCA01_" | Add-TeamUser -User AlexW@<YourTenant>.onmicrosoft.com
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | Add-TeamUser -User <inject key="AlexWilber" enableCopy="false"/>
     ```
 
 9. To add the user **Allan Deyoung** to the team type the following cmdlet (Replacing <YourTenant> with the name of the Microsoft 365 Tenant provided to you.): You can find the Microsoft tenant name in the Environment tab, listed behind Allan Deyoung.”
 
     ```powershell
-    Get-Team -DisplayName "Group_CA-OfficeCA01_" | Add-TeamUser -User AllanD@<YourTenant>.onmicrosoft.com
+    Get-Team -DisplayName "Group_CA-OfficeCA01_" | Add-TeamUser -User <inject key="AllanDeyoung" enableCopy="false"/>
     ```
 
 10. Create a channel **Support** in the **Group_CA-OfficeCA01_** team by using the following cmdlet:
@@ -155,8 +151,6 @@ In this task, you will create via the Teams PowerShell a new team **“Group_CA-
     ```powershell
     Get-Team -DisplayName "Group_CA-OfficeCA01_" | New-TeamChannel -DisplayName "Support"
     ```
-
-	![alt text](L3-e1-t3-ps-support-1.png)
 
 11. Create another channel **Recruiting** in the **Group_CA-OfficeCA01_** team by using the following cmdlet:
 
@@ -186,7 +180,7 @@ In this task, you will create via the Teams PowerShell a new team **“Group_CA-
 
 You have successfully created a team named **Group_CA-Office01_** with the members Alex Wilber and Allan Deyoung. Joni Sherman is the only team owner. Note that you did not specify any owner in the PowerShell cmdlet and because it was run in the context of Joni, she was added as owner automatically. Furthermore, you have created the public channels named **Support** and **Recruiting**, as well as the private channel named **Administration**.
 
-#### Task 3 - Create a team by using Graph API
+#### **Task 3 - Create a team by using Graph API**
 
 In this task, you will test the Graph API capabilities for certain automation plans of your organization with Teams. For this task, you will create a new team, called **Early Adopters** with minimal settings, such as Public join options, and another team with multiple existing channels, called **Tech Meetings**.
 
@@ -194,7 +188,7 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 2. Open Microsoft Edge, maximize the browser, and navigate to the **Graph Explorer** at: [https://developer.microsoft.com/graph/graph-explorer](https://developer.microsoft.com/graph/graph-explorer)
 
-3. Select the **Sign in to Graph Explorer** button in the left of the page and sign in as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+3. Select the **Sign in to Graph Explorer** button in the left of the page and sign in as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 4. If you access the Graph Explorer for the first time, you will see a **Permissions requested** page. Select **Accept**.
 
@@ -307,11 +301,11 @@ In this task, you will test the Graph API capabilities for certain automation pl
 
 You have successfully created two teams via Graph API. Your test of the Graph functionality is complete, and you can advance to the next exercise.
 
-#### Task 4 – Archive and unarchive a team
+#### **Task 4 – Archive and unarchive a team**
 
 After creating the different teams in this lab, you also need to evaluate the different ways of removing teams again. In this task, you will test the archiving function and change the Sales team to a non-activate state without deleting its content. This function is required for some company’s compliance requirements of retaining the stored data inside the teams. The only Teams administrative role with sufficient privilege for this task is the Teams Administrator, which is currently assigned to Joni Sherman, therefore you will use Joni’s account for this task.
 
-1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** (JoniS@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 1 VM** and browser to the **Teams admin center**: [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. Select **Teams** from the left-side pane and select the **Manage Teams**
 
@@ -331,51 +325,51 @@ After creating the different teams in this lab, you also need to evaluate the di
 
 4. Check the archived team
 
-	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	- Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
-	2. Select Teams and channnels then select the **...**, then select **Your teams and channels**.
+	- Select Teams and channnels then select the **...**, then select **Your teams and channels**.
 
-	1. In the **Your teams and channels** page, select **3 more** and filter by **Archived Teams**. The **Sales** team appears with an archive icon. 
+	- In the **Your teams and channels** page, select **3 more** and filter by **Archived Teams**. The **Sales** team appears with an archive icon. 
 
 		![alt text](media/L3-e1-t4-04.png)
 
-		![alt text](L3-e1-t4-05-1.png)
+		![alt text](media/L3-e1-t4-05-1.png)
 
-	3. The **Sales team** appears with an archive icon. 
+	- The **Sales team** appears with an archive icon. 
 
-		![alt text](L3-e1-t4-06.png)
+		![alt text](media/L3-e1-t4-06.png)
 
-	4. Select the **Sales team**, and then select the **Sales channel**. At the bottom of the conversation pane, confirm the **Post in channel** option is not available.
+	- Select the **Sales team**, and then select the **Sales channel**. At the bottom of the conversation pane, confirm the **Post in channel** option is not available.
 
 		![alt text](media/L3-e1-t4-07.png)
 
 5. Unarchive the **Sales** team
 
-	1. Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman**.
+	- Connect to the **Client 1 VM** again and browse to the Teams admin center as **Joni Sherman** <inject key="JoniSherman" enableCopy="false"/> 
 
-	2. Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
+	- Select the checkbox left from **Sales** again and select **Unarchive** from the top menu. The **Status** field should change to **Active** again.
 
 		![alt text](media/L2-e1-t4-08.png)
 
 6. Check the unarchived team
 
-	1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	- Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**
 
-	2. On the left side, select **Teams**.
+	- On the left side, select **Teams**.
 
-	3. Notice that the text of the **Sales** team and the **General** channel changes back to normal after a moment, but the team is hidden.
+	- Notice that the text of the **Sales** team and the **General** channel changes back to normal after a moment, but the team is hidden.
 
-	4. Select the three dots (…) right from the Sales team and select **Show**.
+	- Select the three dots (…) right from the Sales team and select **Show**.
 
 7. Leave the browser open and stay signed in.
 
 You have successfully archived a team and reviewed the limited functionality of archived teams. This fulfills the first requirement of testing the archiving function of teams for compliance preservation policies and rules. After this test, you have unarchived the team again, making it fully operational again.
 
-#### Task 5 - Delete and recover teams
+#### **Task 5 - Delete and recover teams**
 
 In this task, you will delete one of the teams created in the previous lesson and learn how to restore it.
 
-1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+1. Connect to the **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left-hand navigation pane of the Teams web client, select the three dots (…) right from the **Sales** team and select **Delete the team** from the list.
 
@@ -387,21 +381,22 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 4. Restore group
 
-	1.Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
+	- Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
-	2. On the left navigation pane, select **Identity** > **Groups**.
+	- On the left navigation pane, select **Identity** > **Groups**.
 
-	3. On the **Groups** page, select **Deleted groups** in the left side pane.
+	- On the **Groups** page, select **Deleted groups** in the left side pane.
 
-	4. Now you can see all deleted groups, including the **Sales** group.
+	- Now you can see all deleted groups, including the **Sales** group.
 
-	5. Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
+	- Select the checkbox left from the **Sales** group and select **Restore group** from the top pane. Confirm the **Do you want to restore deleted groups dialog** by selecting **Yes**.
 
 		![alt text](media/t5-03.png)
 
 5. Check the restored group.
 
-	1. Connect to **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** (LynneR@&lt;YourTenant&gt;.onmicrosoft.com).
+	1. Connect to **Client 2 VM** and browse to the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins**  **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 	2. The **Sales** team appears in the list of teams again. Press **F5** to refresh the page if needed.
 
@@ -409,15 +404,16 @@ In this task, you will delete one of the teams created in the previous lesson an
 
 		![alt text](media/t5-06.png)
 
-**Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
+		> **Note:** The full process of deleting and restoring a team can take up to 24 hours. If it does not appear again, check for it at a later point in this lab.
 
 You have successfully deleted a team via the Teams web client and restored it with the Azure Portal.
 
-#### Task 6 - Manage team members with dynamic membership
+#### **Task 6 - Manage team members with dynamic membership**
 
 Contoso is expanding to Canada and will open a new office in Toronto. As a system administrator, you need to configure a dynamic group with membership based on the location of the Office 365 services.
 
-1. Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User**.
+1. Connect to the **Client1 VM** and browse to Entra admin center (https://entra.microsoft.com/) as **ODL User** <inject key="AzureAdUserEmail" enableCopy="false"/>
+and **password:** <inject key="AzureAdUserPassword" enableCopy="false"/>
 
 2. On the left navigation pane, select **Identity** > **Groups** > **All groups**.
 
@@ -425,7 +421,7 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 	![alt text](media/t6-01.png)
 
-4. On the **CA-Office** page, select **Properties (1)** from the left-hand navigation pane.
+4. On the **Group_CA-OfficeCA01_** page, select **Properties (1)** from the left-hand navigation pane.
 
 5. Change the **Membership type (2)** from **Assigned** to **Dynamic User (3)**.
 
@@ -435,25 +431,25 @@ Contoso is expanding to Canada and will open a new office in Toronto. As a syste
 
 7. On the **Dynamic membership rules** page, enter the following information to the fields:
 
-	- Property: **accountEnabled**
+	- Property: **accountEnabled (2)**
 
-	- Operator: **Equals**
+	- Operator: **Equals (3)**
 
-	- Value: **true**
+	- Value: **true (4)**
 
-8. Select **+add expression** and enter the following information to the fields:
+8. Select **+add expression (5)** and enter the following information to the fields:
 
-	- Property: **usageLocation**
+	- Property: **usageLocation (6)**
 
-	- Operator: **Equals**
+	- Operator: **Equals (7)**
 
-	- Value: **CA**
+	- Value: **CA (8)**
 
-9. Select **Save** twice.
+9. Select **Save (9)** twice.
 
 	![alt text](media/t6-03.png)
 
-	A warning message is displayed, that the membership will change according to the new dynamic membership rules. Select **Yes** to confirm the message.
+	>**Note**: A warning message is displayed, that the membership will change according to the new dynamic membership rules. Select **Yes** to confirm the message.
 
 11. Select **Overview** in the left-hand navigation pane of the **Group_CA-OfficeCA01_** group window.
 
@@ -475,11 +471,11 @@ You have successfully converted a Microsoft 365 group from static (assigned) to 
 
 In this exercise, you will configure policies to manage the creation of new private channels and the available tools for users in chat.
 
-#### Task 1 - Create a messaging policy for giphy, memes, and stickers
+#### **Task 1 - Create a messaging policy for giphy, memes, and stickers**
 
 The company wants to restrict the use of graphic elements in Teams communication. As a Teams service administrator, you will create a new message policy that prohibits pilot users from using GIF files, memes, and stickers in the Teams chat and channel conversation.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left navigation of the Teams admin center, Scroll down and click on **Show all** . Select **Messaging (2)** from the left side navigation, then select **Messaging policies(3)**.
 
@@ -519,15 +515,15 @@ The company wants to restrict the use of graphic elements in Teams communication
 
       ![alt text](media/m25.png)
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+		>**Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you have successfully configured a new messaging policy and assigned it to the pilot users. It will now take some time for the policy to take effect. Continue with the next task.
 
-#### Task 2 - Manage private channels in a team
+#### **Task 2 - Manage private channels in a team**
 
 As Teams administrator of Contoso, you will create a private channel named **confidential** in the sales team that is only accessible for some team members.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left navigation of the Teams admin center, select **Teams (1)** > **Manage teams (2)**.
 
@@ -570,11 +566,11 @@ In this task, you learned how to create a private channel in the Microsoft Teams
 
 ### **Exercise 3: Manage app settings**
 
-#### Task 1 - Disable third-party storage providers
-
 In the past, users stored data at various locations, including third-party storage providers. Recently, the company deployed OneDrive for all users and would like to guide the users to use SharePoint and OneDrive as the primary data storage locations with Box as an alternative for all file collaborations. As the Teams admin, you are asked to deactivate all third-party storage providers except Box in Microsoft Teams to align with the direction.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+#### **Task 1 - Disable third-party storage providers**
+
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In left navigation of the Teams admin center, select **Teams (1)** > **Teams settings (2)**.
 
@@ -598,15 +594,15 @@ In the past, users stored data at various locations, including third-party stora
 
    ![alt text](media/m33.png)
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+	>**Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you have learned how to enable or disable third-party storage providers for your whole tenant.
 
-#### Task 2 - Block an app at organizational level
+#### **Task 2 - Block an app at organizational level**
 
 In this task, you will block the Google Analytics app for all tenants
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left navigation of the Teams admin center, select **Teams apps(1)** > **Manage apps(2)**.
 
@@ -614,7 +610,7 @@ In this task, you will block the Google Analytics app for all tenants
 
 3. On the **Manage apps** page, type **Google** in the search box and select **Google Analytics Insights**. 
 
-   ![Graphical user interface, application Description automatically generated]![alt text](media/m36.png)
+   ![Graphical user interface, application Description automatically generated](media/m36.png)
 
 4. In **Google Analytics Insights** page click on drop near Action and select **Block App**.
 
@@ -624,7 +620,7 @@ In this task, you will block the Google Analytics app for all tenants
 
    ![alt text](media/m38.png)
    
-**Note**: It can take up to 24 hours for the settings to take effect.
+	>**Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you have learned how to block the Google Analytics app for your tenant.
 
@@ -632,11 +628,11 @@ In this task, you have learned how to block the Google Analytics app for your te
 
 As a Teams administrator you need to highlight the apps that are most important for your users and also showcase apps that users in your organization need, including apps built by third-parties or by parties or by developers in your organization.
 
-#### Task 1 - Edit default org-wide app policy
+#### **Task 1 - Edit default org-wide app policy**
 
 In the pilot project, the company wants to add **Tasks by Planner and To Do** as the default app for all users. To do this, edit the default org-wide app policy. This task may take some time to propagate throughout the tenant.
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left navigation of the Teams admin center, select **Teams apps** > **Setup policies**.
 
@@ -658,13 +654,13 @@ In the pilot project, the company wants to add **Tasks by Planner and To Do** as
 
    ![alt text](media/m43.png)
 
-**Note**: It can take up to 24 hours for the settings to take effect.
+	>**Note**: It can take up to 24 hours for the settings to take effect.
 
 In this task, you learned how to pin default apps from the Microsoft Teams admin center.
 
-#### Task 2 - Create a custom app setup policy
+#### **Task 2 - Create a custom app setup policy**
 
-1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 1 VM** and browse to Teams admin center (https://admin.teams.microsoft.com) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left navigation of the Microsoft Teams admin center, go to **Teams apps** > **Setup policies**.
 
@@ -674,12 +670,12 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
   
 4. Enter the following information
 
-	- Name: **Sales team**
-	- Description: **Install Adobe Acrobat Sign and pin Viva Goals**.
-	- User pinning: **On**
+	- Name: **Sales team (1)**
+	- Description: **Install Adobe Acrobat Sign and pin Viva Goals (2)**.
+	- User pinning: **On (3)**
 	- To install apps for users:
 
-		1. Under **Pinned apps**, select **Add apps**.
+		1. Under **Pinned apps**, select **Add apps (4)**.
 
 		2. In the **Add pinned apps** pane, search for the apps you want to automatically install for users when they start Teams. 
 		
@@ -689,15 +685,17 @@ In this task, you learned how to pin default apps from the Microsoft Teams admin
 
 	- To pin apps:
 
-		1. Under **Pinned apps**, select **+ Add apps**.
+		1. Under **Pinned apps**, select **+ Add apps (4)**.
 
 		2. In the **Add pinned apps** pane, in the search box, type **Viva Goals**, and then next to **Viva Goals**, select **Select**. 
 
 		3. Select **Add**. 
 
-5. Select **Save.**
+		4. You can check them in the list the apps appears **(5)**.
 
-	![alt text](e4-t2-01.png)
+5. Select **Save (6)**
+
+	![alt text](media/e4-t2-01.png)
   
 
 You have now created a new custom app set up policy.
@@ -725,12 +723,11 @@ You have now created a new custom app set up policy.
 
 In this exercise, you will test the configured policy settings on a client with the affected user **Lynne Robbins** and compare the settings to the available client settings of **Joni Sherman**.
 
-#### Task 1 – Test the messaging policy and private channel access
+#### **Task 1 – Test the messaging policy and private channel access**
 
 In this task, you will test the **messaging policies** configured in exercise 1 and compare the difference between an affected user (Lynne Robbins) vs a regular user(Joni Sherman).
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**.
-.
+1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left-hand navigation pane, select **Chat** > **New Chat** icon.
 
@@ -742,11 +739,11 @@ In this task, you will test the **messaging policies** configured in exercise 1 
    
 4. Notice there’s no **giphy**, **memes** and **stickers** icons.
 
-#### Task 2 – Test blocked app and storage providers
+### **Task 2 – Test blocked app and storage providers**
 
 In this task, you will test the blocked app.
 
-1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />**.
+1. Connect to the **Client 2 VM** and browse the [**Microsoft Teams web client (https://teams.microsoft.com/)**](https://teams.microsoft.com/) as **Lynne Robbins** **<inject key="LynneRobbins" enableCopy="true" style="color:blue" />** and password can be copied from **Envirnoment tab**.
 
 2. In the left-hand navigation select **Apps**.
 
@@ -768,8 +765,17 @@ In this task, you will test the blocked app.
 
 ### You have successfully completed this lab. 
 
-“For support, contact: cloudlabs-support@spektrasystems.com” and Live chat - https://cloudlabs.ai/labs-support 
+## Support Contact
  
-### Now, click on **Next >>** from the lower right corner to move on to the next page.
-
-![](media/Next.png)
+The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
+ 
+Learner Support Contacts:
+ 
+- Email Support: [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)
+- Live Chat Support: https://cloudlabs.ai/labs-support
+ 
+### Click **Next >>** from the bottom right corner to embark on your Lab journey!
+ 
+![Start Your Azure Journey](./media/Next.png)
+ 
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!

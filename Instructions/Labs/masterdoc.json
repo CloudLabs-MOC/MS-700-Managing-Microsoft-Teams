@@ -4,21 +4,26 @@
         "Language": "English",
         "BaseURL": "https://github.com/CloudLabsAI-Azure/Azure-Landing-Zone",
         "Files": [
-             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M01_ak.md",
+
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/Getting-started.md",
                 "Order": 1
              },
-            {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M02_ak.md",
+             {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M01_ak.md",
                 "Order": 2
              },
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M03_ak.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M02_ak.md",
                 "Order": 3
              },
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M04_ak.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M03_ak.md",
                 "Order": 4
+             },
+            {
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/MS-700-Managing-Microsoft-Teams/refs/heads/prod/Instructions/Labs/MS-700-lab_M04_ak.md",
+                "Order": 5
              }
         ]
     }
