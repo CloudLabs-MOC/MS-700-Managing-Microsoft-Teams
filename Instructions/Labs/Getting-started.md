@@ -1,6 +1,6 @@
 # Managing Microsoft Teams
  
-### Overall Estimated Duration: 10 Hours
+### Overall Estimated Duration: 12 Hours
 
 >**Note**: You have a **3-day + 8 hrs access window** with a maximum **combined VM uptime of 32 hours** shared between **Client1 and Client2**. Please note that running both VMs simultaneously will consume the allotted time at twice the rate. Once the 32-hour limit is reached, access will be permanently unavailable. To conserve your allocated time, always Stop or Deallocate both VMs from the Resources tab after use. The VMs will automatically deallocate after 15 minutes of inactivity and can be restarted anytime through Actions > Start. (see [Managing Your Virtual Machine](#managing-your-virtual-machine) for details).
 
@@ -21,10 +21,6 @@ The MS-700 Managing Microsoft Teams lab provides a comprehensive, hands-on envir
 - **Monitor & Troubleshoot:** Analyze call quality logs via the Call Quality Dashboard (CQD) and resolve connectivity issues.
 
 - **Automate Administration:** Perform bulk configuration changes efficiently using both the Teams Admin Center and PowerShell modules.
- 
-## Prerequisites
- 
-
  
 ## Explanation of Teams Components
 
