@@ -617,13 +617,13 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 	
 14. Test the newly configured settings.
 
-    1. Connect to the **Client 2 VM** with the credentials that have been provided to you.
+     - Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-    2. Test as **Alex Willber** from Teams desktop client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.     
+     - Test as **Alex Willber** from Teams desktop client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.     
 
-    3. Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available. 
+     - Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available. 
 	
-		If **Create team** option available try to create. It throws an error that **you don't have permission**.
+	- If **Create team** option available try to create. It throws an error that **you don't have permission**.
 
         >**Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
@@ -687,39 +687,40 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 4. Configure **Blocked words**
 
-    1. Under the **Blocked words** tab on the **Groups | Naming policy** page, select **Download (4)** to download a sample file. 
+    - Under the **Blocked words** tab on the **Groups | Naming policy** page, select **Download (4)** to download a sample file. 
 
 		![alt text](media/27.png)
     
-    2. Navigate and right-select the downloaded file **BlockedWords.csv Open **Notepad** in desktop and select file in tab and click open and select the file you downloaded.
+    - Navigate and right-select the downloaded file **BlockedWords.csv Open **Notepad** in desktop and select file in tab and click open and select the file you downloaded.
 
-    3. Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and saving the file. 
+    - Type **CEO,Payroll,HR** replacing the empty quotes in the Notepad window, and saving the file. 
     
-    4. Back to the **Groups | Naming policy** page, upload the saved .csv file under **3. Upload your .csv file** by selecting **Select a file** box or the folder icon.
+    - Back to the **Groups | Naming policy** page, upload the saved .csv file under **3. Upload your .csv file** by selecting **Select a file** box or the folder icon.
 
-    5. Select **Save** to apply the new blocked words setting.
+    - Select **Save** to apply the new blocked words setting.
 
 		![alt text](media/28.png)
 
 5. Configure **Group naming policy**
     
-    1. On the **Groups | Naming policy** page, select the **Group naming policy** tab.
+    - On the **Groups | Naming policy** page, select the **Group naming policy** tab.
 
-    2. Add **Group_ (1)** string as prefix 
+    - Add **Group_ (1)** string as prefix 
         
-        1. Select the dropdown menu of **Select the type of prefix** and choose **String**.
-        2.  Select the checkbox **Add prefix**. 
-        3. Enter **Group_** to the text box.
+        - Select the dropdown menu of **Select the type of prefix** and choose **String**.
+        - Select the checkbox **Add prefix**. 
+        - Enter **Group_** to the text box.
 
-    3. Add **Country or region (2)** string as the suffix 
+    - Add **Country or region (2)** string as the suffix 
         
-        1. Select the dropdown menu of **Select the type of suffix**, choose **String**, and enter **_** to the text box. 
-	2. Select the checkbox **Add suffix (2)**. 
-        3. Select the dropdown menu of **Select another suffix**, choose **Attribute**, and Select **Country or region** from the dropdown menu. 
+        - Select the dropdown menu of **Select the type of suffix**, choose **String**, and enter **_** to the text box. 
+		
+	- Select the checkbox **Add suffix (2)**. 
+        - Select the dropdown menu of **Select another suffix**, choose **Attribute**, and Select **Country or region** from the dropdown menu. 
 
 		![](media/Group-naming-policy.png)
         
-    4. Select **Save (3)** to apply the new blocked words setting.
+    - Select **Save (3)** to apply the new blocked words setting.
 
 In this task, you have configured a naming policy that will block specific words to be used in a Microsoft 365 group name, as well as you have configured a new naming policy for the names of Microsoft 365 groups and teams.
 
