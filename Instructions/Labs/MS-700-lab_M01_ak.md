@@ -506,92 +506,88 @@ You have successfully created a new expiration policy and configured the **Teams
 You are an administrator for your Team’s organization. You need to limit which users can create Microsoft 365 groups. You will create a security group named **GroupCreators** which only the members of the group can create Microsoft 365 groups.
 
 1. Connect to the **Client 1 VM** and browse to the **Microsoft 365 admin center** (https://admin.microsoft.com/) as the Global admin - **ODL User** <inject key="AzureAdUserEmail" enableCopy="true"/>
-and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
+   and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
-2. In the Microsoft 365 admin center, select **Teams &amp; groups (1)** > **Active teams &amp; groups (2)**.
+2. In the Microsoft 365 admin center, select **Teams & groups (1)** > **Active teams & groups (2)**.
 
 3. On the **Active teams and groups** page.
 
-4. Create a security group. 
+4. Create a security group.
 
-	- Navigate to the **Security groups (3)** tab.
+   - Navigate to the **Security groups (3)** tab.
 
-        - Select the **+ Add a security group (4)** button.
+   - Select the **+ Add a security group (4)** button.
 
-			![alt text](media/25.png)
-          
-	- Fill out the following information:
+     ![alt text](media/25.png)
 
-		- Basics:
+   - Fill out the following information:
 
-			- Name: **GroupCreators**
-			- Description: **Users who can create Microsoft 365 Groups for new teams**
-			- Select **Next**
-    
-       	- Settings:
+     - **Basics:**
+       - Name: **GroupCreators**
+       - Description: **Users who can create Microsoft 365 Groups for new teams**
+       - Select **Next**
 
-            - Select **Next**
+     - **Settings:**
+       - Select **Next**
 
-		- Finish: Select **Create Group** and then select **Close**
+     - **Finish:**
+       - Select **Create Group** and then select **Close**
 
-	- Back to **Active teams &amp; group** page, select **Security groups** tab and Select on the security group **GroupCreators** you just created.
+   - Back to **Active teams & groups** page, select **Security groups** tab and select on the security group **GroupCreators** you just created.
 
-	- Select **Members** tab to configure the **Owners** and **Members**.
+   - Select **Members** tab to configure the **Owners** and **Members**.
 
-	- Owners: Select **View all and manage owners** and select **+ Add owners.** Select **ODL User**.
+   - **Owners:** Select **View all and manage owners** and select **+ Add owners.** Select **ODL User**.
 
-		![alt text](media/26.png)
+     ![alt text](media/26.png)
 
-	- Members: Select **View all and manage members** > **+ Add members**, and add the following users:
+   - **Members:** Select **View all and manage members** > **+ Add members**, and add the following users:
 
-		- Joni Sherman
-		- Alex Wilber
+     - Joni Sherman
+     - Alex Wilber
 
-		Restrict the Microsoft 365 groups creation to the security group.
-   
-	**Please note:** Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands. 
+   Restrict the Microsoft 365 groups creation to the security group.
 
-	**Please note:** The **AzureADPreview** module is no longer functional on this tenant as the AAD Graph API has been deprecated. Complete all steps below using **Microsoft Graph PowerShell** only.
+   **Please note:** Microsoft PowerShell is soon to be deprecated and Microsoft Graph PowerShell will now be used. Therefore, both PowerShell and Microsoft Graph PowerShell commands are provided to complete this task. Users will be able to use either the PowerShell or Microsoft Graph PowerShell commands. Once PowerShell has been deprecated, please switch to using the Microsoft Graph PowerShell commands.
+
+   **Please note:** The **AzureADPreview** module is no longer functional on this tenant as the AAD Graph API has been deprecated. Complete all steps below using **Microsoft Graph PowerShell** only.
 
 5. Open **Windows PowerShell** and run as Administrator.
 
-6. Install the **Microsoft Graph Beta** module. Enter `Y` and press **Enter**
-   to confirm installation from an untrusted repository.
+6. Install the **Microsoft Graph Beta** module. Enter `Y` and press **Enter** to confirm installation from an untrusted repository.
 
    ```powershell
-    Install-Module Microsoft.Graph.Beta
-	```
+   Install-Module Microsoft.Graph.Beta
+   ```
 
-8. Connect to Microsoft Graph with the required scopes. Sign in as
-   **ODL User** when prompted.
+7. Connect to Microsoft Graph with the required scopes. Sign in as **ODL User** when prompted.
 
-   -	**Global admin -** **<inject key="AzureAdUserEmail"></inject>**
+   - **Global admin -** **<inject key="AzureAdUserEmail"></inject>**
+   - **Password -** **<inject key="AzureAdUserPassword"></inject>**
 
-	-	**Password-** **<inject key="AzureAdUserPassword"></inject>**
+   ```powershell
+   Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
+   ```
 
-	```powershell
-    Connect-MgGraph -Scopes "Group.ReadWrite.All", "Directory.ReadWrite.All"
-	```
-	
-9. Load the unified group directory setting template:
+8. Load the unified group directory setting template:
 
-	```powershell
+   ```powershell
    $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
-	```  
+   ```
 
-10. Check whether a directory setting already exists for this template. If not,
-    create one:
+9. Check whether a directory setting already exists for this template. If not, create one:
 
-	```powershell
-    $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
-    if (-not $Setting) {
-        $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
-    }
-	```
-	
-11. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
+   ```powershell
+   $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.TemplateId -eq $Template.Id }
 
-	```powershell
+   if (-not $Setting) {
+       $Setting = New-MgBetaDirectorySetting -TemplateId $Template.Id
+   }
+   ```
+
+10. Configure the group creation restriction and assign the **GroupCreators** group as the only permitted group:
+
+    ```powershell
     $params = @{
         Values = @(
             @{ Name = "EnableGroupCreation"; Value = "false" }
@@ -600,77 +596,79 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
     }
 
     Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
-	```
-       
-12. Review the applied settings and confirm the values are correct:
+    ```
 
-	```powershell
+11. Review the applied settings and confirm the values are correct:
+
+    ```powershell
     (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-	```
+    ```
 
-13. Verify that the output shows:
+12. Verify that the output shows:
 
-	-  **EnableGroupCreation** → false
-	-  **GroupCreationAllowedGroupId** → populated with a GUID
+    - **EnableGroupCreation** → false
+    - **GroupCreationAllowedGroupId** → populated with a GUID
 
-    	>**Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use ```New-AzureADDirectorySetting``` to create a directory settings object for the first time.
-	
-14. Test the newly configured settings.
+    > **Note:** Since this is a new tenant, there’s no directory settings object in the tenant yet. You need to use `New-AzureADDirectorySetting` to create a directory settings object for the first time.
 
-     - Connect to the **Client 2 VM** with the credentials that have been provided to you.
+13. Test the newly configured settings.
 
-     - Test as **Alex Willber** from Teams desktop client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.     
+    - Connect to the **Client 2 VM** with the credentials that have been provided to you.
 
-     - Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available. 
-	
-	- If **Create team** option available try to create. It throws an error that **you don't have permission**.
+    - Test as **Alex Wilber** from Teams desktop client, notice when select **Join or create a team**, there are options for **Create team** and **Join a team with a code**.
 
-        >**Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
+    - Test as **Lynne Robbins** from Teams web client, notice when select **Join or create a team**, only one option **Join a team with a code** is available.
 
-15. Revert the change for enabling users to create new teams.
+    - If **Create team** option available try to create. It throws an error that **you don't have permission**.
 
-16. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.  
-    
-17. Load the existing directory setting:
+    > **Note:** When you are still able to create a new team, wait several minutes for the new configuration to take effect on your users.
 
-	```powershell
+14. Revert the change for enabling users to create new teams.
+
+15. Connect to the **Client 1 VM** where you have **Windows PowerShell** opened.
+
+16. Load the existing directory setting:
+
+    ```powershell
     $Template = Get-MgBetaDirectorySettingTemplate | Where-Object { $_.DisplayName -eq "Group.Unified" }
-	```  
-18. Get the existing active group settings in your tenant
+    ```
 
-	```powershell
- 	$Setting = Get-MgBetaDirectorySetting | Where-Object { $_.DisplayName -eq "Group.Unified" }
+17. Get the existing active group settings in your tenant.
 
-	$Setting.Id
- 	```
-19.	Reset group creation to allow all users:
+    ```powershell
+    $Setting = Get-MgBetaDirectorySetting | Where-Object { $_.DisplayName -eq "Group.Unified" }
 
-	```powershell
-	$params = @{
-       	 	Values = @(
-           	 	@{ Name = "EnableGroupCreation"; Value = "true" }
-            	@{ Name = "GroupCreationAllowedGroupId"; Value = "" }
-        		)
-    		}
+    $Setting.Id
+    ```
 
-    Update-MgBetaDirectorySetting 	-DirectorySettingId $Setting.Id @params
-	```  
-	
-20. Verify the revert was applied:
+18. Reset group creation to allow all users:
 
-	```powershell
-	(Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
-	```  
+    ```powershell
+    $params = @{
+        Values = @(
+            @{ Name = "EnableGroupCreation"; Value = "true" }
+            @{ Name = "GroupCreationAllowedGroupId"; Value = "" }
+        )
+    }
+
+    Update-MgBetaDirectorySetting -DirectorySettingId $Setting.Id @params
+    ```
+
+19. Verify the revert was applied:
+
+    ```powershell
+    (Get-MgBetaDirectorySetting -DirectorySettingId $Setting.Id).Values
+    ```
          
  	Verify that **EnableGroupCreation** is now **true** and **GroupCreationAllowedGroupId** is empty.
 
-21. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
+20. In the PowerShell window, enter the following cmdlet to disconnect the current session from Microsoft Graph.
 
 	```powershell
 	Disconnect-MgGraph
 	```
 	
-22. Close the PowerShell window and continue to the next task.
+21. Close the PowerShell window and continue to the next task.
 	
 In this task, you have successfully created a new security group and configured Azure AD settings to restrict the creation of new groups to members of this group only. At the end of the task, you have successfully tested the new group creation restrictions.
 
