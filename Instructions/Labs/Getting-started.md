@@ -91,7 +91,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
     ![Manage Your Virtual Machine](./media/resource.png)
 
-- If the **VM remains idle for 15 minutes**, it will **automatically deallocate** to save time. You can launch it again by navigating to **Actions (2) > start** and clicking the **Start** button from **Environment Status (3)**
+- If the **VM remains idle for 15 minutes**, it will **automatically deallocate (1)** to save time. You can launch it again by navigating to **Actions (2) > start** and clicking the **Start** button from **Environment Status (3)**
 
     ![](media/vm-start.png)
 
