@@ -22,6 +22,10 @@ The MS-700 Managing Microsoft Teams lab provides a comprehensive, hands-on envir
 
 - **Automate Administration:** Perform bulk configuration changes efficiently using both the Teams Admin Center and PowerShell modules.
  
+## Prerequisites
+ 
+
+ 
 ## Explanation of Teams Components
 
 ### 1. The Core Infrastructure (Where files & data live)
