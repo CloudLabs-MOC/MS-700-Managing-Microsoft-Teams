@@ -142,11 +142,11 @@ Contoso Ltd. wants to broadcast video and meeting content to large online audien
 
 	![alt text](media/105.png)
 
-6. Back on the **Live events policies** page, select **Management Live Events** policy and select **Manage Users** select **Assign users** from the top menu.
+6. Back on the **Live events policies** page, select **Management Live Events (1)** policy and select **Manage Users (2)** select **Assign users** from the top menu.
 
-7. In the **Manage users** pane, search and add **Lynne Robbins**.
+7. In the **Manage users** pane, search and **add (4) **Lynne Robbins(4)**.
 
-8. Select **Apply** then **Confirm** to assign the policy to the selected user.
+8. Select **Apply (5)** then **Confirm** to assign the policy to the selected user.
 
 	![alt text](media/106.png)
 
@@ -164,12 +164,13 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 3. Enter the **Basic info** and then select **Save and send invites**:
 
-	- **webinar title**: IT Office Hours
-	- **Start/End**: Select a time close to your current time 
-	- **Give your webinar a description**: Company-wide meeting to answer questions regarding the new reporting system.
-	- **Presenters**: Patti Fernandez, Allan Deyoung
-	- **Co-organizers**: Diego Siciliani
-	- **Event access**: Your organization
+	- **webinar title**: IT Office Hours **(1)**
+	- **Start/End**: Select a time close to your current time **(2)**
+	- **Give your webinar a description**: Company-wide meeting to answer questions regarding the new reporting system. **(3)**
+	- **Co-organizers**: Diego Siciliani **(4)**
+	- **Presenters**: Patti Fernandez, Allan Deyoung  **(5)**
+	- **Event access**: Your organization **(6)**
+	- **Save and send invite (7)**
 
 		>**Note**: When you save the event, invites will be sent to presenters and co-organizers automatically. 
 
@@ -177,10 +178,10 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 4. Review the **Meeting options**, the **Presenter bios** and **Theming**, by selecting the options on the left hand side navigation. Press **Save** if prompte first.
 
-5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration**. Enter the following information and then select **Save**: 
+5. Complete the Registration site configuration. On the **IT Office Hours | Microsoft Teams** tab, at the left, expand **Registration** and select **Configuration (1)**. Enter the following information and then select **Save**: 
 
-	- **Capacity**: 1000
-	- Under **Form** select **+ Add field** > **Custom question** > **Text input** and enter the following in the textbox below **Custom question**:
+	- **Capacity**: 1000 **(2)
+	- Under **Form** select **+ Add field (3)** > **Custom question (4)** > **Text input (5)** and enter the following in the textbox below **Custom question**:
 
 		*What is your question about the new reporting system?*
 
@@ -194,7 +195,7 @@ The IT department wants to host a company-wide meeting to answer employees’ qu
 
 7. Publish the Registration site and share the link:
 
-	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site** and then selet **Publish** to activate the Webinar registration site.
+	1. On the **IT Office Hours | Microsoft Teams** tab, select **Publish site (1)** and then selet **Publish (2)** to activate the Webinar registration site.
 
 		![](media/L4-t5-07-1.png)
 
@@ -226,7 +227,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 You have successfully created a webinar with a custom registration form.
 
-### **Exercise 2: Deploy Teams device profiles**
+### Exercise 2: Deploy Teams device profiles
 
 As a Teams administrator, you will create configuration profiles to manage settings and features for Teams devices in your organization. You can create or upload configuration profiles to include settings and features you want to enable or disable and then assign a profile to a device or groups of devices.
 
@@ -252,31 +253,31 @@ During the planning phase of Teams Phones devices in your organization, you want
 
 5. Under **General** section, configure following settings:
 
-	- Device lock: **On**
+	- Device lock: **On** **(1)**
 
-	- Timeout: **30 seconds**
+	- Timeout: **30 seconds** **(2)**
 
-	- PIN: **123456**
+	- PIN: **123456** **(3)**
 
-	- Language: English **(United States)**
+	- Language: English **(United States)** **(4)**
 
-	- Timezone: **(UTC-4:00) Eastern Time (US and Canada)**
+	- Timezone: **(UTC-4:00) Eastern Time (US and Canada)** **(5)**
 
-	- Date format: **MM/DD/YYYY**
+	- Date format: **MM/DD/YYYY** **(6)**
 
-	- Time format: **12 Hours (AM/PM)**
+	- Time format: **12 Hours (AM/PM)** **(7)**
 
 		![alt text](media/113.png)
 
 6. Under **Device settings** configure following settings:
 
-	- Display screen saver: **On, Timeout 1 minute**
+	- Display screen saver: **On (1), Timeout 1 minute (2)**
 
-	- Display high contrast: **On**
+	- Display high contrast: **On (3)**
 
-	- Office hours: **08:00-17:00**
+	- Office hours: Select **Set Office hours (4) and set time  **08:00-17:00** **(5)**
 
-	- Power Saving: **On**
+	- Power Saving: **On** **(6)*8
 
 		![alt text](media/114.png)
 
@@ -340,7 +341,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 
 		![](media/L4-e2-t2-03.png)
 
-	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps** tab, select **Available licenses** and then select **Save changes**.
+	3. In the NY-TeamsRoom1@&lt;YourTenant&gt;.onmicrosoft.com page, under the **Licenses and Apps (1)** tab, select **Microsoft Teams Rooms Pro (2)** and then select **Save changes (3)**.
 
 		![](media/L4-e2-t2-04.png)
 
@@ -349,7 +350,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>
 You have successfully created, configured, and licensed a Microsoft Teams Room service account, which is a prerequisite for deploying a Microsoft Teams Room system.
  
 
-### **Exercise 3: Set up a Calling Plan (Read-Only)**
+### Exercise 3: Set up a Calling Plan (Read-Only)
 
 In this exercise, you will set up one of your users with a Calling Plan Trial. You will need to start the trial, order a phone number from Microsoft as your provider and enable your user to use this phone number when making outgoing calls.
 
@@ -424,9 +425,9 @@ In this task, you will order a phone number for a user with an assigned Calling 
 
 3. Navigate to the **Teams admin center** at [**https://admin.teams.microsoft.com/**](https://admin.teams.microsoft.com/).
 
-4. On the left navigation pane, select **Voice**, and then **Phone numbers** below.
+4. On the left navigation pane, select **Voice (1)**, and then **Phone numbers (2)** below.
 
-5. Select **+ Add** in the right pane.
+5. Select **+ Add (3)** in the right pane.
 
 	![](media/L4-e3-t3-02.png)
 
@@ -492,7 +493,7 @@ In this Task, you will assign an existing phone number to a user.
 
 8. Select **Apply** to assign the phone number to the user.
 
-### **Exercise 4: Manage Teams Phone** 
+### Exercise 4: Manage Teams Phone
 
 Contoso organization is using the legacy PBX system. With the introduction of Microsoft Teams, Contoso will migrate their legacy telephony system to Microsoft Teams Phone. Teams admins are responsible for evaluating and testing Microsoft Teams voice functionalities.
 
@@ -560,23 +561,23 @@ As Teams admin, you are responsible for creating the call queue and configuring 
 
 3. On the left navigation pane, select **Voice**, and then choose **Resource accounts,** to create a resource account.
 
-4. On the **Resource accounts** page, select **+ Add** from the top pane.
+4. On the **Resource accounts** page, select **+ Add (1)** from the top pane.
 
 5. On the right pane, enter the following information:
 
-	- Display name: **Contoso Call Queue Resource Account**
+	- Display name: **Contoso Call Queue Resource Account** **(2)**
 
-	- Username: **pilot_callqueue1** and select the **tenant domain** name 
+	- Username: **pilot_callqueue1** **(3)**and select the **tenant domain** name 
 
-	- Resource Account Type: **Call queue**
+	- Resource Account Type: **Call queue** **(4)**
 
-6. Select **Save**.
+6. Select **Save** **(5)**
 
 	![alt text](media/125.png)
 
    > **NOTE:** If the error *You don't have the required permissions to create/manage resource accounts* appears, open the **Microsoft 365 admin center** (https://admin.microsoft.com) as **ODL User**. Select **Users** > **Active users**, and then select **Joni Sherman**. Select **Manage roles**, assign the **User Administrator** role, and then select **Save changes**. Sign out of the Teams admin center and sign back in as **Joni Sherman** before retrying.
 
-1. Resource account is created for **Contoso Call Queue Resource account** and license is not assigned. 
+1. Resource account is created for **Contoso Call Queue Resource account** **(1)** and license is not assigned **(2)**. 
 
 	![](media/rc-1.png)
 
@@ -585,7 +586,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>. Select 
 
 	![](media/rc-2.png)
 
-1. It navigates to user configuration details pane. Select the **Licenses and apps** tab and select the checkbox for **Microsoft Teams Phone Resource Account**.
+1. It navigates to user configuration details pane. Select the **Licenses and apps** **(1)** tab and select the checkbox for **Microsoft Teams Phone Resource Account** **(2)** and **Save changes** **(3)**
 
 	![](media/rc-3.png)
 
@@ -617,15 +618,15 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/>. Select 
 	
 	- Language: **English (United States)**, then select **Next**.
 
-	- Greeting: select **Play an audio file**, and then select **Upload file**.
+	- Greeting: select **Play an audio file (1)**, and then select **Upload file**.
 
 	- In **Open** window, navigate to the Downloads folder, select **Alarm03.wav** and select **Open**.
 
-	- Music on hold: **Play default music**, then select **Next**.
+	- Music on hold: **Play default music (2)**, then select **Next (3)**.
 
 		![alt text](media/129.png)
 
-	- Call answering: Select **Choose users and groups** then select **Add groups** and on the right-side pane, search for **Sales**, select **Add** for **Sales** and then select **Add** at the bottom of the **Add call agents** pane. Select **Next**.
+	- Call answering: Select **Choose users and groups (1)** then select **Add groups (2)** and on the right-side pane, search for **Sales**, select **Add (3)** for **Sales** and then select **Add (4)** at the bottom of the **Add call agents** pane. Select **Next**.
 
 		![alt text](media/130.png)
 
@@ -690,7 +691,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/> .
 
  	![](media/rc-auto.png)
 
-1. It navigates to user configuration details pane. Select the **Licenses and apps** tab and select the checkbox for **Microsoft Teams Phone Resource Account**.
+1. It navigates to user configuration details pane. Select the **Licenses and apps (1)** tab and select the checkbox for **Microsoft Teams Phone Resource Account (2)** and click **Save changes (3)**
 
 	![](media/rc-auto-2.png)
 
@@ -707,19 +708,19 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/> .
 
 9. Enter the following information:
 
-	- Add a name for your auto attendant: **Contoso Auto attendant**
+	- Add a name for your auto attendant: **Contoso Auto attendant** **(1)**
 
-	- Operator: **Voice app**
+	- Operator: **Voice app** **(2)**
 
-	- Search by resource account: **Contoso Call Queue Resource Account**
+	- Search by resource account: **Contoso Call Queue Resource Account** **(3)**
 
-	- Time zone: **(UTC-08:00) Pacific Time (US &amp; Canada)**
+	- Time zone: **(UTC-08:00) Pacific Time (US &amp; Canada)** **(4)**
 
-	- Language: **English (United States)**
+	- Language: **English (United States)** **(5)**
 
-	- Enable voice inputs: **Off**
+	- Enable voice inputs: **Off** **(6)**
 
-10. Select **Next**.
+10. Select **Next**. **(7)**
 
 	![alt text](media/134.png)
 
@@ -751,7 +752,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/> .
 
 	- Call routing options: **Disconnect**
 
-14. Select **Next**.
+14. Select **Next**. **(5)**
 
 	![alt text](media/136.png)
 
@@ -767,7 +768,7 @@ and **password:** <inject key="AzureAdUserPassword" enableCopy="true"/> .
 
 You have successfully created a resource account for the auto attendant and then created an auto attendant configuration.
 
-### **Exercise 5: Explore reports for call quality in Microsoft Teams**
+### Exercise 5: Explore reports for call quality in Microsoft Teams
 
 When users experience calling problems, an organization's Teams administrator must quickly diagnose and fix the problems. The Teams client, the network, and any number of configuration issues in the Microsoft Teams admin center can disrupt an organization's users from effectively sending and receiving calls and participating in Teams meetings.
 
@@ -779,7 +780,7 @@ Note: As we have not made any calls in this environment, reports will be blank a
 
 1. Connect to the **Client 1 VM** and browse to Teams admin center ([https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/)) as **Joni Sherman** **<inject key="JoniSherman" enableCopy="true" style="color:blue" />** and  navigate to **environment tab** to get password.
 
-2. In the left-hand navigation pane, select **Users&gt;Manage users**, and then select a **user**.
+2. In the left-hand navigation pane, select **Users (1) &gt;Manage users (2)**, and then select any **user (3)**.
 
 	![](media/L4-e5-t1-1.png)
 
