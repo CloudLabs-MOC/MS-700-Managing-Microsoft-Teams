@@ -24,6 +24,13 @@ The MS-700 Managing Microsoft Teams lab provides a comprehensive, hands-on envir
  
 ## Prerequisites
  
+- **Licenses & Roles:** You need a Microsoft 365 E5 account assigned with a Global.
+    - **Microsoft Teams Phone Resource Account license**
+    - **Microsoft Teams Room Pro license**
+
+- **Teams Desktop Client:** You need the Teams Desktop app installed on your main computer to test the real administrative policies you deploy in the cloud.
+
+- **Two Virtual Machines:** You need two Virtual Machines (VMs) to simulate two different remote employees logging in simultaneously to **test video calling, screen sharing, and network performance.**
 
  
 ## Explanation of Teams Components
