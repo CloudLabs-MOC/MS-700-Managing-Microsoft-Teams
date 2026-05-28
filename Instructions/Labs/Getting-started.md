@@ -1,8 +1,8 @@
 # Managing Microsoft Teams
  
-### Overall Estimated Duration: 10 Hours
+### Overall Estimated Duration: 9 Hours
 
->**Note**: You have a **3-day window** with a **maximum of 32 hours of combined uptime** shared between **Client1** and **Client2** (running both drains time twice as fast). If this limit is exhausted, access is lost permanently. To preserve your time, always **Stop or Deallocate both VMs** from the *Resources* tab when finished; note that VMs automatically deallocate after **15 minutes of idling** and can be restarted via **Actions** > **Start** (see [Managing Your Virtual Machine](#managing-your-virtual-machine) for details).
+>**Note**: You have a **3-day + 8 hrs access window** with a maximum **combined VM uptime of 32 hours** shared between **Client1 and Client2**. Please note that running both VMs simultaneously will consume the allotted time at twice the rate. Once the 32-hour limit is reached, access will be permanently unavailable. To conserve your allocated time, always Stop or Deallocate both VMs from the Resources tab after use. The VMs will automatically deallocate after 15 minutes of inactivity and can be restarted anytime through Actions > Start. (see [Managing Your Virtual Machine](#managing-your-virtual-machine) for details).
 
 ## Overview
  
@@ -24,14 +24,7 @@ The MS-700 Managing Microsoft Teams lab provides a comprehensive, hands-on envir
  
 ## Prerequisites
  
-- **Licenses & Roles:** You need a **Microsoft 365 E5** account assigned with a Global admin
-    - **Microsoft Teams Phone Resource account license**
-    - **Microsoft Teams Room Pro license**
-    - **Teams Administrator** roles so you have full master control.
 
-- **Teams Desktop Client:** You need the Teams Desktop app installed on your main computer to test the real administrative policies you deploy in the cloud.
-
-- **Two Virtual Machines:** You need two Virtual Machines (VMs) to simulate two different remote employees logging in simultaneously to **test video calling, screen sharing, and network performance.**
  
 ## Explanation of Teams Components
 
@@ -102,7 +95,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
     ![Manage Your Virtual Machine](./media/resource.png)
 
-- If the **VM remains idle for 15 minutes**, it will **automatically deallocate** to save time. You can launch it again by navigating to **Actions (2) > start** and clicking the **Start** button from **Environment Status (3)**
+- If the **VM remains idle for 15 minutes**, it will **automatically deallocate (1)** to save time. You can launch it again by navigating to **Actions (2) > start** and clicking the **Start** button from **Environment Status (3)**
 
     ![](media/vm-start.png)
 
